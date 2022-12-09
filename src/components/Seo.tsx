@@ -52,18 +52,18 @@ export const Seo = withRouter(
         />
       )}
 
-      {/* <meta
+      <meta
         property="og:image"
         key="og:image"
-        content={`https://beta.reactjs.org${image}`}
-      /> */}
+        content={`https://mimikyu.vercel.app/logo_og.jpeg`}
+      />
 
       {/* TWITTER */}
-      {/* <meta
+      <meta
         name="twitter:card"
         key="twitter:card"
         content="summary_large_image"
-      /> */}
+      />
       <meta name="twitter:site" key="twitter:site" content="@mimikyu" />
       <meta name="twitter:creator" key="twitter:creator" content="@mimikyu" />
       {title != null && (
