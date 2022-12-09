@@ -1,11 +1,13 @@
-export interface JapaneseLetter {
+export interface JapaneseLetterType {
   hira: string;
   kata: string;
   roumaji: string;
-  type: 'gojuuon' | '_' | 'dakuon' | 'handakuon' | 'sokuon' | 'youon';
+  type: 'gojuuon' | 'dakuon' | 'handakuon' | 'sokuon' | 'youon';
 }
 
-export const mono1: JapaneseLetter[] = [
+export const block1Type = ['gojuuon'];
+
+export const block1: JapaneseLetterType[] = [
   {hira: 'あ', roumaji: 'a', type: 'gojuuon', kata: 'ア'},
   {hira: 'い', roumaji: 'i', type: 'gojuuon', kata: 'イ'},
   {hira: 'う', roumaji: 'u', type: 'gojuuon', kata: 'ウ'},
@@ -33,7 +35,7 @@ export const mono1: JapaneseLetter[] = [
   {hira: 'の', roumaji: 'no', type: 'gojuuon', kata: 'ノ'},
   {hira: 'は', roumaji: 'ha', type: 'gojuuon', kata: 'ハ'},
   {hira: 'ひ', roumaji: 'hi', type: 'gojuuon', kata: 'ヒ'},
-  {hira: 'ふ', roumaji: 'hu', type: 'gojuuon', kata: 'フ'},
+  {hira: 'ふ', roumaji: 'fu', type: 'gojuuon', kata: 'フ'},
   {hira: 'へ', roumaji: 'he', type: 'gojuuon', kata: 'ヘ'},
   {hira: 'ほ', roumaji: 'ho', type: 'gojuuon', kata: 'ホ'},
   {hira: 'ま', roumaji: 'ma', type: 'gojuuon', kata: 'マ'},
@@ -42,9 +44,7 @@ export const mono1: JapaneseLetter[] = [
   {hira: 'め', roumaji: 'me', type: 'gojuuon', kata: 'メ'},
   {hira: 'も', roumaji: 'mo', type: 'gojuuon', kata: 'モ'},
   {hira: 'や', roumaji: 'ya', type: 'gojuuon', kata: 'ヤ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
   {hira: 'ゆ', roumaji: 'yu', type: 'gojuuon', kata: 'ユ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
   {hira: 'よ', roumaji: 'yo', type: 'gojuuon', kata: 'ヨ'},
   {hira: 'ら', roumaji: 'ra', type: 'gojuuon', kata: 'ラ'},
   {hira: 'り', roumaji: 'ri', type: 'gojuuon', kata: 'リ'},
@@ -52,72 +52,11 @@ export const mono1: JapaneseLetter[] = [
   {hira: 'れ', roumaji: 're', type: 'gojuuon', kata: 'レ'},
   {hira: 'ろ', roumaji: 'ro', type: 'gojuuon', kata: 'ロ'},
   {hira: 'わ', roumaji: 'wa', type: 'gojuuon', kata: 'ワ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
   {hira: 'を', roumaji: 'wo', type: 'gojuuon', kata: 'ヲ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
   {hira: 'ん', roumaji: 'n', type: 'gojuuon', kata: 'ン'},
-  // {hira: 'が', roumaji: 'ga', type: 'dakuon', kata: 'ガ'},
-  // {hira: 'ぎ', roumaji: 'gi', type: 'dakuon', kata: 'ギ'},
-  // {hira: 'ぐ', roumaji: 'gu', type: 'dakuon', kata: 'グ'},
-  // {hira: 'げ', roumaji: 'ge', type: 'dakuon', kata: 'ゲ'},
-  // {hira: 'ご', roumaji: 'go', type: 'dakuon', kata: 'ゴ'},
-  // {hira: 'ざ', roumaji: 'za', type: 'dakuon', kata: 'ザ'},
-  // {hira: 'じ', roumaji: 'ji', type: 'dakuon', kata: 'ジ'},
-  // {hira: 'ず', roumaji: 'zu', type: 'dakuon', kata: 'ズ'},
-  // {hira: 'ぜ', roumaji: 'ze', type: 'dakuon', kata: 'ゼ'},
-  // {hira: 'ぞ', roumaji: 'zo', type: 'dakuon', kata: 'ゾ'},
-  // {hira: 'だ', roumaji: 'da', type: 'dakuon', kata: 'ダ'},
-  // {hira: 'ぢ', roumaji: 'ji', type: 'dakuon', kata: 'ヂ'},
-  // {hira: 'づ', roumaji: 'zu', type: 'dakuon', kata: 'ヅ'},
-  // {hira: 'で', roumaji: 'de', type: 'dakuon', kata: 'デ'},
-  // {hira: 'ど', roumaji: 'do', type: 'dakuon', kata: 'ド'},
-  // {hira: 'ば', roumaji: 'ba', type: 'dakuon', kata: 'バ'},
-  // {hira: 'び', roumaji: 'bi', type: 'dakuon', kata: 'ビ'},
-  // {hira: 'ぶ', roumaji: 'bu', type: 'dakuon', kata: 'ブ'},
-  // {hira: 'べ', roumaji: 'be', type: 'dakuon', kata: 'ベ'},
-  // {hira: 'ぼ', roumaji: 'bo', type: 'dakuon', kata: 'ボ'},
-  // {hira: 'ぱ', roumaji: 'pa', type: 'handakuon', kata: 'パ'},
-  // {hira: 'ぴ', roumaji: 'pi', type: 'handakuon', kata: 'ピ'},
-  // {hira: 'ぷ', roumaji: 'pu', type: 'handakuon', kata: 'プ'},
-  // {hira: 'ぺ', roumaji: 'pe', type: 'handakuon', kata: 'ペ'},
-  // {hira: 'ぽ', roumaji: 'po', type: 'handakuon', kata: 'ポ'},
-  // {hira: 'っ', roumaji: '(pause)', type: 'sokuon', kata: 'ッ'},
-  // {hira: 'きゃ', roumaji: 'kya', type: 'youon', kata: 'キャ'},
-  // {hira: 'きゅ', roumaji: 'kyu', type: 'youon', kata: 'キュ'},
-  // {hira: 'きょ', roumaji: 'kyo', type: 'youon', kata: 'キョ'},
-  // {hira: 'しゃ', roumaji: 'sha', type: 'youon', kata: 'シャ'},
-  // {hira: 'しゅ', roumaji: 'shu', type: 'youon', kata: 'シュ'},
-  // {hira: 'しょ', roumaji: 'sho', type: 'youon', kata: 'ショ'},
-  // {hira: 'ちゃ', roumaji: 'cha', type: 'youon', kata: 'チャ'},
-  // {hira: 'ちゅ', roumaji: 'chu', type: 'youon', kata: 'チュ'},
-  // {hira: 'ちょ', roumaji: 'cho', type: 'youon', kata: 'チョ'},
-  // {hira: 'にゃ', roumaji: 'nya', type: 'youon', kata: 'ニャ'},
-  // {hira: 'にゅ', roumaji: 'nyu', type: 'youon', kata: 'ニュ'},
-  // {hira: 'にょ', roumaji: 'nyo', type: 'youon', kata: 'ニョ'},
-  // {hira: 'ひゃ', roumaji: 'hya', type: 'youon', kata: 'ヒャ'},
-  // {hira: 'ひゅ', roumaji: 'hyu', type: 'youon', kata: 'ヒュ'},
-  // {hira: 'ひょ', roumaji: 'hyo', type: 'youon', kata: 'ヒョ'},
-  // {hira: 'みゃ', roumaji: 'mya', type: 'youon', kata: 'ミャ'},
-  // {hira: 'みゅ', roumaji: 'myu', type: 'youon', kata: 'ミュ'},
-  // {hira: 'みょ', roumaji: 'myo', type: 'youon', kata: 'ミョ'},
-  // {hira: 'りゃ', roumaji: 'rya', type: 'youon', kata: 'リャ'},
-  // {hira: 'りゅ', roumaji: 'ryu', type: 'youon', kata: 'リュ'},
-  // {hira: 'りょ', roumaji: 'ryo', type: 'youon', kata: 'リョ'},
-  // {hira: 'ぎゃ', roumaji: 'gya', type: 'youon', kata: 'ギャ'},
-  // {hira: 'ぎゅ', roumaji: 'gyu', type: 'youon', kata: 'ギュ'},
-  // {hira: 'ぎょ', roumaji: 'gyo', type: 'youon', kata: 'ギョ'},
-  // {hira: 'じゃ', roumaji: 'ja', type: 'youon', kata: 'ジャ'},
-  // {hira: 'じゅ', roumaji: 'ju', type: 'youon', kata: 'ジュ'},
-  // {hira: 'じょ', roumaji: 'jo', type: 'youon', kata: 'ジョ'},
-  // {hira: 'びゃ', roumaji: 'bya', type: 'youon', kata: 'ビャ'},
-  // {hira: 'びゅ', roumaji: 'byu', type: 'youon', kata: 'ビュ'},
-  // {hira: 'びょ', roumaji: 'byo', type: 'youon', kata: 'ビョ'},
-  // {hira: 'ぴゃ', roumaji: 'pya', type: 'youon', kata: 'ピャ'},
-  // {hira: 'ぴゅ', roumaji: 'pyu', type: 'youon', kata: 'ピュ'},
-  // {hira: 'ぴょ', roumaji: 'pyo', type: 'youon', kata: 'ピョ'},
 ];
 
-export const mono2: JapaneseLetter[] = [
+export const block2: JapaneseLetterType[] = [
   {hira: 'が', roumaji: 'ga', type: 'dakuon', kata: 'ガ'},
   {hira: 'ぎ', roumaji: 'gi', type: 'dakuon', kata: 'ギ'},
   {hira: 'ぐ', roumaji: 'gu', type: 'dakuon', kata: 'グ'},
@@ -143,62 +82,59 @@ export const mono2: JapaneseLetter[] = [
   {hira: 'ぷ', roumaji: 'pu', type: 'handakuon', kata: 'プ'},
   {hira: 'ぺ', roumaji: 'pe', type: 'handakuon', kata: 'ペ'},
   {hira: 'ぽ', roumaji: 'po', type: 'handakuon', kata: 'ポ'},
-];
-
-export const mono3: JapaneseLetter[] = [
   {hira: 'きゃ', roumaji: 'kya', type: 'youon', kata: 'キャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'きゅ', roumaji: 'kyu', type: 'youon', kata: 'キュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'きょ', roumaji: 'kyo', type: 'youon', kata: 'キョ'},
   {hira: 'しゃ', roumaji: 'sha', type: 'youon', kata: 'シャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'しゅ', roumaji: 'shu', type: 'youon', kata: 'シュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'しょ', roumaji: 'sho', type: 'youon', kata: 'ショ'},
   {hira: 'ちゃ', roumaji: 'cha', type: 'youon', kata: 'チャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ちゅ', roumaji: 'chu', type: 'youon', kata: 'チュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ちょ', roumaji: 'cho', type: 'youon', kata: 'チョ'},
   {hira: 'にゃ', roumaji: 'nya', type: 'youon', kata: 'ニャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'にゅ', roumaji: 'nyu', type: 'youon', kata: 'ニュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'にょ', roumaji: 'nyo', type: 'youon', kata: 'ニョ'},
   {hira: 'ひゃ', roumaji: 'hya', type: 'youon', kata: 'ヒャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ひゅ', roumaji: 'hyu', type: 'youon', kata: 'ヒュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ひょ', roumaji: 'hyo', type: 'youon', kata: 'ヒョ'},
   {hira: 'みゃ', roumaji: 'mya', type: 'youon', kata: 'ミャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'みゅ', roumaji: 'myu', type: 'youon', kata: 'ミュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'みょ', roumaji: 'myo', type: 'youon', kata: 'ミョ'},
   {hira: 'りゃ', roumaji: 'rya', type: 'youon', kata: 'リャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'りゅ', roumaji: 'ryu', type: 'youon', kata: 'リュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'りょ', roumaji: 'ryo', type: 'youon', kata: 'リョ'},
   {hira: 'ぎゃ', roumaji: 'gya', type: 'youon', kata: 'ギャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ぎゅ', roumaji: 'gyu', type: 'youon', kata: 'ギュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ぎょ', roumaji: 'gyo', type: 'youon', kata: 'ギョ'},
   {hira: 'じゃ', roumaji: 'ja', type: 'youon', kata: 'ジャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'じゅ', roumaji: 'ju', type: 'youon', kata: 'ジュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'じょ', roumaji: 'jo', type: 'youon', kata: 'ジョ'},
   {hira: 'びゃ', roumaji: 'bya', type: 'youon', kata: 'ビャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'びゅ', roumaji: 'byu', type: 'youon', kata: 'ビュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'びょ', roumaji: 'byo', type: 'youon', kata: 'ビョ'},
   {hira: 'ぴゃ', roumaji: 'pya', type: 'youon', kata: 'ピャ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ぴゅ', roumaji: 'pyu', type: 'youon', kata: 'ピュ'},
-  {hira: '_', roumaji: '_', type: '_', kata: '_'},
+
   {hira: 'ぴょ', roumaji: 'pyo', type: 'youon', kata: 'ピョ'},
 ];

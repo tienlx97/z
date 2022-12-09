@@ -29,7 +29,7 @@ import {IconNavArrow} from '../Icon/IconNavArrow';
 import ButtonLink from 'components/ButtonLink';
 import {TocContext} from './TocContext';
 import type {Toc, TocItem} from './TocContext';
-import JapaneseLetters from './JapaneseLetters';
+import JapaneseLetters from './JapanTable/JapaneseLetters';
 
 function CodeStep({children, step}: {children: any; step: number}) {
   return (
@@ -164,7 +164,7 @@ function YouWillLearn({
   children: any;
   isChapter?: boolean;
 }) {
-  let title = isChapter ? 'Trong chương này' : 'You will learn';
+  let title = isChapter ? 'In this chapter' : 'You will learn';
   return <SimpleCallout title={title}>{children}</SimpleCallout>;
 }
 
