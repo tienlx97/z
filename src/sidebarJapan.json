@@ -1,0 +1,23 @@
+{
+  "title": "Japanese",
+  "heading": true,
+  "path": "/japan",
+  "routes": [
+    {
+      "heading": true,
+      "path": "",
+      "routes": [
+        {
+          "title": "Beginner",
+          "path": "/japan",
+          "routes": [
+            {
+              "title": "Japanese Letters",
+              "path": "/japan/japanese-letters"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
