@@ -49,16 +49,15 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
       <>
         {block.map((letter, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <li
                 onClick={() => handleLetterClick(letter.type, index)}
                 className={cn(
                   'w-[17.5%] aspect-[7/8] mb-[2.5%] select-none cursor-pointer flex flex-col justify-evenly items-center border-solid border-[2px] border-purple-50 bg-card  dark:border-purple-30 dark:bg-card-dark hover:bg-gray-10 dark:hover:bg-gray-70',
                   {
-                    'w-[26%]': letter.type === 'youon',
+                    'w-[26%] aspect-[100/73]': letter.type === 'youon',
                   }
-                )}
-                key={index}>
+                )}>
                 <p
                   style={{fontSize: (width / 100) * 9}}
                   className="font-ja text-black font-medium dark:text-white ">
@@ -73,7 +72,7 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
               {appendSpace.includes(letter.roumaji) && (
                 <li className="w-[17.5%] mb-[2.5%]" />
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </>

@@ -1,0 +1,12 @@
+{
+  "mdx": {
+    "youwilllearn": {
+      "in_this_chapter": "In this chapter",
+      "you_will_learn": "You will learn"
+    },
+    "expandableexample": {
+      "show_details": "Show Details",
+      "hide_details": "Hide Details"
+    }
+  }
+}

@@ -12,10 +12,15 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     plugins: true,
-    scrollRestoration: true,
-    legacyBrowsers: false,
-    browsersListForSwc: true,
   },
+  i18n: {
+    locales: ['en', 'vi'],
+    defaultLocale: 'vi',
+    localeDetection: false,
+  },
+  scrollRestoration: true,
+  legacyBrowsers: false,
+  browsersListForSwc: true,
   env: {
     SANDPACK_BARE_COMPONENTS: process.env.SANDPACK_BARE_COMPONENTS,
   },

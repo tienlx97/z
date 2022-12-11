@@ -7,7 +7,9 @@ import {AppProps} from 'next/app';
 import {useRouter} from 'next/router';
 import {ga} from '../utils/analytics';
 
-import '@docsearch/css';
+import {I18nProvider} from 'next-localization';
+
+// import '@docsearch/css';
 // import '../styles/algolia.css';
 import '../styles/index.css';
 import '../styles/sandpack.css';
@@ -51,5 +53,11 @@ export default function MyApp({Component, pageProps}: AppProps) {
     };
   }, [router.events]);
 
-  return <Component {...pageProps} />;
+  return (
+    <I18nProvider
+      lngDict={(pageProps as any).lngDict}
+      locale={router?.locale as string}>
+      <Component {...pageProps} />
+    </I18nProvider>
+  );
 }

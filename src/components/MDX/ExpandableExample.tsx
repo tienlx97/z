@@ -9,6 +9,7 @@ import {IconDeepDive} from '../Icon/IconDeepDive';
 import {IconCodeBlock} from '../Icon/IconCodeBlock';
 import {Button} from '../Button';
 import {H4} from './Heading';
+import {useI18n} from 'next-localization';
 
 interface ExpandableExampleProps {
   children: React.ReactNode;

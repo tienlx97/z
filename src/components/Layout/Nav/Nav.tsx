@@ -98,8 +98,12 @@ export default function Nav() {
   const scrollParentRef = useRef<HTMLDivElement>(null);
   const feedbackAutohideRef = useRef<any>(null);
   const section = useActiveSection();
-  const {asPath} = useRouter();
+  const router = useRouter();
+  const {pathname, asPath, query, locale} = router;
   const feedbackPopupRef = useRef<null | HTMLDivElement>(null);
+
+  const isEn = locale === 'en';
+  const language = isEn ? 'vi' : 'en';
 
   // In desktop mode, use the route tree for current route.
   let routeTree: RouteItem = useContext(SidebarContext);
@@ -213,11 +217,16 @@ export default function Nav() {
               Mimikyu Note
             </a>
           </NextLink>
-          <div className="lg:w-full leading-loose hidden sm:flex flex-initial items-center h-auto pr-5 lg:pr-5 pt-0.5">
+          <div
+            onClick={() => {
+              router.push({pathname, query}, asPath, {locale: language});
+            }}
+            className="lg:w-full leading-loose hidden sm:flex flex-initial items-center h-auto pr-5 lg:pr-5 pt-0.5 cursor-pointer">
             <div className="px-1 mb-px bg-highlight dark:bg-highlight-dark rounded text-link dark:text-link-dark uppercase font-bold tracking-wide text-xs whitespace-nowrap">
-              Beta
+              {`${language}`}
             </div>
           </div>
+
           <div className="block dark:hidden">
             <button
               type="button"
@@ -253,18 +262,6 @@ export default function Nav() {
         </div>
         <div className="flex my-4 h-10 mx-0 w-full lg:hidden justify-end lg:max-w-sm">
           {/* <Search /> */}
-          <button
-            aria-label="Give feedback"
-            type="button"
-            className={cn(
-              'inline-flex lg:hidden items-center rounded-full px-1.5 ml-4 lg:ml-6 relative top-px',
-              {
-                'bg-card dark:bg-card-dark': showFeedback,
-              }
-            )}
-            onClick={handleFeedback}>
-            {feedbackIcon}
-          </button>
           <div className="block dark:hidden">
             <button
               type="button"

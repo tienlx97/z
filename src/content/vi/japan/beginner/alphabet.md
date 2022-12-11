@@ -9,7 +9,7 @@ Hiragana và Katakana là chữ biểu âm, mỗi chữ thể hiện 1 âm, còn
 
 </Intro>
 
-<Recipes showNavigate={false} showChallangeDescription={false} titleText="Japanese Letters">
+<Recipes showNavigate={false} showChallangeDescription={false} titleText="Alphabet">
 
 #### Hiragana {/*hiragana*/}
 

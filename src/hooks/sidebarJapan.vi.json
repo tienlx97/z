@@ -1,5 +1,5 @@
 {
-  "title": "Japanese",
+  "title": "Tiếng nhật",
   "heading": true,
   "path": "/japan",
   "routes": [
@@ -8,7 +8,7 @@
       "path": "",
       "routes": [
         {
-          "title": "Beginner",
+          "title": "Vỡ lòng",
           "path": "/japan/beginner",
           "routes": [
             {

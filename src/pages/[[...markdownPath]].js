@@ -60,12 +60,14 @@ const DISK_CACHE_BREAKER = 7;
 
 // Put MDX output into JSON for client.
 export async function getStaticProps(context) {
+  const languagePackage = await import(`../locales/${context.locale}.json`);
   const fs = require('fs');
   const {
     prepareMDX,
     PREPARE_MDX_CACHE_BREAKER,
   } = require('../utils/prepareMDX');
-  const rootDir = process.cwd() + '/src/content/';
+
+  const rootDir = `${process.cwd()}/src/content/${context.locale}/`;
   const mdxComponentNames = Object.keys(MDXComponents);
 
   // Read MDX from the file.
@@ -175,11 +177,14 @@ export async function getStaticProps(context) {
   const fm = require('gray-matter');
   const meta = fm(mdx).data;
 
+  console.log(languagePackage.default);
+
   const output = {
     props: {
       content: JSON.stringify(children, stringifyNodeOnServer),
       toc: JSON.stringify(toc, stringifyNodeOnServer),
       meta,
+      lngDict: languagePackage.default,
     },
   };
 
@@ -202,6 +207,7 @@ export async function getStaticProps(context) {
 
   // Cache it on the disk.
   await store.set(hash, output);
+
   return output;
 }
 
@@ -215,14 +221,14 @@ export async function getStaticPaths() {
   const rootDir = process.cwd() + '/src/content';
 
   // Find all MD files recursively.
-  async function getFiles(dir) {
+  async function getFiles(dir, slashLocale) {
     const subdirs = await readdir(dir);
     const files = await Promise.all(
       subdirs.map(async (subdir) => {
         const res = resolve(dir, subdir);
         return (await stat(res)).isDirectory()
-          ? getFiles(res)
-          : res.slice(rootDir.length + 1);
+          ? getFiles(res, slashLocale)
+          : res.slice((rootDir + slashLocale).length + 1);
       })
     );
     return files.flat().filter((file) => file.endsWith('.md'));
@@ -238,18 +244,32 @@ export async function getStaticPaths() {
     return segments;
   }
 
-  const files = await getFiles(rootDir);
-  const paths = files.map((file) => ({
+  // ?may be I will use loop later
+  const enFiles = await getFiles(rootDir + '/en', '/en');
+  const viFiles = await getFiles(rootDir + '/vi', '/vi');
+
+  const enPath = enFiles.map((file) => ({
     params: {
       markdownPath: getSegments(file),
       // ^^^ CAREFUL HERE.
       // If you rename markdownPath, update patches/next-remote-watch.patch too.
       // Otherwise you'll break Fast Refresh for all MD files.
     },
+    locale: 'en',
+  }));
+
+  const viPath = viFiles.map((file) => ({
+    params: {
+      markdownPath: getSegments(file),
+      // ^^^ CAREFUL HERE.
+      // If you rename markdownPath, update patches/next-remote-watch.patch too.
+      // Otherwise you'll break Fast Refresh for all MD files.
+    },
+    locale: 'vi',
   }));
 
   return {
-    paths: paths,
+    paths: enPath.concat(viPath),
     fallback: false,
   };
 }

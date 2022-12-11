@@ -1646,3 +1646,197 @@ ol.mdx-illustration-block {
     transform: translateX(-50%) translateY(-100%) rotate(90deg);
   }
 }
+
+/* grid */
+div.grid {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+div.grid0 {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #ccc;
+}
+
+div.grid1 {
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+div.grid2 {
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+div.grid3 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid #ccc;
+}
+
+div.grid4 {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+
+div.grid5 {
+  left: 9.175%;
+  top: 9.175%;
+  width: 81.65%;
+  height: 81.65%;
+  border: 1px solid #ccc;
+}
+
+.dark div.grid {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.dark div.grid0 {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid gray;
+}
+
+.dark div.grid1 {
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.dark div.grid2 {
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.dark div.grid3 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid gray;
+}
+
+.dark div.grid4 {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid gray;
+}
+
+.dark div.grid5 {
+  left: 9.175%;
+  top: 9.175%;
+  width: 81.65%;
+  height: 81.65%;
+  border: 1px solid gray;
+}
+
+
+/* animation */
+
+@keyframes zk {
+  from {
+    stroke-dashoffset: 3339;
+    /* stroke: #3d725d; */
+    stroke: #000;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+    /* stroke: #3d725d; */
+    stroke: #000
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    stroke: #000;
+  }
+}
+
+@keyframes zk-dark {
+  from {
+    stroke-dashoffset: 3339;
+    /* stroke: #3d725d; */
+    stroke: #fff
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+    /* stroke: #3d725d; */
+    stroke: #fff
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    stroke: #fff;
+  }
+}
+
+svg.acjk path[clip-path] {
+  --t: 0.8s;
+  animation: zk var(--t) linear forwards var(--d);
+  stroke-dasharray: 3337;
+  stroke-dashoffset: 3339;
+  stroke-width: 128;
+  stroke-linecap: round;
+  fill: none;
+  stroke: #000;
+}
+
+.dark svg.acjk path[clip-path] {
+  --t: 0.8s;
+  animation: zk-dark var(--t) linear forwards var(--d);
+  stroke-dasharray: 3337;
+  stroke-dashoffset: 3339;
+  stroke-width: 128;
+  stroke-linecap: round;
+  fill: none;
+  stroke: #000;
+}
+
+svg.acjk path[id] {
+  fill: #ccc;
+}
+
+.dark svg.acjk path[id] {
+  fill: gray;
+}
+
+
+/* for xrays  */
+.xrays svg.acjk path[clip-path] {
+  stroke-width: 6.4;
+}
+
+.xrays svg.acjk path[id] {
+  fill: #6666;
+}

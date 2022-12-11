@@ -1,7 +1,7 @@
 {
   "title": "Japanese",
   "heading": true,
-  "path": "/japan",
+  "path": "/en/japan",
   "routes": [
     {
       "heading": true,
@@ -9,11 +9,11 @@
       "routes": [
         {
           "title": "Beginner",
-          "path": "/japan/beginner",
+          "path": "/en/japan/beginner",
           "routes": [
             {
               "title": "Alphabet ",
-              "path": "/japan/beginner/alphabet"
+              "path": "/en/japan/beginner/alphabet"
             }
           ]
         }
