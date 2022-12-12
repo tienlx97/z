@@ -79,13 +79,32 @@ export default function Alphabet({
   };
 
   const loadComponent = async () => {
-    await import(`./${type}/${romaji}${isDuplicate ? 2 : ''}`)
-      .then((r) => {
-        setComponent(r.default);
-      })
-      .catch(() => {
-        setComponent(_404);
-      });
+    if (romaji.length == 3) {
+      // let change = 'a';
+      // if (romaji[1] === 'y' || romaji[1] === 'h') {
+      //   change = 'i';
+      // }
+      // const large = await import(
+      //   `./${type}/${romaji[0]}${
+      //     romaji[1] === '' ? 'i' : 'a'
+      //   }`
+      // );
+      // const mini = await import(`./${type}/${romaji.substring(1, 3)}2`);
+      // setComponent(
+      //   <>
+      //     {large.default}
+      //     {mini.default}
+      //   </>
+      // );
+    } else {
+      await import(`./${type}/${romaji}${isDuplicate ? 2 : ''}`)
+        .then((r) => {
+          setComponent(r.default);
+        })
+        .catch(() => {
+          setComponent(_404);
+        });
+    }
   };
 
   React.useEffect(() => {

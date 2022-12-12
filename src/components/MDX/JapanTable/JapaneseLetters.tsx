@@ -3,7 +3,6 @@
 import * as React from 'react';
 
 import cn from 'classnames';
-import {useElementSize} from 'hooks/useElementSize';
 import {IconChevron} from 'components/Icon/IconChevron';
 import {
   block1,
@@ -23,11 +22,6 @@ interface JapaneseLettersProps {
 }
 
 function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
-  const ref = React.useRef<HTMLDivElement>(null);
-
-  // scale font size of each col based parent width
-  const {width} = useElementSize(ref);
-
   const [currentSelectIndex, setCurrentSelectIndex] = React.useState<number>(0);
   const [isPage1Click, setPage1Click] = React.useState(true);
   const [isOpenModal, setOpenModal] = React.useState(false);
@@ -109,7 +103,6 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
       </ul>
       <div className="flex justify-between">
         <div
-          ref={ref}
           className={`w-full lg:block lg:w-[48%] ${
             !isPage1Click ? 'hidden' : 'block'
           }`}>

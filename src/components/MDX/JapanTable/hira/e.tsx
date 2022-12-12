@@ -1,8 +1,10 @@
-export default function Svg() {
+import * as React from 'react';
+export default function svgComp() {
   return (
     <svg
       id="z12360"
       className="acjk"
+      version="1.1"
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -23,22 +25,14 @@ export default function Svg() {
         </clipPath>
       </defs>
       <path
-        style={
-          {
-            '--d': '1s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '1s'} as any}
+        pathLength="3333"
         clipPath="url(#z12360c1)"
         d="M 400,113 654,205"
       />
       <path
-        style={
-          {
-            '--d': '2s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '2s'} as any}
+        pathLength="3333"
         clipPath="url(#z12360c2)"
         d="M 197,436 277,460 618,334 654,363 608,380 203,762 204,804 333,709 407,692 482,722 596,836 793,835 855,853"
       />

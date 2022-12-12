@@ -1,8 +1,10 @@
-export default function Svg() {
+import * as React from 'react';
+export default function svgComp() {
   return (
     <svg
       id="z12362"
       className="acjk"
+      version="1.1"
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -37,42 +39,26 @@ export default function Svg() {
         </clipPath>
       </defs>
       <path
-        style={
-          {
-            '--d': '1s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '1s'} as any}
+        pathLength="3333"
         clipPath="url(#z12362c1)"
         d="M 111.6,323.2 174,363.7 327,362.1 535.2,309.4"
       />
       <path
-        style={
-          {
-            '--d': '2s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '2s'} as any}
+        pathLength="3333"
         clipPath="url(#z12362c2a)"
         d="M 287,100 338,140 311,847 282,898 234,906 218,900 165,836 158,764 243,671 525,536 748,543 835,691 763,820 588,917"
       />
       <path
-        style={
-          {
-            '--d': '2s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '2s'} as any}
+        pathLength="3333"
         clipPath="url(#z12362c2b)"
         d="M 287,1712 338,1672 311,965 282,914 234,906 218,900 165,836 158,764 243,671 525,536 748,543 835,691 763,820 588,917"
       />
       <path
-        style={
-          {
-            '--d': '3s',
-          } as any
-        }
-        pathLength={3333}
+        style={{'--d': '3s'} as any}
+        pathLength="3333"
         clipPath="url(#z12362c3)"
         d="M 710,189 794,229 868,350"
       />

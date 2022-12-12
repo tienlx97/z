@@ -1763,6 +1763,7 @@ div.grid5 {
 
 /* animation */
 
+
 @keyframes zk {
   from {
     stroke-dashoffset: 3339;
@@ -1830,7 +1831,6 @@ svg.acjk path[id] {
 .dark svg.acjk path[id] {
   fill: gray;
 }
-
 
 /* for xrays  */
 .xrays svg.acjk path[clip-path] {
