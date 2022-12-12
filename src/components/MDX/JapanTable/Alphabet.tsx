@@ -68,7 +68,7 @@ export default function Alphabet({
   isDuplicate?: boolean;
 }) {
   const [Component, setComponent] = React.useState<any>(undefined);
-
+  const [Little, setLittle] = React.useState<any>(undefined);
   React.useEffect(() => {
     setNumber(showStrokeNumbering);
   });
@@ -79,23 +79,22 @@ export default function Alphabet({
   };
 
   const loadComponent = async () => {
-    if (romaji.length == 3) {
-      // let change = 'a';
-      // if (romaji[1] === 'y' || romaji[1] === 'h') {
-      //   change = 'i';
-      // }
-      // const large = await import(
-      //   `./${type}/${romaji[0]}${
-      //     romaji[1] === '' ? 'i' : 'a'
-      //   }`
-      // );
-      // const mini = await import(`./${type}/${romaji.substring(1, 3)}2`);
-      // setComponent(
-      //   <>
-      //     {large.default}
-      //     {mini.default}
-      //   </>
-      // );
+    if (['ja', 'ju', 'jo'].includes(romaji)) {
+      await import(`./${type}/ji`).then(async (ji) => {
+        await import(`./${type}/y${romaji[1]}2`).then((yLittle) => {
+          setComponent(ji.default);
+          setLittle(yLittle.default);
+        });
+      });
+    } else if (romaji.length === 3) {
+      await import(
+        `./${type}/${romaji[0]}${romaji[1] === 'h' ? 'hi' : 'i'}`
+      ).then(async (ji) => {
+        await import(`./${type}/y${romaji[2]}2`).then((yLittle) => {
+          setComponent(ji.default);
+          setLittle(yLittle.default);
+        });
+      });
     } else {
       await import(`./${type}/${romaji}${isDuplicate ? 2 : ''}`)
         .then((r) => {
@@ -113,7 +112,14 @@ export default function Alphabet({
 
   return (
     <React.Fragment>
-      {Component}
+      {Little ? (
+        <div className="flex w-full h-full">
+          {Component}
+          {Little}
+        </div>
+      ) : (
+        Component
+      )}
       <button
         onClick={() => {
           setComponent(null);
