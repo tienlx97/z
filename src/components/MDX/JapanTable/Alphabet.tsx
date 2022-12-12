@@ -93,7 +93,7 @@ export default function Alphabet({
   }, [romaji, type]);
 
   return (
-    <>
+    <React.Fragment>
       {Component}
       <button
         onClick={() => {
@@ -109,6 +109,6 @@ export default function Alphabet({
         className="absolute right-[16px] top-[16px] cursor-pointer p-2 bg-[#ff886c] hover:bg-[#ff5f39] rounded-3xl">
         <Speaker />
       </div>
-    </>
+    </React.Fragment>
   );
 }

@@ -19,19 +19,18 @@ export default function AlphabetUtility({
 
   return (
     <div className="relative w-full h-full z-1 flex box-content">
+      <svg
+        className="opacity-[100] w-[inherit] h-[inherit]"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="500"
+        height="500"
+      />
       <div
-        className={`w-[inherit] h-[inherit] p-[32px] mb-2 lg:mb-[auto] ${
+        className={`absolute w-[inherit] h-[inherit] p-[32px] mb-2 lg:mb-[auto] ${
           xRays ? 'xrays' : undefined
         }`}>
-        {/* SVG here */}
-        {open ? (
-          children
-        ) : (
-          <img
-            className="block max-w-full w-full opacity-[100] m-0 p-0 border-0"
-            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27500%27%20height=%27500%27/%3e"
-          />
-        )}
+        {open ? children : <></>}
 
         {grid && (
           <>
@@ -45,7 +44,7 @@ export default function AlphabetUtility({
       </div>
 
       {/* Bottom utility */}
-      <div className="mb-1 bottom-0 left-0 w-full absolute flex items-center justify-around">
+      <div className="absolute mb-1 bottom-0 left-0 w-full flex items-center justify-around">
         {/* Stroke */}
         <label
           className={cn(
@@ -53,6 +52,7 @@ export default function AlphabetUtility({
           )}
           htmlFor="numberr">
           <input
+            className="cursor-pointer"
             id="numberr"
             type="checkbox"
             onClick={() => {
@@ -71,6 +71,7 @@ export default function AlphabetUtility({
           )}
           htmlFor="gridd">
           <input
+            className="cursor-pointer"
             id="gridd"
             onClick={() => {
               setGrid(!grid);
@@ -87,6 +88,7 @@ export default function AlphabetUtility({
           )}
           htmlFor="xrays">
           <input
+            className="cursor-pointer"
             id="xrays"
             onClick={() => {
               setXRays(!xRays);

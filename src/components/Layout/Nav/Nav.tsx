@@ -221,7 +221,7 @@ export default function Nav() {
             onClick={() => {
               router.push({pathname, query}, asPath, {locale: language});
             }}
-            className="lg:w-full leading-loose hidden sm:flex flex-initial items-center h-auto pr-5 lg:pr-5 pt-0.5 cursor-pointer">
+            className="pl-2 lg:w-full leading-loose sm:flex flex-initial items-center h-auto pr-5 lg:pr-5 pt-0.5 cursor-pointer">
             <div className="px-1 mb-px bg-highlight dark:bg-highlight-dark rounded text-link dark:text-link-dark uppercase font-bold tracking-wide text-xs whitespace-nowrap">
               {`${language}`}
             </div>
