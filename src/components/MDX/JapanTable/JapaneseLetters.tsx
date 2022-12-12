@@ -1,12 +1,20 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable @next/next/no-img-element */
 import * as React from 'react';
-import {createPortal} from 'react-dom';
 
 import cn from 'classnames';
 import {useElementSize} from 'hooks/useElementSize';
 import {IconChevron} from 'components/Icon/IconChevron';
-import {block1, block2, JapaneseLetterType} from 'data/japan/letters/index';
-import {LetterDetail} from './LetterDetail';
+import {
+  block1,
+  block2,
+  combine,
+  JapaneseLetterType,
+} from 'data/japan/letters/index';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import AlphabetUtility from './AlphabetUtility';
+import Alphabet from './Alphabet';
 
 const appendSpace = ['ya', 'yu', 'wa', 'wo'];
 
@@ -20,29 +28,23 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
   // scale font size of each col based parent width
   const {width} = useElementSize(ref);
 
+  const [currentSelectIndex, setCurrentSelectIndex] = React.useState<number>(0);
   const [isPage1Click, setPage1Click] = React.useState(true);
-  const [isOpen, setOpen] = React.useState(false);
-  const [modalValue, setModalValue] = React.useState<{
-    type: 'gojuuon' | 'dakuon' | 'handakuon' | 'sokuon' | 'youon';
-    index: number;
-  } | null>(null);
+  const [isOpenModal, setOpenModal] = React.useState(false);
+  const [showStrokeNumbering, setShowStrokeNumbering] = React.useState(false);
 
-  const handlePage1Click = (val: boolean) => {
-    setPage1Click(val);
+  const handlePage1Click = (val: boolean) => setPage1Click(val);
+
+  const onStrokeNumberingChange = (value: boolean) =>
+    setShowStrokeNumbering(value);
+
+  const handleLetterClick = (type: 1 | 2 | 'youon', index: number) => {
+    const currentIndex = type !== 1 ? block1.length + index : index;
+    setCurrentSelectIndex(currentIndex);
+    setOpenModal(true);
   };
 
-  const handleLetterClick = (
-    type: 'gojuuon' | 'dakuon' | 'handakuon' | 'sokuon' | 'youon',
-    index: number
-  ) => {
-    setOpen(true);
-    setModalValue({
-      index,
-      type,
-    });
-  };
-
-  const handleCloseModal = () => setOpen(false);
+  const handleCloseModal = () => setOpenModal(false);
 
   const LetterBlock = (block: JapaneseLetterType[]) => {
     return (
@@ -124,20 +126,29 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
           </ul>
         </div>
       </div>
-      {isOpen &&
-        createPortal(
-          <>
-            <div
-              onClick={handleCloseModal}
-              className="fixed z-[100] top-0 left-0 w-[100vw] h-[100vh] bg-[rgba(101,108,133,.8)] dark:bg-[rgba(52,58,70,.8)]"></div>
-            <LetterDetail
-              chart={type}
-              index={modalValue!.index}
-              type={modalValue!.type}
+
+      <div
+        onClick={handleCloseModal}
+        style={{display: isOpenModal ? 'block' : 'none'}}
+        className="fixed z-[100] top-0 left-0 w-[100vw] h-[100vh] bg-[rgba(101,108,133,.8)] dark:bg-[rgba(52,58,70,.8)]"
+      />
+
+      <div
+        style={{display: isOpenModal ? 'block' : 'none'}}
+        className="bg-[#fff] dark:bg-[#23272f] max-w-[500px] max-h-[500px] h-full  fixed z-[101] top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-50%] rounded-lg">
+        <div className="my-0 mx-auto relative overflow-hidden list-none p-0 z-1 w-[full] h-[full]">
+          <AlphabetUtility
+            onStrokeNumberingChange={onStrokeNumberingChange}
+            open={isOpenModal}>
+            <Alphabet
+              showStrokeNumbering={showStrokeNumbering}
+              isDuplicate={combine[currentSelectIndex].note}
+              romaji={combine[currentSelectIndex].roumaji}
+              type={type}
             />
-          </>,
-          document.body
-        )}
+          </AlphabetUtility>
+        </div>
+      </div>
     </>
   );
 }

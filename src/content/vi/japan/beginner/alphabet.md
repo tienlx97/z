@@ -45,7 +45,7 @@ Hiragana và Katakana là chữ biểu âm, mỗi chữ thể hiện 1 âm, còn
 
 Theo [wikipedia](https://vi.wikipedia.org/wiki/Kanji), Kanji (漢字 — かんじ) là chữ Hán được sử dụng trong hệ thống chữ viết tiếng Nhật hiện đại cùng với hiragana và katakana. Kanji có nguồn gốc từ tiếng Trung, ngày xưa khi Nhật Bản chưa có hệ thống chữ viết riêng, người Nhật đã bắt chước những ký tự tượng hình từ tiếng Trung sau đó đem về và cải tiến. Nói cải tiến chứ thực ra chỉ là lược bỏ bớt những từ khó nhai, sau đó gộp nó với hira và kata. Tèn tén tèn , tiếng Nhật được ra đời.
 
-<figure class="image">
+<figure>
 <img src="https://raw.githubusercontent.com/tienlx97/mimikyu-content/main/content/japan/japanese-letters/kanji_meme.webp" style={{margin: '0 auto'}} />
   <figcaption align="center">Photo by [Shinigami](https://facebook.com/tienlx97) on Unsplash</figcaption>
 </figure>

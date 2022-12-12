@@ -1840,3 +1840,9 @@ svg.acjk path[id] {
 .xrays svg.acjk path[id] {
   fill: #6666;
 }
+
+/*  */
+.swiper {
+  width: 100%;
+  height: auto;
+}
