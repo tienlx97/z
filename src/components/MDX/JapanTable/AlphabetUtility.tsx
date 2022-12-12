@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import cn from 'classnames';
 import setStrokeNumber from './Number';
@@ -16,10 +18,20 @@ export default function AlphabetUtility({
   const [grid, setGrid] = React.useState(false);
 
   return (
-    <div className="relative w-full h-full z-1 flex p-[32px] ">
-      <div className={`w-[inherit] h-[inherit] ${xRays ? 'xrays' : undefined}`}>
+    <div className="relative w-full h-full z-1 flex box-content">
+      <div
+        className={`w-[inherit] h-[inherit] p-[32px] mb-2 lg:mb-[auto] ${
+          xRays ? 'xrays' : undefined
+        }`}>
         {/* SVG here */}
-        {open ? children : <></>}
+        {open ? (
+          children
+        ) : (
+          <img
+            className="block max-w-full w-full opacity-[100] m-0 p-0 border-0"
+            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27500%27%20height=%27500%27/%3e"
+          />
+        )}
 
         {grid && (
           <>
@@ -31,17 +43,13 @@ export default function AlphabetUtility({
           </>
         )}
       </div>
-      {/* Draw again */}
 
       {/* Bottom utility */}
-      <div className="mb-2 bottom-0 left-0 w-full absolute flex items-center justify-around">
+      <div className="mb-1 bottom-0 left-0 w-full absolute flex items-center justify-around">
         {/* Stroke */}
         <label
           className={cn(
-            'flex items-center cursor-pointer select-none text-sm lg:text-base',
-            {
-              'pointer-events-none opacity-[0.4]': children === null,
-            }
+            'flex items-center cursor-pointer select-none text-sm lg:text-base'
           )}
           htmlFor="numberr">
           <input
@@ -59,10 +67,7 @@ export default function AlphabetUtility({
         {/* Grid */}
         <label
           className={cn(
-            'flex items-center cursor-pointer select-none text-sm lg:text-base',
-            {
-              'pointer-events-none opacity-[0.4]': children === null,
-            }
+            'flex items-center cursor-pointer select-none text-sm lg:text-base'
           )}
           htmlFor="gridd">
           <input
@@ -78,10 +83,7 @@ export default function AlphabetUtility({
         {/* X-rays */}
         <label
           className={cn(
-            'flex items-center cursor-pointer select-none text-sm lg:text-base',
-            {
-              'pointer-events-none opacity-[0.4]': children === null,
-            }
+            'flex items-center cursor-pointer select-none text-sm lg:text-base'
           )}
           htmlFor="xrays">
           <input

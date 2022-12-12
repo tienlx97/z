@@ -100,11 +100,8 @@ export default function Alphabet({
           setComponent(null);
           loadComponent().then(() => setStrokeNumber(showStrokeNumbering));
         }}
-        className="absolute top-[16px] left-[16px] px-2 rounded-md bg-highlight dark:bg-highlight-dark cursor-pointer flex items-center select-none text-base">
+        className="absolute top-[16px] left-[16px] p-2 rounded-md bg-highlight dark:bg-highlight-dark cursor-pointer flex items-center select-none text-base">
         <Draw />
-        <span className="ml-2 text-link dark:text-link-dark text-sm lg:text-base">
-          Again
-        </span>
       </button>
       {/* Speaker */}
       <div

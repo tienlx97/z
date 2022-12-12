@@ -129,14 +129,24 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
 
       <div
         onClick={handleCloseModal}
-        style={{display: isOpenModal ? 'block' : 'none'}}
-        className="fixed z-[100] top-0 left-0 w-[100vw] h-[100vh] bg-[rgba(101,108,133,.8)] dark:bg-[rgba(52,58,70,.8)]"
+        className={cn(
+          'blur-transition w-full h-full fixed cursor-pointer opacity-0 top-0 left-0 pointer-events-none bg-[rgba(101,108,133,.8)] dark:bg-[rgba(52,58,70,.8) z-[100] ',
+          {
+            'pointer-events-auto opacity-100': isOpenModal,
+          }
+        )}
       />
-
       <div
-        style={{display: isOpenModal ? 'block' : 'none'}}
-        className="bg-[#fff] dark:bg-[#23272f] max-w-[500px] max-h-[500px] h-full  fixed z-[101] top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-50%] rounded-lg">
-        <div className="my-0 mx-auto relative overflow-hidden list-none p-0 z-1 w-[full] h-[full]">
+        style={{
+          zIndex: isOpenModal ? 101 : -1,
+        }}
+        className={cn(
+          ' opacity-0 visible modal-transition fixed top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-50%] max-w-[500px] h-auto bg-[#fff] dark:bg-[#23272f] rounded-lg ',
+          {
+            'opacity-[100]': isOpenModal,
+          }
+        )}>
+        <div className="my-0 mx-auto relative overflow-hidden list-none p-0 z-1">
           <AlphabetUtility
             onStrokeNumberingChange={onStrokeNumberingChange}
             open={isOpenModal}>
@@ -149,6 +159,25 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
           </AlphabetUtility>
         </div>
       </div>
+
+      {/* <div
+        style={{
+          display: isOpenModal ? 'block' : 'none',
+        }}
+        className="bg-[#fff] dark:bg-[#23272f] max-w-[500px] h-auto fixed z-[101] top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-50%] rounded-lg">
+        <div className="my-0 mx-auto relative overflow-hidden list-none p-0 z-1">
+          <AlphabetUtility
+            onStrokeNumberingChange={onStrokeNumberingChange}
+            open={isOpenModal}>
+            <Alphabet
+              showStrokeNumbering={showStrokeNumbering}
+              isDuplicate={combine[currentSelectIndex].note}
+              romaji={combine[currentSelectIndex].roumaji}
+              type={type}
+            />
+          </AlphabetUtility>
+        </div>
+      </div> */}
     </>
   );
 }
