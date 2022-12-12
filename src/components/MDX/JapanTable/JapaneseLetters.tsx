@@ -61,13 +61,13 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
                   }
                 )}>
                 <p
-                  style={{fontSize: (width / 100) * 9}}
-                  className="font-ja text-black font-medium dark:text-white ">
+                  // style={{fontSize: (width / 100) * 9}}
+                  className="font-ja text-black font-medium dark:text-white kanji">
                   {type === 'hira' ? letter.hira : letter.kata}
                 </p>
                 <p
-                  style={{fontSize: (width / 100) * 5}}
-                  className="text-[#3d725d] dark:text-green-20">
+                  // style={{fontSize: (width / 100) * 5}}
+                  className="text-[#3d725d] dark:text-green-20 romaji">
                   {letter.roumaji}
                 </p>
               </li>
@@ -110,17 +110,17 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
       <div className="flex justify-between">
         <div
           ref={ref}
-          className={cn('block w-full lg:block lg:w-[48%]', {
-            hidden: !isPage1Click,
-          })}>
+          className={`w-full lg:block lg:w-[48%] ${
+            !isPage1Click ? 'hidden' : 'block'
+          }`}>
           <ul className="flex justify-between flex-wrap">
             {LetterBlock(block1)}
           </ul>
         </div>
         <div
-          className={cn('block lg:block w-full lg:w-[48%]', {
-            hidden: isPage1Click,
-          })}>
+          className={`lg:block w-full lg:w-[48%] ${
+            isPage1Click ? 'hidden' : 'block'
+          }`}>
           <ul className="flex justify-between flex-wrap">
             {LetterBlock(block2)}
           </ul>
