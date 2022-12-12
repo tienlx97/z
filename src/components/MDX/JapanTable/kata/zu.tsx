@@ -41,25 +41,25 @@ export default function svgComp() {
       <path
         style={{'--d': '1s'} as any}
         pathLength="3333"
-        clip-path="url(#z12474c1)"
+        clipPath="url(#z12474c1)"
         d="M 210,304 302,303 667,209 729,253 464,579 174,850"
       />
       <path
         style={{'--d': '2s'} as any}
         pathLength="3333"
-        clip-path="url(#z12474c2)"
+        clipPath="url(#z12474c2)"
         d="M 531,579 867,834"
       />
       <path
         style={{'--d': '3s'} as any}
         pathLength="3333"
-        clip-path="url(#z12474c3)"
+        clipPath="url(#z12474c3)"
         d="M 764,114 853,158 869,222"
       />
       <path
         style={{'--d': '4s'} as any}
         pathLength="3333"
-        clip-path="url(#z12474c4)"
+        clipPath="url(#z12474c4)"
         d="M 833,44 917,90 939,152"
       />
     </svg>

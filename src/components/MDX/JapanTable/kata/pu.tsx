@@ -27,13 +27,13 @@ export default function svgComp() {
       <path
         style={{'--d': '1s'} as any}
         pathLength="3333"
-        clip-path="url(#z12503c1)"
+        clipPath="url(#z12503c1)"
         d="M 166,304 258,303 723,209 785,253 554,584 251,841"
       />
       <path
         style={{'--d': '2s'} as any}
         pathLength="3333"
-        clip-path="url(#z12503c2)"
+        clipPath="url(#z12503c2)"
         d="M 908,42 836,81 840,161 908,203 986,160 983,82 908,43"
       />
     </svg>
