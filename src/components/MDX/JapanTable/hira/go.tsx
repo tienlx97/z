@@ -4,7 +4,6 @@ export default function svgComp() {
     <svg
       id="z12372"
       className="acjk"
-      version="1.1"
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -39,26 +38,42 @@ export default function svgComp() {
         </clipPath>
       </defs>
       <path
-        style={{'--d': '1s'} as any}
-        pathLength="3333"
+        style={
+          {
+            '--d': '1s',
+          } as any
+        }
+        pathLength={3333}
         clipPath="url(#z12372c1)"
         d="M 288,222 318,227 536,214 678,254 715,283 630,280 518,327"
       />
       <path
-        style={{'--d': '2s'} as any}
-        pathLength="3333"
+        style={
+          {
+            '--d': '2s',
+          } as any
+        }
+        pathLength={3333}
         clipPath="url(#z12372c2)"
         d="M 248,635 245,714 312,792 511,840 704,838 783,851"
       />
       <path
-        style={{'--d': '3s'} as any}
-        pathLength="3333"
+        style={
+          {
+            '--d': '3s',
+          } as any
+        }
+        pathLength={3333}
         clipPath="url(#z12372c3)"
         d="M 774,174 863,218 879,282"
       />
       <path
-        style={{'--d': '4s'} as any}
-        pathLength="3333"
+        style={
+          {
+            '--d': '4s',
+          } as any
+        }
+        pathLength={3333}
         clipPath="url(#z12372c4)"
         d="M 843,104 927,150 949,212"
       />

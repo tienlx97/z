@@ -113,13 +113,16 @@ export default function Alphabet({
   return (
     <React.Fragment>
       {Little ? (
-        <div className="flex w-full h-full">
-          {Component}
-          {Little}
+        <div className="flex w-full h-full justify-center items-center">
+          <div className="w-[60%] float-left">{Component}</div>
+          <div className="w-[40%] h-[30%] float-right">{Little}</div>
         </div>
       ) : (
         Component
       )}
+
+      {/* {Component} */}
+
       <button
         onClick={() => {
           setComponent(null);
