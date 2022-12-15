@@ -33,7 +33,7 @@ export function Page({children, toc}: PageProps) {
     <>
       {/* <SocialBanner /> */}
       <SidebarContext.Provider value={routeTree}>
-        <div className="grid grid-cols-only-content lg:grid-cols-sidebar-content 2xl:grid-cols-sidebar-content-toc">
+        <div className="w-full grid grid-cols-only-content lg:grid-cols-sidebar-content 2xl:grid-cols-sidebar-content-toc">
           <div className="fixed lg:sticky top-0 left-0 right-0 py-0 shadow lg:shadow-none z-50">
             <Nav />
           </div>
@@ -44,7 +44,6 @@ export function Page({children, toc}: PageProps) {
               <article className="break-words" key={asPath}>
                 {children}
               </article>
-              <Footer />
             </main>
           </Suspense>
           <div className="hidden lg:max-w-xs 2xl:block">

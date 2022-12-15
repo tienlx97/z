@@ -25,8 +25,15 @@ Hiragana và Katakana là chữ biểu âm, mỗi chữ thể hiện 1 âm, còn
 
 </Recipes>
 
+# Cách phát âm
+
+- Nguyên âm <Kanji>あ</Kanji> cần phát âm nhẹ hơn một chút so với tiếng Việt.
+- Nguyên âm <Kanji>い</Kanji> và <Kanji>お</Kanji> có cách phát âm giống với “i”, “ô” trong tiếng Việt.
+- Nguyên âm <Kanji>う</Kanji> khi phát âm khẩu hình miệng là u nhưng âm thoát là ư, sẽ có vẻ lai giữa u và ư.
+- Nguyên âm <Kanji>え</Kanji> có kiểu phát âm tưng tự <Kanji>う</Kanji>, âm thoát ra thành tiếng sẽ lai giữa e và ê.
+
 <DeepDive>
-#### Hiragana vs Katakana {/*hiragana-vs-katakana*/}
+#### Hiragana và Katakana {/*hiragana-vs-katakana*/}
 
 **Hiragana** là "chữ mềm" chủ yếu được sử dụng trong các trường hợp sau:
 

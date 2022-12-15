@@ -10,6 +10,9 @@ import PageHeading from 'components/PageHeading';
 import {useRouteMeta} from './useRouteMeta';
 import {useActiveSection} from '../../hooks/useActiveSection';
 import {TocContext} from '../MDX/TocContext';
+import {Footer} from './Footer';
+import UtilityBar from 'components/UitilityBar';
+import Comment from 'components/Comment';
 
 import(/* webpackPrefetch: true */ '../MDX/CodeBlock/CodeBlock');
 
@@ -31,6 +34,35 @@ export function MarkdownPage<
   const title = meta.title || route?.title || '';
   const description = meta.description || route?.description || '';
   const isHomePage = section === 'home';
+
+  const [open, setOpen] = React.useState(false);
+  const [isVisible, setVisible] = React.useState(true);
+
+  const onOpen = () => setOpen(true);
+  const onClose = () => setOpen(false);
+
+  const listenToScroll = () => {
+    const bodyRect = document.body.getBoundingClientRect();
+    const elemRect = document
+      .getElementById('hide-comment')!
+      .getBoundingClientRect();
+    const offset = elemRect.top - bodyRect.top - window.innerHeight;
+
+    const scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (scrollTop > 1 && scrollTop < offset) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', listenToScroll);
+    return () => window.removeEventListener('scroll', listenToScroll);
+  }, []);
+
   return (
     <>
       <div className="pl-0">
@@ -46,6 +78,7 @@ export function MarkdownPage<
           <div className="max-w-7xl mx-auto">
             <TocContext.Provider value={toc}>{children}</TocContext.Provider>
           </div>
+          <Footer />
           <DocsPageFooter
             route={route}
             nextRoute={nextRoute}
@@ -53,6 +86,9 @@ export function MarkdownPage<
           />
         </div>
       </div>
+      <UtilityBar isVisible={isVisible} onOpen={onOpen} />
+      <div id="hide-comment"></div>
+      <Comment onClose={onClose} isOpenComment={open} />
     </>
   );
 }

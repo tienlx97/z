@@ -54,6 +54,10 @@ function CodeStep({children, step}: {children: any; step: number}) {
   );
 }
 
+const Kanji = ({children}: {children: any}) => (
+  <span className="font-ja text-xl">{children}</span>
+);
+
 const P = (p: JSX.IntrinsicElements['p']) => (
   <p className="whitespace-pre-wrap my-4" {...p} />
 );
@@ -413,6 +417,7 @@ export const MDXComponents = {
   CodeStep,
   //
   JapaneseLetters,
+  Kanji,
 };
 
 for (let key in MDXComponents) {

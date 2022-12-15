@@ -31,6 +31,9 @@ module.exports = {
       '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       inner: 'inset 0 1px 4px 0 rgba(0, 0, 0, 0.05)',
       none: 'none',
+
+      comment: 'rgb(0 0 0 / 10%) 0px 2px 10px 0px',
+      'comment-dark': 'rgb(0 0 0 / 10%) 0px 2px 10px 0px',
     },
     extend: {
       maxWidth: {

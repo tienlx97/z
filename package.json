@@ -25,6 +25,7 @@
     "@codesandbox/sandpack-react": "1.15.5",
     "@docsearch/css": "3.0.0-alpha.41",
     "@docsearch/react": "3.0.0-alpha.41",
+    "@giscus/react": "^2.2.4",
     "@headlessui/react": "^1.7.0",
     "@svgr/webpack": "^6.5.1",
     "axios": "^1.2.1",
