@@ -364,6 +364,15 @@ function LinkWithTodo({href, children, ...props}: JSX.IntrinsicElements['a']) {
   );
 }
 
+function Via({href, children}: {href: string; children: React.ReactNode}) {
+  return (
+    <div className="flex justify-end items-center text-[13px] gap-x-1">
+      <span>Theo </span>
+      <Link href={href}>{children}</Link>
+    </div>
+  );
+}
+
 export const MDXComponents = {
   p: P,
   strong: Strong,
@@ -421,6 +430,7 @@ export const MDXComponents = {
   JapaneseLetters,
   Kanji,
   JapaneseWordLine,
+  Via,
 };
 
 for (let key in MDXComponents) {

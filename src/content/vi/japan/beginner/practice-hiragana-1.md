@@ -1,15 +1,15 @@
 ---
-title: Tập đọc từ 
+title: Tập đánh vần
 ---
 
 
 <Intro>
 
-Sau khi học bảng chữ cái thì chúng ta sẽ tập đọc để nhớ mặt chữ.
+Sau khi học bảng chữ cái thì chúng ta sẽ tập đánh vần để nhớ mặt chữ.
 
 </Intro>
 
-<Recipes showNavigate={false} showChallangeDescription={false} titleText="Hiragana">
+<Recipes showNavigate={false} showChallangeDescription={false} titleText="Word">
 
 #### あ - そ
 
@@ -53,6 +53,27 @@ Sau khi học bảng chữ cái thì chúng ta sẽ tập đọc để nhớ m�
 <JapaneseWordLine kanaStr="ふ ふく ふね ふつか ふそ ひふ"/>
 <JapaneseWordLine kanaStr="へ へそ へた"/>
 <JapaneseWordLine kanaStr="は ほし ほね ほせき"/>
+
+<Solution />
+
+#### ま - ん
+
+<JapaneseWordLine kanaStr="ま まち まめ うま くま ひま あたま"/>
+<JapaneseWordLine kanaStr="み みせ みち みみ かみ みなみ"/>
+<JapaneseWordLine kanaStr="む むし むね むら むり むかし むすこ"/>
+<JapaneseWordLine kanaStr="め めし めす めくる めしかえ むすめ"/>
+<JapaneseWordLine kanaStr="も みく もし もつ もと もの にもつ"/>
+
+<JapaneseWordLine kanaStr="や やき やね やま やくて やくそく へや"/>
+<JapaneseWordLine kanaStr="ゆ ゆき ゆめ ゆかた ふゆ おかゆ"/>
+<JapaneseWordLine kanaStr="よ よこ よく よる よそみ よなか よやく"/>
+
+
+<JapaneseWordLine kanaStr="ら らく らし らくそく さくら いらいら"/>
+<JapaneseWordLine kanaStr="り りか りえき りくつ りさつ くもり ことり"/>
+<JapaneseWordLine kanaStr="る るす ひる あさる あひる くるま"/>
+<JapaneseWordLine kanaStr="れ れきし これ かれし はれる わすれもの"/>
+<JapaneseWordLine kanaStr="ろ ろく うしろ おふろ ところ ふくろ"/>
 
 <Solution />
 

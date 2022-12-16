@@ -17,11 +17,11 @@ export default function UtilityBar({
           '!opacity-100': isVisible,
         }
       )}>
-      <div className="border-gray-20 border-[1px] border-solid dark:border-border-dark shadow-comment dark:shadow-comment-dark  bg-wash dark:bg-wash-dark h-[40px] min-w-[80px] py-0 px-[4px] rounded-[20px] flex items-center lg:py-0 lg:px-[14px] ">
+      <div
+        onClick={onOpen}
+        className="cursor-pointer border-gray-20 border-[1px] border-solid dark:border-border-dark shadow-comment dark:shadow-comment-dark  bg-wash dark:bg-wash-dark h-[40px] min-w-[80px] py-0 px-[4px] rounded-[20px] flex items-center lg:py-0 lg:px-[14px] ">
         <div className="flex flex-row items-center justify-center  w-[100%]">
-          <button onClick={onOpen}>
-            <IconComment />
-          </button>
+          <IconComment />
         </div>
       </div>
     </div>

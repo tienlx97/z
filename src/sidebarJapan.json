@@ -13,11 +13,13 @@
           "routes": [
             {
               "title": "Alphabet ",
-              "path": "/japan/beginner/alphabet"
+              "path": "/japan/beginner/alphabet",
+              "tags": ["3-days"]
             },
             {
-              "title": "Practice Word",
-              "path": "/japan/beginner/practice_word"
+              "title": "Practice Hiragana 1",
+              "path": "/japan/beginner/practice-hiragana-1",
+              "tags": ["2-days"]
             }
           ]
         }

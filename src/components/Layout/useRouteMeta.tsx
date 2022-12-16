@@ -12,12 +12,7 @@ import {useRouter} from 'next/router';
  * route object that is infinitely nestable.
  */
 
-export type RouteTag =
-  | 'foundation'
-  | 'intermediate'
-  | 'advanced'
-  | 'experimental'
-  | 'deprecated';
+export type RouteTag = '1-days' | '2-days' | '3-days';
 
 export interface RouteItem {
   /** Page title (for the sidebar) */

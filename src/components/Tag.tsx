@@ -6,16 +6,16 @@ import cn from 'classnames';
 import {RouteTag} from './Layout/useRouteMeta';
 
 const variantMap = {
-  foundation: {
-    name: 'Foundation',
+  '1-days': {
+    name: '1-days',
     classes: 'bg-yellow-50 text-white',
   },
-  intermediate: {
-    name: 'Intermediate',
+  '2-days': {
+    name: '2-days',
     classes: 'bg-purple-40 text-white',
   },
-  advanced: {
-    name: 'Advanced',
+  '3-days': {
+    name: '3-days',
     classes: 'bg-green-40 text-white',
   },
   experimental: {
