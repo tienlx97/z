@@ -11,6 +11,9 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/styles/**/*.{js,ts,jsx,tsx}',
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   darkMode: 'class',
   theme: {
     // Override base screen sizes

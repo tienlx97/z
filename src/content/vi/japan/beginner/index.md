@@ -10,9 +10,5 @@ Hôm nay mình xin được chia sẻ với các bạn mới bắt đầu tìm h
 <YouWillLearn isChapter={true}>
 
 * [Bảng chữ cái tiếng nhật](/japan/alphabet)
-* [Âm đục, âm ghép](/learn/start-a-new-react-project)
-* [Đếm số, đếm tuổi](/learn/editor-setup)
-* [Giới thiệu bản thân](/learn/editor-setup)
-* [Các câu giao tiếp cơ bản](/learn/editor-setup)
 
 </YouWillLearn>

@@ -29,7 +29,9 @@ import {IconNavArrow} from '../Icon/IconNavArrow';
 import ButtonLink from 'components/ButtonLink';
 import {TocContext} from './TocContext';
 import type {Toc, TocItem} from './TocContext';
-import JapaneseLetters from './JapanTable/JapaneseLetters';
+import JapaneseLetters from './JapaneseAlphabet/JapaneseLetters';
+import JapaneseWordLine from './JapaneseWordLine';
+
 import {useI18n} from 'next-localization';
 
 function CodeStep({children, step}: {children: any; step: number}) {
@@ -418,6 +420,7 @@ export const MDXComponents = {
   //
   JapaneseLetters,
   Kanji,
+  JapaneseWordLine,
 };
 
 for (let key in MDXComponents) {

@@ -5,8 +5,11 @@
 import * as React from 'react';
 import ButtonLink from 'components/ButtonLink';
 import {IconNavArrow} from 'components/Icon/IconNavArrow';
+import {useI18n} from 'next-localization';
 
 export function Footer() {
+  const {t} = useI18n();
+
   return (
     <>
       <div className="self-stretch w-full">
@@ -14,7 +17,7 @@ export function Footer() {
           <hr className="max-w-7xl mx-auto border-border dark:border-border-dark" />
           <div className="flex flex-col items-center m-4 p-4">
             <p className="font-bold text-primary dark:text-primary-dark text-lg mb-4">
-              How do you like these docs?
+              {t('mdx.survey.how_do_you_like_these_docs')}
             </p>
             <div>
               <ButtonLink
@@ -23,7 +26,7 @@ export function Footer() {
                 type="primary"
                 size="md"
                 target="_blank">
-                Take our survey!
+                {t('mdx.survey.take_a_survey')}
                 <IconNavArrow
                   displayDirection="right"
                   className="inline ml-1"

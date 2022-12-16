@@ -51,7 +51,7 @@ export function MarkdownPage<
     const scrollTop =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (scrollTop > 1 && scrollTop < offset) {
+    if (scrollTop < offset) {
       setVisible(true);
     } else {
       setVisible(false);

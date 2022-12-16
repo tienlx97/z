@@ -7,6 +7,10 @@
     "expandableexample": {
       "show_details": "Hiện",
       "hide_details": "Ẩn"
+    },
+    "survey": {
+      "how_do_you_like_these_docs": "Bạn thấy thế nào về website ?",
+      "take_a_survey": "Khảo sát!"
     }
   }
 }

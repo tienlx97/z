@@ -41,9 +41,9 @@ export default function Comment({
           // 'comment-animation fixed box-border h-full opacity-100 top-0 w-[414px] px-6 z-[520]  bg-[#fff] dark:bg-[#23272f] left-[100%] overflow-auto translate-x-0 invisible',
           'comment-animation  box-border h-full opacity-100 top-0 fixed bg-[#fff] dark:bg-[#23272f]  overflow-auto invisible z-[520] px-6',
           'left-0 translate-y-[100%] w-[100%] rounded-t-[20px]',
-          'lg:rounded-t-[0px] lg:w-[414px] lg:left-[100%] lg:translate-y-0 lg:translate-x-0',
+          'lg:rounded-t-[0px] lg:w-[450px] lg:left-[100%] lg:translate-y-0 lg:translate-x-0',
           {
-            '!visible translate-y-[30px] lg:!translate-y-0 lg:translate-x-[-414px]':
+            '!visible translate-y-[30px] lg:!translate-y-0 lg:translate-x-[-450px]':
               isOpenComment,
           }
         )}>
