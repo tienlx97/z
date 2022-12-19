@@ -20,6 +20,16 @@
               "title": "Practice Hiragana 1",
               "path": "/japan/beginner/practice-hiragana-1",
               "tags": ["2-days"]
+            },
+            {
+              "title": "Practice Hiragana 2",
+              "path": "/japan/beginner/practice-hiragana-2",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Dakuon",
+              "path": "/japan/beginner/dakuon",
+              "tags": ["1-days"]
             }
           ]
         }

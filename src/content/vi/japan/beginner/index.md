@@ -1,5 +1,5 @@
 ---
-title: Nhập môn
+title: Nhật ngữ vỡ lòng
 ---
 
 <Intro>

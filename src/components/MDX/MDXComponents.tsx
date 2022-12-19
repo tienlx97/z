@@ -31,6 +31,10 @@ import {TocContext} from './TocContext';
 import type {Toc, TocItem} from './TocContext';
 import JapaneseLetters from './JapaneseAlphabet/JapaneseLetters';
 import JapaneseWordLine from './JapaneseWordLine';
+import JapaneseSensLine from './JapaneseSensLine';
+import DakuonAlphabet from './JapaneseAlphabet/DakuonAlphabet';
+import Speak from './Speak';
+import JaWL from './JaWL';
 
 import {useI18n} from 'next-localization';
 
@@ -431,6 +435,10 @@ export const MDXComponents = {
   Kanji,
   JapaneseWordLine,
   Via,
+  JapaneseSensLine,
+  DakuonAlphabet,
+  Speak,
+  JaWL,
 };
 
 for (let key in MDXComponents) {

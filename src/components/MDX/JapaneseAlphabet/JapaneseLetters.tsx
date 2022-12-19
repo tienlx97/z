@@ -152,25 +152,6 @@ function JapaneseLetters({type = 'hira'}: JapaneseLettersProps) {
           </AlphabetUtility>
         </div>
       </div>
-
-      {/* <div
-        style={{
-          display: isOpenModal ? 'block' : 'none',
-        }}
-        className="bg-[#fff] dark:bg-[#23272f] max-w-[500px] h-auto fixed z-[101] top-[50%] left-[50%] w-[90%] translate-x-[-50%] translate-y-[-50%] rounded-lg">
-        <div className="my-0 mx-auto relative overflow-hidden list-none p-0 z-1">
-          <AlphabetUtility
-            onStrokeNumberingChange={onStrokeNumberingChange}
-            open={isOpenModal}>
-            <Alphabet
-              showStrokeNumbering={showStrokeNumbering}
-              isDuplicate={combine[currentSelectIndex].note}
-              romaji={combine[currentSelectIndex].roumaji}
-              type={type}
-            />
-          </AlphabetUtility>
-        </div>
-      </div> */}
     </>
   );
 }
