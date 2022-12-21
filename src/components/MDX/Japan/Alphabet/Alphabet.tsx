@@ -86,7 +86,7 @@ export default function Alphabet({
           setLittle(yLittle.default);
         });
       });
-    } else if (romaji.length === 3) {
+    } else if (romaji.length === 3 && !['shi', 'chi', 'tsu'].includes(romaji)) {
       await import(
         `./${type}/${romaji[0]}${romaji[1] === 'h' ? 'hi' : 'i'}`
       ).then(async (ji) => {

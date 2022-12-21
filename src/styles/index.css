@@ -3046,3 +3046,13 @@ svg.acjk path[id] {
 .utility-animation {
   transition: opacity 300ms ease 0s
 }
+
+/* JaWL css */
+
+.grid-line {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  /* grid-template-rows: repeat(2, 30px); */
+  grid-template-rows: auto;
+  column-gap: 5px;
+}

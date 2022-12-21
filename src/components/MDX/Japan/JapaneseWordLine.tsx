@@ -17,13 +17,11 @@ export default function JapaneseWordLine({
             {kanaList[0]}
           </p>
         </div>
-        <div className="flex flex-wrap items-center w-full gap-x-4 sm:text-xl sm:gap-x-5 lg:gap-x-7">
+        <div className="w-full grid-line">
           {kanaList.map((item, index) => {
             return (
               index !== 0 && (
-                <span
-                  className="font-ja lg:text-2xl cursor-pointer"
-                  key={index}>
+                <span className="font-ja lg:text-2xl" key={index}>
                   {item}
                 </span>
               )

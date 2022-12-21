@@ -1,6 +1,6 @@
 import React from 'react';
 import md5 from 'md5';
-import {siteConfig} from '../../siteConfig';
+import {siteConfig} from '../../../siteConfig';
 
 function convertJptoHex(kana: string) {
   if (null == kana || '' == kana) return '';

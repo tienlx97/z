@@ -29,12 +29,13 @@ import {IconNavArrow} from '../Icon/IconNavArrow';
 import ButtonLink from 'components/ButtonLink';
 import {TocContext} from './TocContext';
 import type {Toc, TocItem} from './TocContext';
-import JapaneseLetters from './JapaneseAlphabet/JapaneseLetters';
-import JapaneseWordLine from './JapaneseWordLine';
-import JapaneseSensLine from './JapaneseSensLine';
-import DakuonAlphabet from './JapaneseAlphabet/DakuonAlphabet';
-import Speak from './Speak';
-import JaWL from './JaWL';
+// from japan
+import JapaneseLetters from './Japan/Alphabet/JapaneseLetters';
+import JapaneseWordLine from './Japan/JapaneseWordLine';
+import JapaneseSensLine from './Japan/JapaneseSensLine';
+import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
+import Speak from './Japan/Speak';
+import JaWL from './Japan/JaWL';
 
 import {useI18n} from 'next-localization';
 
@@ -340,6 +341,9 @@ function calculateNestedToc(toc: Toc): NestedTocRoot {
 function InlineToc() {
   const toc = useContext(TocContext);
   const root = useMemo(() => calculateNestedToc(toc), [toc]);
+  if (root.children.length < 2) {
+    return null;
+  }
   return <InlineTocItem items={root.children} />;
 }
 
