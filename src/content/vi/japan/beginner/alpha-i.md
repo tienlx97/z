@@ -3,7 +3,7 @@ title: Cách đọc ghép với chữ い
 ---
 
 <Intro>
-い : Phiên âm là (i) và sẽ phát âm như chữ (i) tiếng Việt, khi đọc âm này bạn cần kéo dài miệng ra và đọc (i)
+<CodeStep step={1}><Kanji>い</Kanji></CodeStep> : Phiên âm là <CodeStep step={2}>**i**</CodeStep> và sẽ phát âm như chữ **i** tiếng Việt, khi đọc âm này bạn cần kéo dài miệng ra và đọc **i**
 </Intro>
 
 <br/>
@@ -63,11 +63,11 @@ title: Cách đọc ghép với chữ い
 
 ## 「Tập đọc câu」
 
-<JapaneseSensLine>しろい　かみ</JapaneseSensLine>
-<JapaneseSensLine>くろい　かみ</JapaneseSensLine>
-<JapaneseSensLine>あおい　かみ</JapaneseSensLine>
+<JaSL>しろい　かみ</JaSL>
+<JaSL>くろい　かみ</JaSL>
+<JaSL>あおい　かみ</JaSL>
 
 <br/>
 
-<JapaneseSensLine>ひろい　みち</JapaneseSensLine>
-<JapaneseSensLine>せまい　みち</JapaneseSensLine>
+<JaSL>ひろい　みち</JaSL>
+<JaSL>せまい　みち</JaSL>

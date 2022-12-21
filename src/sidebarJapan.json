@@ -8,6 +8,10 @@
       "path": "",
       "routes": [
         {
+          "title": "Quick Start",
+          "path": "/japan"
+        },
+        {
           "title": "Beginner",
           "path": "/japan/beginner",
           "routes": [
@@ -34,6 +38,21 @@
             {
               "title": "Alpha い",
               "path": "/japan/beginner/alpha-i",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Alpha ん",
+              "path": "/japan/beginner/alpha-n",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Chouon",
+              "path": "/japan/beginner/chouon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Practice",
+              "path": "/japan/beginner/practice",
               "tags": ["1-days"]
             }
           ]

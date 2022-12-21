@@ -9,23 +9,23 @@ Sau khi học bảng chữ cái thì chúng ta sẽ tập đánh vần để nh�
 
 </Intro>
 
-<JapaneseSensLine>いぬと  ねこ</JapaneseSensLine>
-<JapaneseSensLine>うしと  うま</JapaneseSensLine>
-<JapaneseSensLine>つくえと  いす</JapaneseSensLine>
+<JaSL>いぬと  ねこ</JaSL>
+<JaSL>うしと  うま</JaSL>
+<JaSL>つくえと  いす</JaSL>
 <br />
 <br />
-<JapaneseSensLine>てと  あしと  あたま</JapaneseSensLine>
-<JapaneseSensLine>めと  はなと  みみと  くち</JapaneseSensLine>
+<JaSL>てと  あしと  あたま</JaSL>
+<JaSL>めと  はなと  みみと  くち</JaSL>
 <br />
 <br />
-<JapaneseSensLine>わたしの  うち</JapaneseSensLine>
-<JapaneseSensLine>あなたの  うち</JapaneseSensLine>
-<JapaneseSensLine>あのひとの  うち</JapaneseSensLine>
+<JaSL>わたしの  うち</JaSL>
+<JaSL>あなたの  うち</JaSL>
+<JaSL>あのひとの  うち</JaSL>
 <br />
 <br />
-<JapaneseSensLine>わたしに  へや</JapaneseSensLine>
-<JapaneseSensLine>あとこの  くち</JapaneseSensLine>
+<JaSL>わたしに  へや</JaSL>
+<JaSL>あとこの  くち</JaSL>
 <br />
 <br />
-<JapaneseSensLine>さくらの  はな</JapaneseSensLine>
-<JapaneseSensLine>さくの  はな</JapaneseSensLine>
+<JaSL>さくらの  はな</JaSL>
+<JaSL>さくの  はな</JaSL>

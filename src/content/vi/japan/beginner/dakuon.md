@@ -13,7 +13,7 @@ Biến âm (Trọc âm) tiếng Nhật là một phần kiến thức thể hi�
 
 ## Biến âm là gì ?
 
-- Biến âm là một cách chuyển đổi các chữ cái gốc sang một âm mới với sự xuất hiện của **các ký tự đi kèm** vào *trên đầu* mỗi chữ cái, từ đó cách đọc các chữ cái này cũng khác đi. .
+- Biến âm là một cách chuyển đổi các chữ cái gốc sang một âm mới với sự xuất hiện của <CodeStep step={1}>các ký tự đi kèm</CodeStep> vào *trên đầu* mỗi chữ cái, từ đó cách đọc các chữ cái này cũng khác đi. .
 - Bảng biến âm là những chữ thuộc 4 hàng ka, sa, ta, ha.
 > Các ký tự đi kèm là những chữ cái được thêm vào dấu ten ten ( " ) hay maru ( ○ ).
 
