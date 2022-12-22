@@ -17,7 +17,7 @@ export default function Comment({
   isOpenComment: boolean;
   onClose: any;
 }) {
-  const [preferredTheme, setPreferredTheme] = useState('light');
+  const [preferredTheme, setPreferredTheme] = useState('dark');
 
   const {locale} = useI18n();
 
