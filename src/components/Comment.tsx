@@ -3,6 +3,7 @@ import cn from 'classnames';
 import {IconClose} from './Icon/IconClose';
 import Giscus from '@giscus/react';
 import {IconGitHub} from './Icon/IconGitHub';
+import {useI18n} from 'next-localization';
 
 const THEME_MAPPING = {
   light: 'light',
@@ -17,6 +18,8 @@ export default function Comment({
   onClose: any;
 }) {
   const [preferredTheme, setPreferredTheme] = useState('light');
+
+  const {locale} = useI18n();
 
   useEffect(() => {
     // Perform localStorage action
@@ -58,14 +61,14 @@ export default function Comment({
         <Giscus
           repo="tienlx97/z"
           repoId="R_kgDOIldgSw"
-          category="Show and tell"
+          category="Announcements"
           categoryId="DIC_kwDOIldgS84CTErr"
           theme={THEME_MAPPING[preferredTheme as keyof typeof THEME_MAPPING]}
           mapping="og:title"
           strict="1"
           emitMetadata="1"
           inputPosition="top"
-          lang="en"
+          lang={locale() === 'en' ? 'en' : 'vi'}
           loading="lazy"
           reactionsEnabled="1"
         />

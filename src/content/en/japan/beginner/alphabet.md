@@ -1,2 +1,0 @@
-
-Not translate yet !
