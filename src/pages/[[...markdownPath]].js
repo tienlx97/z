@@ -177,7 +177,7 @@ export async function getStaticProps(context) {
   const fm = require('gray-matter');
   const meta = fm(mdx).data;
 
-  console.log(languagePackage.default);
+  // console.log(languagePackage.default);
 
   const output = {
     props: {
