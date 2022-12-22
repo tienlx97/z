@@ -1,5 +1,5 @@
 ---
-id: home
+id: 533cdbee-fef8-437e-a437-db6397afbc95
 title: Mimikyu Note Beta
 permalink: index.html
 ---

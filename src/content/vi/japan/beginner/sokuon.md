@@ -1,4 +1,5 @@
 ---
+id: 5a56fe2c-ef53-48d1-8728-638735c3e2c3
 title: Xúc âm
 ---
 
@@ -6,6 +7,8 @@ title: Xúc âm
 Âm ngắt trong tiếng Nhật còn được gọi là xúc âm (Sokuon) hay khuất âm. Âm ngắt (っ- tsu nhỏ) là một trong những kiến thức quan trọng trong từ vựng tiếng Nhật. Âm ngắt cùng với trường âm, biến âm và âm ghép giúp chúng ta có thể nói được tiếng Nhật
 </Intro>
 <Via href="https://yoko.edu.vn/am-ngat-trong-tieng-nhat/">yoko</Via>
+
+<InlineToc />
 
 # Xúc âm là gì ?
 
@@ -26,7 +29,7 @@ Chẳng hạn trong từ たつと (dùng "tsu lớn") sẽ đọc là tatsuto (
 
 <Via href="http://tiengnhatgiaotiep.edu.vn/xuc-am-tieng-nhat.html">tiengnhatgiaotiep</Via>
 
-<p align="center">Click để nghe</p>
+<p align="left">Click để nghe</p>
 <JaWL m={4}>
   <Speak k="切手"><Kanji>き**っ**て</Kanji></Speak>
   <Speak k="雑誌"><Kanji>ざ**っ**し</Kanji></Speak>

@@ -13,11 +13,12 @@ import {TocContext} from '../MDX/TocContext';
 import {Footer} from './Footer';
 import UtilityBar from 'components/UitilityBar';
 import Comment from 'components/Comment';
+import Head from 'next/head';
 
 import(/* webpackPrefetch: true */ '../MDX/CodeBlock/CodeBlock');
 
 export interface MarkdownProps<Frontmatter> {
-  meta: Frontmatter & {description?: string};
+  meta: Frontmatter & {description?: string; id: string};
   children?: React.ReactNode;
   toc: Array<{
     url: string;
@@ -65,6 +66,15 @@ export function MarkdownPage<
 
   return (
     <>
+      <Head>
+        <meta
+          property="og:title"
+          name={meta.id}
+          content={meta.id}
+          key="og:title"
+        />
+      </Head>
+
       <div className="pl-0">
         <Seo title={title} />
         {!isHomePage && (

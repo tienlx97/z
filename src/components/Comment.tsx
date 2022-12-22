@@ -61,7 +61,7 @@ export default function Comment({
         <Giscus
           repo="tienlx97/z"
           repoId="R_kgDOIldgSw"
-          category="Announcements"
+          category="Show and tell"
           categoryId="DIC_kwDOIldgS84CTErr"
           theme={THEME_MAPPING[preferredTheme as keyof typeof THEME_MAPPING]}
           mapping="og:title"

@@ -1,4 +1,5 @@
 ---
+id: 49bbf316-4707-49ae-98bf-74e0fc7d5883
 title: Nhật ngữ vỡ lòng
 ---
 
@@ -12,6 +13,14 @@ Thật là liều lĩnh khi một người ngoại quốc không chuyên nghĩ �
 
 * [Bảng chữ cái tiếng nhật](/japan/beginner/alphabet)
 * [Luyện đọc Hiragana 1](/japan/beginner/practice-hiragana-1)
+* [Luyện đọc Hiragana 2](/japan/beginner/practice-hiragana-2)
+* [Biến âm](/japan/beginner/dakuon)
+* [Trường âm](/japan/beginner/chouon)
+* [Ảo âm 1](/japan/beginner/youon-i)
+* [Âm nối](/japan/beginner/youon-n)
+* [Ảo âm 2](/japan/beginner/youon-ya-yu-yo)
+* [Xúc âm](/japan/beginner/sokuon)
+* [Luyện tập 1](/japan/beginner/practice-1)
 
 </YouWillLearn>
 

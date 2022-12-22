@@ -41,9 +41,9 @@ export const Seo = withRouter(
         key="og:url"
         content={`https://beta.reactjs.org${router.asPath.split(/[\?\#]/)[0]}`}
       />
-      {title != null && (
+      {/* {title != null && (
         <meta property="og:title" content={title} key="og:title" />
-      )}
+      )} */}
       {description != null && (
         <meta
           property="og:description"
