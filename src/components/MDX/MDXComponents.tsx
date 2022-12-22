@@ -34,6 +34,8 @@ import JapaneseLetters from './Japan/Alphabet/JapaneseLetters';
 import JapaneseWordLine from './Japan/JapaneseWordLine';
 import JapaneseSensLine from './Japan/JapaneseSensLine';
 import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
+import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
+
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
 
@@ -62,7 +64,7 @@ function CodeStep({children, step}: {children: any; step: number}) {
 }
 
 const Kanji = ({children}: {children: any}) => (
-  <span className="font-ja text-xl">{children}</span>
+  <span className="font-ja2 text-xl">{children}</span>
 );
 
 const P = (p: JSX.IntrinsicElements['p']) => (
@@ -441,6 +443,7 @@ export const MDXComponents = {
   Via,
   JaSL: JapaneseSensLine,
   DakuonAlphabet,
+  YouonAlphabet,
   Speak,
   JaWL,
 };

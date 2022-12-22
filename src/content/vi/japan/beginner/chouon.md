@@ -31,12 +31,12 @@ Với bảng Hiragana, 5 nguyên âm <Kanji>あ, い, う, え, お </Kanji> đ�
 
 Với bảng Katakana, dấu 「―」 biểu thị trường âm chung cho tất cả các từ, đứng phía sau các nguyên âm hoặc âm ghép. 
 
-<JaWL>
+<JaWL m={2}>
   <Kanji>カード (kādo)</Kanji>
   <Kanji>ノート (nōto)</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={2}>
   <Kanji>ケーキ (kēki)</Kanji>
   <Kanji>コーヒー (kōhī)</Kanji>
 </JaWL>
@@ -53,12 +53,12 @@ Khi phát âm các từ có trường âm cần chú ý kéo dài âm cho đúng
 
 Một số từ dễ nhầm lẫn do cách phát âm:
 
-<JaWL>
+<JaWL m={2}>
   <Speak k="お婆さん"><Kanji>おばあさん</Kanji></Speak>
   <Speak k="叔母さん"><Kanji>おばさん</Kanji></Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={2}>
   <Speak k="お爺さん"><Kanji>おじいさん</Kanji></Speak>
   <Speak k="叔父さん"><Kanji>おじさん</Kanji></Speak>
 </JaWL>
@@ -103,63 +103,63 @@ Phát âm sai hoặc nhầm lẫn những từ có trường âm và không có 
 
 ## [ Tập đọc từ ]
 
-<JaWL>
+<JaWL m={4}>
   <Kanji>おおきい</Kanji>
   <Kanji>ちいさい</Kanji>
   <Kanji>えいご</Kanji>
   <Kanji>れいぼう</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>とけい</Kanji>
  <Kanji>せいかつ</Kanji>
  <Kanji>めいれい</Kanji>
  <Kanji>けいさつ</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>おおぜい</Kanji>
  <Kanji>ていねい</Kanji>
  <Kanji>せんせい</Kanji>
  <Kanji>けいかく</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>くうき</Kanji>
  <Kanji>ぎんこう</Kanji>
  <Kanji>どうろ</Kanji>
  <Kanji>ようふく</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>すうじ</Kanji>
  <Kanji>おうさま</Kanji>
  <Kanji>そうじ</Kanji>
  <Kanji>ぼうし</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>ろうそく</Kanji>
  <Kanji>ゆうびん</Kanji>
  <Kanji>こうえん</Kanji>
  <Kanji>どうぶつえん</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>もうふ</Kanji>
  <Kanji>すうがく</Kanji>
  <Kanji>とおか</Kanji>
  <Kanji>とおり</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>とおる</Kanji>
  <Kanji>おおあめ</Kanji>
  <Kanji>おおい</Kanji>
  <Kanji>とおい</Kanji>
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
  <Kanji>どうぞ</Kanji>
  <Kanji>たいふう</Kanji>
  <Kanji>ゆうがた</Kanji>

@@ -36,23 +36,33 @@
               "tags": ["1-days"]
             },
             {
-              "title": "Alpha い",
-              "path": "/japan/beginner/alpha-i",
-              "tags": ["1-days"]
-            },
-            {
-              "title": "Alpha ん",
-              "path": "/japan/beginner/alpha-n",
-              "tags": ["1-days"]
-            },
-            {
               "title": "Chouon",
               "path": "/japan/beginner/chouon",
               "tags": ["1-days"]
             },
             {
-              "title": "Practice",
-              "path": "/japan/beginner/practice",
+              "title": "Youon い",
+              "path": "/japan/beginner/youon-i",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Youon ん",
+              "path": "/japan/beginner/youon-n",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Youon ゃ ゅ ょ",
+              "path": "/japan/beginner/youon-ya-yu-yo",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Sokuon",
+              "path": "/japan/beginner/sokuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Practice 1",
+              "path": "/japan/beginner/practice-1",
               "tags": ["1-days"]
             }
           ]

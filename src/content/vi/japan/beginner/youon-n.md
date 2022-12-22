@@ -13,12 +13,12 @@ Ví dụ: <Kanji>て</Kanji> có phiên âm là <Kanji>**te**</Kanji> nhưng khi
 
 Nguyên tắc này được sử dụng với cả bảng chữ cái Hiragana và Katakana.
 
-<JaWL>
+<JaWL  m={2}>
   <Kanji>にほん</Kanji>
   <Kanji>さんまい</Kanji>  
 </JaWL>
 
-<JaWL>
+<JaWL m={2}>
   <Kanji>かばん</Kanji>
   <Kanji>りんご</Kanji>
 </JaWL>
@@ -27,33 +27,33 @@ Nguyên tắc này được sử dụng với cả bảng chữ cái Hiragana v�
 
 Riêng các trường hợp <CodeStep step={1}>theo sau</CodeStep>  <Kanji>「ん」</Kanji> là các âm thuộc dãy <CodeStep step={2}>**m p b**</CodeStep> thì lúc này <Kanji>「ん」</Kanji> sẽ được đọc là <CodeStep step={3}>**m**</CodeStep>
 
-<JaWL>
+<JaWL m={2}>
   <Kanji>こんばん</Kanji>
   <Kanji>さんぽ</Kanji>  
 </JaWL>
 
-<JaWL>
+<JaWL m={2}>
   <Kanji>にほんばし</Kanji>
   <Kanji>しんぶん</Kanji>
 </JaWL>
 
 ## [ Tập đọc từ ]
 
-<JaWL>
+<JaWL m={4}>
   <Kanji>たいしかん</Kanji>
   <Kanji>ほんたい</Kanji>
   <Kanji>にほん</Kanji>
   <Kanji>けんか</Kanji>  
 </JaWL>
 
-<JaWL>
+<JaWL  m={4}>
   <Kanji>えん</Kanji>
   <Kanji>おんな</Kanji>
   <Kanji>はつおん</Kanji>
   <Kanji>せんたくき</Kanji>  
 </JaWL>
 
-<JaWL>
+<JaWL m={4}>
   <Kanji>きおん</Kanji>
   <Kanji>きけん</Kanji>
   <Kanji>せんもん</Kanji>

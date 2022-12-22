@@ -45,12 +45,15 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
 - Nếu thêm maru thì thay <Kanji>**h**</Kanji> thành <Kanji>**p**</Kanji>: 「ha hi fu he ho」 -「pa pi pu pe po」
   + <Speak kana="ha"><Kanji>は</Kanji></Speak> <Speak kana="hi"><Kanji>ひ</Kanji></Speak> <Speak kana="fu"><Kanji>ふ</Kanji></Speak> <Speak kana="he"><Kanji>へ</Kanji></Speak> <Speak kana="ho"><Kanji>ほ</Kanji></Speak> ---  <Speak kana="pa"><Kanji>ぱ</Kanji></Speak> <Speak kana="pi"><Kanji>ぴ</Kanji></Speak> <Speak kana="pu"><Kanji>ぷ</Kanji></Speak> <Speak kana="pe"><Kanji>ぺ</Kanji></Speak> <Speak kana="po"><Kanji>ぽ</Kanji></Speak>
 
+<Note>
+  Click để nghe
+</Note>
 
 <Recipes showNavigate={false} showChallangeDescription={false} titleText="Tập đọc từ">
 
 #### Trang 1
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="手紙 ">てがみ</Speak>
   <Speak k="眼鏡">めがね</Speak>
   <Speak k="鍵">かぎ</Speak>
@@ -59,7 +62,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="髭">ひげ</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="午後">ごご</Speak>
   <Speak k="仕事">しごと</Speak>
   <Speak k="叔父">おじ</Speak>
@@ -68,7 +71,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="鼠">ねずみ</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="風">かぜ</Speak>
   <Speak k="家族">かぞく</Speak>
   <Speak k="誰">だれ</Speak>
@@ -77,7 +80,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="友達">ともだち</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="筆箱">ふでばこ</Speak>
   <Speak k="子供">こども</Speak>
   <Speak k="蕎麦">そば</Speak>
@@ -91,7 +94,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
 
 #### Trang 2
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="祖母">そぼ</Speak>
   <Speak k="窓">まど</Speak>
   <Speak k="上着">うわぎ</Speak>
@@ -100,7 +103,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="果物">くだもの</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="真面目">まじめ</Speak>
   <Speak k="すずき">すずき</Speak>
   <Speak k="腕">うで</Speak>
@@ -109,7 +112,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="日差し">ひざし</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="虹">にじ</Speak>
   <Speak k="枝">えだ</Speak>
   <Speak k="緑">みどり</Speak>
@@ -118,7 +121,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="火傷">やけど</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="一番">いちば</Speak>
   <Speak k="風">かぜ</Speak>
   <Speak k="首">くび</Speak>
@@ -127,7 +130,7 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
   <Speak k="ぬいぐるみ">ぬいぐるみ</Speak>
 </JaWL>
 
-<JaWL>
+<JaWL m={6}>
   <Speak k="科学">かがく</Speak>
   <Speak k="ゴミ捨て">ごみすて</Speak>
   <Speak k="複雑">ふくざつ</Speak>

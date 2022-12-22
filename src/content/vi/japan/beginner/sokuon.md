@@ -1,0 +1,74 @@
+---
+title: Xúc âm
+---
+
+<Intro>
+Âm ngắt trong tiếng Nhật còn được gọi là xúc âm (Sokuon) hay khuất âm. Âm ngắt (っ- tsu nhỏ) là một trong những kiến thức quan trọng trong từ vựng tiếng Nhật. Âm ngắt cùng với trường âm, biến âm và âm ghép giúp chúng ta có thể nói được tiếng Nhật
+</Intro>
+<Via href="https://yoko.edu.vn/am-ngat-trong-tieng-nhat/">yoko</Via>
+
+# Xúc âm là gì ?
+
+Để hiểu cũng như có thể vận dụng âm ngắt trong giao tiếp tiếng Nhật, các bạn cần phải biết đến thuật ngữ mora (モーラ). Mora được hiểu là âm tiết hoặc phách trong tiếng Nhật Bản. Vì được gọi là “phách” nên khi phát âm mora, các bạn cần phát âm chúng một cách đều nhau
+
+Mỗi chữ trong bảng chữ cái tiếng Nhật đều sẽ mang một giá trị mora và do đó, âm ngắt cũng là một giá trị mora.
+
+Chúng ta gọi っ là âm ngắt do khi đọc, っ sẽ ngắt từ ngữ ra thành 2 bộ phận. Khi phát âm, âm ngắt sẽ được phát âm với độ dài tương đương với một mora như các âm khác.
+
+Chúng ta gọi っ là âm ngắt do khi đọc, っ sẽ ngắt từ ngữ ra thành 2 bộ phận. Khi phát âm, âm ngắt sẽ được phát âm với độ dài tương đương với một mora như các âm khác.
+
+<Via href="https://yoko.edu.vn/am-ngat-trong-tieng-nhat/">yoko</Via>
+
+
+# Cách đọc ?
+
+Chẳng hạn trong từ たつと (dùng "tsu lớn") sẽ đọc là tatsuto (ta-chư-tô), còn たっと (dùng "tsu nhỏ") sẽ đọc là tatto (tạt-tô). Có nghĩa khi chúng ta sử dụng chữ "tsu" lớn, lúc đó chữ "tsu" mang tính độc lập, được phát âm lên trong từ, còn khi dùng chữ "tsu" nhỏ, nó chỉ có tác dụng kéo dài phụ âm đầu của chữ liền sau mà không được phát âm ra.
+
+<Via href="http://tiengnhatgiaotiep.edu.vn/xuc-am-tieng-nhat.html">tiengnhatgiaotiep</Via>
+
+<p align="center">Click để nghe</p>
+<JaWL m={4}>
+  <Speak k="切手"><Kanji>き**っ**て</Kanji></Speak>
+  <Speak k="雑誌"><Kanji>ざ**っ**し</Kanji></Speak>
+  <Speak k="日記"><Kanji>に**っ**き</Kanji></Speak>
+  <Speak k="切符"><Kanji>き**っ**ぷ</Kanji></Speak>
+</JaWL>
+
+
+# [ Tập đọc từ ]
+<br/>
+
+<JaWL m={4}>
+ <Kanji>がっき</Kanji>
+ <Kanji>はっけん</Kanji>
+ <Kanji>けっこん</Kanji>
+ <Kanji>せっけん</Kanji>
+</JaWL>
+
+<JaWL m={4}>
+ <Kanji>みっか</Kanji>
+ <Kanji>よっか</Kanji>
+ <Kanji>にってい</Kanji>
+ <Kanji>むっつ</Kanji>
+</JaWL>
+
+<JaWL m={4}>
+ <Kanji>はってん</Kanji>
+ <Kanji>かっぱ</Kanji>
+ <Kanji>はっせん</Kanji>
+ <Kanji>きっさてん</Kanji>
+</JaWL>
+
+<JaWL m={4}>
+ <Kanji>にっき</Kanji>
+ <Kanji>ろぴゃく</Kanji>
+ <Kanji>がっこう</Kanji>
+ <Kanji>てっぽう</Kanji>
+</JaWL>
+
+<JaWL m={4}>
+ <Kanji>いっぱい</Kanji>
+ <Kanji>あさって</Kanji>
+ <Kanji>いっさつ</Kanji>
+ <Kanji>しゅっしん</Kanji>
+</JaWL>

@@ -56,6 +56,7 @@ module.exports = {
         ],
         mono: ['"Source Code Pro"', ...defaultTheme.fontFamily.mono],
         ja: ['"BIZ UDPMincho"', 'sans-serif'],
+        ja2: ['Noto Sans JP', 'sans-serif'],
       },
       lineHeight: {
         base: '30px',

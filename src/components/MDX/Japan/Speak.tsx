@@ -55,7 +55,9 @@ export default function Speak({
   };
 
   return (
-    <div onClick={handleSpeak} className="inline-block cursor-pointer">
+    <div
+      onClick={handleSpeak}
+      className="inline-block font-[inherit] text-inherit lg:text-inherit cursor-pointer">
       {children}
     </div>
   );

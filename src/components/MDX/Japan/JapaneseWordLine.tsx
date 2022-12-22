@@ -21,7 +21,7 @@ export default function JapaneseWordLine({
           {kanaList.map((item, index) => {
             return (
               index !== 0 && (
-                <span className="font-ja lg:text-2xl" key={index}>
+                <span className="font-ja2 lg:text-2xl" key={index}>
                   {item}
                 </span>
               )

@@ -1,20 +1,29 @@
 import React from 'react';
 
-export default function JaWL({children}: {children: React.ReactNode}) {
+export default function JaWL({
+  children,
+  m = 5,
+}: {
+  children: React.ReactNode;
+  m?: number;
+}) {
   const arr = React.Children.toArray(children).filter(
     (child) => child !== '\n'
   );
+
+  const append = m - arr.length;
 
   return (
     <>
       <div className="grid-line">
         {arr.map((item, index) => {
-          return (
-            <span className="font-ja lg:text-2xl" key={index}>
-              {item}
-            </span>
-          );
+          return <React.Fragment key={index}>{item}</React.Fragment>;
         })}
+
+        {append !== 0 &&
+          Array.from(Array(append), (e, i) => {
+            return <span key={i} />;
+          })}
       </div>
       <br />
     </>
