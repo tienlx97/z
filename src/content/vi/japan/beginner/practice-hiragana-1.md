@@ -14,67 +14,67 @@ Sau khi học bảng chữ cái thì chúng ta sẽ tập đánh vần để nh�
 
 #### あ - そ
 
-<JapaneseWordLine kanaStr="あ あう あき あさ あし あす あせ"/>
-<JapaneseWordLine kanaStr="い いう いえ いか いけ いし いす"/>
-<JapaneseWordLine kanaStr="う うえ うき うし うそ うすい"/>
-<JapaneseWordLine kanaStr="え ええ えき えさ"/>
-<JapaneseWordLine kanaStr="お おか おく おす おかし おこす おさけ"/>
+<AlphaWL kana="あ" kanaStr="あう あき あさ あし あす あせ"/>
+<AlphaWL kana="い" kanaStr="いう いえ いか いけ いし いす"/>
+<AlphaWL kana="う" kanaStr="うえ うき うし うそ うすい"/>
+<AlphaWL kana="え" kanaStr="ええ えき えさ"/>
+<AlphaWL kana="お" kanaStr="おか おく おす おかし おこす おさけ"/>
 
-<JapaneseWordLine  kanaStr="か かい かう かお かき かく かす"/>
-<JapaneseWordLine  kanaStr="き きく きそ きおく きこく きそく"/>
-<JapaneseWordLine  kanaStr="く くい くさ くし くせ いく"/>
-<JapaneseWordLine  kanaStr="け けさ けす けしき いけ"/>
-<JapaneseWordLine  kanaStr="こ こえ ここ こそ こせき ここせき"/>
+<AlphaWL  kana="か" kanaStr="かい かう かお かき かく かす"/>
+<AlphaWL  kana="き" kanaStr="きく きそ きおく きこく きそく"/>
+<AlphaWL  kana="く" kanaStr="くい くさ くし くせ いく"/>
+<AlphaWL  kana="け" kanaStr="けさ けす けしき いけ"/>
+<AlphaWL  kana="こ" kanaStr="こえ ここ こそ こせき ここせき"/>
 
-<JapaneseWordLine  kanaStr="さ さか さき さく さけ さす さそう"/>
-<JapaneseWordLine  kanaStr="し しお しか しき しく しかく しかし"/>
-<JapaneseWordLine  kanaStr="す すう すえ すき すそ すくう すこし"/>
-<JapaneseWordLine  kanaStr="せ せき せこ せおう"/>
-<JapaneseWordLine  kanaStr="そ そこ そこく そしき いそう"/>
+<AlphaWL  kana="さ" kanaStr="さか さき さく さけ さす さそう"/>
+<AlphaWL  kana="し" kanaStr="しお しか しき しく しかく しかし"/>
+<AlphaWL  kana="す" kanaStr="すう すえ すき すそ すくう すこし"/>
+<AlphaWL  kana="せ" kanaStr="せき せこ せおう"/>
+<AlphaWL  kana="そ" kanaStr="そこ そこく そしき いそう"/>
 
 
 <Solution />
 
 #### た - は
 
-<JapaneseWordLine kanaStr="た たち たこ たち たて たな たに"/>
-<JapaneseWordLine kanaStr="ち ちち ちかく ちかてつ うち くち"/>
-<JapaneseWordLine kanaStr="つ つく つの つくえ ついたち くつ"/>
-<JapaneseWordLine kanaStr="て てき てつ てあし てあて てさき"/>
-<JapaneseWordLine kanaStr="と とき とし そと いとこ"/>
+<AlphaWL kana="た" kanaStr="たち たこ たち たて たな たに"/>
+<AlphaWL kana="ち" kanaStr="ちち ちかく ちかてつ うち くち"/>
+<AlphaWL kana="つ" kanaStr="つく つの つくえ ついたち くつ"/>
+<AlphaWL kana="て" kanaStr="てき てつ てあし てあて てさき"/>
+<AlphaWL kana="と" kanaStr="とき とし そと いとこ"/>
 
-<JapaneseWordLine kanaStr="な なか なし なつ なに いなか"/>
-<JapaneseWordLine kanaStr="に にく にし あに くに"/>
-<JapaneseWordLine kanaStr="ぬ ぬく ぬし ぬす ぬの いぬ"/>
-<JapaneseWordLine kanaStr="ね のこ ねつ あね おかね きつね"/>
-<JapaneseWordLine kanaStr="の のい のこす なのか いのしし ここのか"/>
+<AlphaWL kana="な" kanaStr="なか なし なつ なに いなか"/>
+<AlphaWL kana="に" kanaStr="にく にし あに くに"/>
+<AlphaWL kana="ぬ" kanaStr="ぬく ぬし ぬす ぬの いぬ"/>
+<AlphaWL kana="ね" kanaStr="のこ ねつ あね おかね きつね"/>
+<AlphaWL kana="の" kanaStr="のい のこす なのか いのしし ここのか"/>
 
-<JapaneseWordLine kanaStr="は はし はと はな はたけ はつか はなし"/>
-<JapaneseWordLine kanaStr="ひ ひく ひと ひとつ ひかく ひにく"/>
-<JapaneseWordLine kanaStr="ふ ふく ふね ふつか ふそ ひふ"/>
-<JapaneseWordLine kanaStr="へ へそ へた"/>
-<JapaneseWordLine kanaStr="は ほし ほね ほせき"/>
+<AlphaWL kana="は" kanaStr="はし はと はな はたけ はつか はなし"/>
+<AlphaWL kana="ひ" kanaStr="ひく ひと ひとつ ひかく ひにく"/>
+<AlphaWL kana="ふ" kanaStr="ふく ふね ふつか ふそ ひふ"/>
+<AlphaWL kana="へ" kanaStr="へそ へた"/>
+<AlphaWL kana="は" kanaStr="ほし ほね ほせき"/>
 
 <Solution />
 
 #### ま - ん
 
-<JapaneseWordLine kanaStr="ま まち まめ うま くま ひま あたま"/>
-<JapaneseWordLine kanaStr="み みせ みち みみ かみ みなみ"/>
-<JapaneseWordLine kanaStr="む むし むね むら むり むかし むすこ"/>
-<JapaneseWordLine kanaStr="め めし めす めくる めしかえ むすめ"/>
-<JapaneseWordLine kanaStr="も みく もし もつ もと もの にもつ"/>
+<AlphaWL kana="ま" kanaStr="まち まめ うま くま ひま あたま"/>
+<AlphaWL kana="み" kanaStr="みせ みち みみ かみ みなみ"/>
+<AlphaWL kana="む" kanaStr="むし むね むら むり むかし むすこ"/>
+<AlphaWL kana="め" kanaStr="めし めす めくる めしかえ むすめ"/>
+<AlphaWL kana="も" kanaStr="みく もし もつ もと もの にもつ"/>
 
-<JapaneseWordLine kanaStr="や やき やね やま やくて やくそく へや"/>
-<JapaneseWordLine kanaStr="ゆ ゆき ゆめ ゆかた ふゆ おかゆ"/>
-<JapaneseWordLine kanaStr="よ よこ よく よる よそみ よなか よやく"/>
+<AlphaWL kana="や" kanaStr="やき やね やま やくて やくそく へや"/>
+<AlphaWL kana="ゆ" kanaStr="ゆき ゆめ ゆかた ふゆ おかゆ"/>
+<AlphaWL kana="よ" kanaStr="よこ よく よる よそみ よなか よやく"/>
 
 
-<JapaneseWordLine kanaStr="ら らく らし らくそく さくら いらいら"/>
-<JapaneseWordLine kanaStr="り りか りえき りくつ りさつ くもり ことり"/>
-<JapaneseWordLine kanaStr="る るす ひる あさる あひる くるま"/>
-<JapaneseWordLine kanaStr="れ れきし これ かれし はれる わすれもの"/>
-<JapaneseWordLine kanaStr="ろ ろく うしろ おふろ ところ ふくろ"/>
+<AlphaWL kana="ら" kanaStr="らく らし らくそく さくら いらいら"/>
+<AlphaWL kana="り" kanaStr="りか りえき りくつ りさつ くもり ことり"/>
+<AlphaWL kana="る" kanaStr="るす ひる あさる あひる くるま"/>
+<AlphaWL kana="れ" kanaStr="れきし これ かれし はれる わすれもの"/>
+<AlphaWL kana="ろ" kanaStr="ろく うしろ おふろ ところ ふくろ"/>
 
 <Solution />
 

@@ -35,6 +35,7 @@ import JapaneseWordLine from './Japan/JapaneseWordLine';
 import JapaneseSensLine from './Japan/JapaneseSensLine';
 import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
 import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
+import KatakanaAlphabet from './Japan/Alphabet/KatakanaAlphabet';
 
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
@@ -439,11 +440,12 @@ export const MDXComponents = {
   //
   JapaneseLetters,
   Kanji,
-  JapaneseWordLine,
+  AlphaWL: JapaneseWordLine,
   Via,
   JaSL: JapaneseSensLine,
   DakuonAlphabet,
   YouonAlphabet,
+  KatakanaAlphabet,
   Speak,
   JaWL,
 };

@@ -8,7 +8,11 @@ const MyDocument = () => {
   //  @todo specify language in HTML?
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="theme-color" content="#23272f" />
+      </Head>
       <body className="font-sans antialiased text-lg bg-wash dark:bg-wash-dark text-secondary dark:text-secondary-dark leading-base">
         <script
           dangerouslySetInnerHTML={{

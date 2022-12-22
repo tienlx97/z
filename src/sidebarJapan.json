@@ -64,6 +64,21 @@
               "title": "Practice 1",
               "path": "/japan/beginner/practice-1",
               "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Alphabet",
+              "path": "/japan/beginner/katakana-alphabet",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Dakuon",
+              "path": "/japan/beginner/katakana-dakuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Youon",
+              "path": "/japan/beginner/katakana-youon",
+              "tags": ["1-days"]
             }
           ]
         }
