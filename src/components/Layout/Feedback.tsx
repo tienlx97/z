@@ -4,7 +4,6 @@
 
 import {useState} from 'react';
 import {useRouter} from 'next/router';
-import {ga} from '../../utils/analytics';
 
 export function Feedback({onSubmit = () => {}}: {onSubmit?: () => void}) {
   const {asPath} = useRouter();
@@ -44,19 +43,6 @@ const thumbsDownIcon = (
   </svg>
 );
 
-function sendGAEvent(isPositive: boolean) {
-  // Fragile. Don't change unless you've tested the network payload
-  // and verified that the right events actually show up in GA.
-  ga(
-    'send',
-    'event',
-    'button',
-    'feedback',
-    window.location.pathname,
-    isPositive ? '1' : '0'
-  );
-}
-
 function SendFeedback({onSubmit}: {onSubmit: () => void}) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   return (
@@ -71,7 +57,6 @@ function SendFeedback({onSubmit}: {onSubmit: () => void}) {
           onClick={() => {
             setIsSubmitted(true);
             onSubmit();
-            sendGAEvent(true);
           }}>
           {thumbsUpIcon}
         </button>
@@ -83,7 +68,6 @@ function SendFeedback({onSubmit}: {onSubmit: () => void}) {
           onClick={() => {
             setIsSubmitted(true);
             onSubmit();
-            sendGAEvent(false);
           }}>
           {thumbsDownIcon}
         </button>

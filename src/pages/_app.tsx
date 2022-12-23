@@ -5,7 +5,6 @@
 import {useEffect} from 'react';
 import {AppProps} from 'next/app';
 import {useRouter} from 'next/router';
-import {ga} from '../utils/analytics';
 
 import {I18nProvider} from 'next-localization';
 
@@ -13,16 +12,6 @@ import {I18nProvider} from 'next-localization';
 // import '../styles/algolia.css';
 import '../styles/index.css';
 import '../styles/sandpack.css';
-
-if (typeof window !== 'undefined') {
-  if (process.env.NODE_ENV === 'production') {
-    ga('create', process.env.NEXT_PUBLIC_GA_TRACKING_ID, 'auto');
-  }
-  const terminationEvent = 'onpagehide' in window ? 'pagehide' : 'unload';
-  window.addEventListener(terminationEvent, function () {
-    ga('send', 'timing', 'JS Dependencies', 'unload');
-  });
-}
 
 export default function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
@@ -41,17 +30,6 @@ export default function MyApp({Component, pageProps}: AppProps) {
       // It seems to work better for Chrome and Firefox which don't animate the back swipe.
     }
   }, []);
-
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      ga('set', 'page', url);
-      ga('send', 'pageview');
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
 
   return (
     <I18nProvider
