@@ -21,6 +21,9 @@ Thật là liều lĩnh khi một người ngoại quốc không chuyên nghĩ �
 * [Ảo âm 2](/japan/beginner/youon-ya-yu-yo)
 * [Xúc âm](/japan/beginner/sokuon)
 * [Luyện tập 1](/japan/beginner/practice-1)
+* [Bảng Katakana](/japan/beginner/katakana-alphabet)
+* [Katakana 2](/japan/beginner/katakana-dakuon)
+* [Katakana 3](/japan/beginner/katakana-youon)
 
 </YouWillLearn>
 

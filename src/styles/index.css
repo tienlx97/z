@@ -8,6 +8,15 @@
 
 @layer base {
 
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Source-Code-Pro-Regular.woff2') format('woff2');
+  }
+
   @font-face {
     font-family: yjnewsicon;
     src: url(https://s.yimg.jp/images/news-web/common/fonts/yjnewsicon_v2.0.eot);
@@ -16,7 +25,8 @@
 
   @font-face {
     font-family: 'ヒラギノ角ゴ Pro W3';
-    src: local(HiraginoSans-W3)
+    src: url('/fonts/ヒラギノ角ゴ Pro W3.otf') format('OpenType');
+    /* local(HiraginoSans-W3) */
   }
 
   @font-face {
