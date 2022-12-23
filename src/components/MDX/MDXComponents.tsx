@@ -65,7 +65,9 @@ function CodeStep({children, step}: {children: any; step: number}) {
 }
 
 const Kanji = ({children}: {children: any}) => (
-  <span className="font-ja text-xl">{children}</span>
+  <span className="font-ja text-[16px] sm:text-[18px] md:text-xl lg:text-xl">
+    {children}
+  </span>
 );
 
 const P = (p: JSX.IntrinsicElements['p']) => (
