@@ -25,7 +25,7 @@ export default function JapaneseWordLine({
         <div className="w-full grid-line">
           {kanaList.map((item, index) => {
             return (
-              <span className="font-ja2 lg:text-2xl" key={index}>
+              <span className="font-ja lg:text-2xl" key={index}>
                 {item}
               </span>
             );
