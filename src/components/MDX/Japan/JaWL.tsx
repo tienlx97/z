@@ -1,11 +1,14 @@
 import React from 'react';
+import cn from 'classnames';
 
 export default function JaWL({
   children,
   m = 5,
+  c = 'fit',
 }: {
   children: React.ReactNode;
   m?: number;
+  c?: 'fit' | 'fill';
 }) {
   const arr = React.Children.toArray(children).filter(
     (child) => child !== '\n'
@@ -15,7 +18,10 @@ export default function JaWL({
 
   return (
     <>
-      <div className="grid-line">
+      <div
+        className={cn(`grid-line`, {
+          'grid-1': c === 'fill',
+        })}>
         {arr.map((item, index) => {
           return <React.Fragment key={index}>{item}</React.Fragment>;
         })}

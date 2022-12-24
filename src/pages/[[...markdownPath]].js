@@ -168,7 +168,8 @@ export async function getStaticProps(context) {
   const reactTree = fakeExports.default({});
 
   // Pre-process MDX output and serialize it.
-  let {toc, children} = prepareMDX(reactTree.props.children);
+
+  let {toc, children} = prepareMDX(context.locale, reactTree.props.children);
   if (path === 'index') {
     toc = [];
   }

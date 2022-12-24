@@ -808,4 +808,21 @@ svg.acjk path[id] {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-template-rows: auto;
   column-gap: 5px;
+  place-items: baseline;
+}
+
+.grid-1 {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+/* vocalbulary-table */
+
+#vocalbulary-table td {
+  border: none;
+}
+
+#vocalbulary-table th {
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }

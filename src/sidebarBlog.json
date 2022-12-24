@@ -12,6 +12,17 @@
           "path": "/blog"
         },
         {
+          "title": "Components",
+          "hasSeparator": true,
+          "path": "/blog/components",
+          "routes": [
+            {
+              "title": "Japan Expandable",
+              "path": "/blog/components/japan-expandable"
+            }
+          ]
+        },
+        {
           "title": "Community",
           "hasSeparator": true,
           "path": "/blog/community",

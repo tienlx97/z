@@ -8,6 +8,7 @@ import cn from 'classnames';
 import {IconNote} from '../Icon/IconNote';
 import {IconWarning} from '../Icon/IconWarning';
 import {IconPitfall} from '../Icon/IconPitfall';
+import {useI18n} from 'next-localization';
 
 type CalloutVariants = 'deprecated' | 'pitfall' | 'note' | 'wip';
 
@@ -56,6 +57,8 @@ function ExpandableCallout({children, type}: ExpandableCalloutProps) {
   const contentRef = useRef<HTMLDivElement>(null);
   const variant = variantMap[type];
 
+  const {t} = useI18n();
+
   return (
     <div
       className={cn(
@@ -67,7 +70,7 @@ function ExpandableCallout({children, type}: ExpandableCalloutProps) {
         <variant.Icon
           className={cn('inline mr-3 mb-1 text-lg', variant.textColor)}
         />
-        {variant.title}
+        {t(`mdx.expandablecallout.${type}`)}
       </h3>
       <div className="relative">
         <div ref={contentRef} className="py-2">

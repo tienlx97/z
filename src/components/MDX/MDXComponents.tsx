@@ -36,6 +36,8 @@ import JapaneseSensLine from './Japan/JapaneseSensLine';
 import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
 import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
 import KatakanaAlphabet from './Japan/Alphabet/KatakanaAlphabet';
+import VocalbularyTable from './Japan/VocalbularyTable';
+import Expandable from './Japan/Expandable';
 
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
@@ -386,6 +388,42 @@ function Via({href, children}: {href: string; children: React.ReactNode}) {
   );
 }
 
+function Skit({children}: {children: any}) {
+  return <Expandable type="skit">{children}</Expandable>;
+}
+
+function BonusPhrase({children}: {children: any}) {
+  return <Expandable type="bonus-phrase">{children}</Expandable>;
+}
+
+function Culture({children}: {children: any}) {
+  return <Expandable type="culture">{children}</Expandable>;
+}
+
+function KKanji({children}: {children: any}) {
+  return <Expandable type="kanji">{children}</Expandable>;
+}
+
+function KeyPhrase({children}: {children: any}) {
+  return <Expandable type="key-phrase">{children}</Expandable>;
+}
+
+function TripTip({children}: {children: any}) {
+  return <Expandable type="trip-tip">{children}</Expandable>;
+}
+
+function TryItOut({children}: {children: any}) {
+  return <Expandable type="try-it-out">{children}</Expandable>;
+}
+
+function UseIt({children}: {children: any}) {
+  return <Expandable type="use-it">{children}</Expandable>;
+}
+
+function Vocalbulary({children}: {children: any}) {
+  return <Expandable type="vocalbulary">{children}</Expandable>;
+}
+
 export const MDXComponents = {
   p: P,
   strong: Strong,
@@ -450,6 +488,17 @@ export const MDXComponents = {
   KatakanaAlphabet,
   Speak,
   JaWL,
+  VTable: VocalbularyTable,
+  Expandable,
+  Skit,
+  BonusPhrase,
+  Culture,
+  KKanji,
+  KeyPhrase,
+  TripTip,
+  TryItOut,
+  UseIt,
+  Vocalbulary,
 };
 
 for (let key in MDXComponents) {

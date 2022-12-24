@@ -11,7 +11,9 @@ Trong tiếng Nhật có rất nhiều cách ghép âm để tạo thành các �
 
 <br/>
 
-<p align="center">Click để nghe</p>
+<Note>
+  Click để nghe
+</Note>
 
 <JaWL m={2}>
   <Speak k="赤い"><Kanji>あか**い**</Kanji></Speak>

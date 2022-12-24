@@ -79,6 +79,11 @@
               "title": "Katakana Youon",
               "path": "/japan/beginner/katakana-youon",
               "tags": ["1-days"]
+            },
+            {
+              "title": "Counting number, age",
+              "path": "/japan/beginner/counting-number-age",
+              "tags": ["1-days"]
             }
           ]
         }

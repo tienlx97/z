@@ -7,8 +7,8 @@ export const PREPARE_MDX_CACHE_BREAKER = 2;
 // !!! IMPORTANT !!! Bump this if you change any logic.
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-export function prepareMDX(rawChildren) {
-  const toc = getTableOfContents(rawChildren, /* depth */ 10);
+export function prepareMDX(locale, rawChildren) {
+  const toc = getTableOfContents(locale, rawChildren, /* depth */ 10);
   const children = wrapChildrenInMaxWidthContainers(rawChildren);
   return {toc, children};
 }
@@ -55,9 +55,9 @@ function wrapChildrenInMaxWidthContainers(children) {
   return finalChildren;
 }
 
-function getTableOfContents(children, depth) {
+function getTableOfContents(locale, children, depth) {
   const anchors = [];
-  extractHeaders(children, depth, anchors);
+  extractHeaders(locale, children, depth, anchors);
   if (anchors.length > 0) {
     anchors.unshift({
       url: '#',
@@ -75,12 +75,76 @@ const headerTypes = new Set([
   'Challenges',
   'Recap',
   'TeamMember',
+  //
+  'Skit',
+  'Vocalbulary',
+  'KeyPhrase',
+  'BonusPhrase',
+  'UseIt',
+  'TryItOut',
+  'KKanji',
+  'Culture',
+  'TripTip',
 ]);
-function extractHeaders(children, depth, out) {
+function extractHeaders(locale, children, depth, out) {
   for (const child of Children.toArray(children)) {
     if (child.type && headerTypes.has(child.type)) {
       let header;
-      if (child.type === 'Challenges') {
+      if (child.type === 'Skit') {
+        header = {
+          url: '#skit',
+          depth: 2,
+          text: locale === 'en' ? 'Skit' : 'Hội thoại',
+        };
+      } else if (child.type === 'Vocalbulary') {
+        header = {
+          url: '#vocalbulary',
+          depth: 2,
+          text: locale === 'en' ? 'Vocalbulary' : 'Từ vựng',
+        };
+      } else if (child.type === 'BonusPhrase') {
+        header = {
+          url: '#bonus-phrase',
+          depth: 2,
+          text: locale === 'en' ? 'Bonus Phrase' : 'Mở rộng',
+        };
+      } else if (child.type === 'KeyPhrase') {
+        header = {
+          url: '#key-phrase',
+          depth: 2,
+          text: locale === 'en' ? 'Key Phrase' : 'Mẫu câu cơ bản',
+        };
+      } else if (child.type === 'UseIt') {
+        header = {
+          url: '#use-it',
+          depth: 2,
+          text: locale === 'en' ? 'Use It' : 'Luyện tập',
+        };
+      } else if (child.type === 'TryItOut') {
+        header = {
+          url: '#try-it-out',
+          depth: 2,
+          text: locale === 'en' ? 'Try It Out' : 'Thực hành',
+        };
+      } else if (child.type === 'KKanji') {
+        header = {
+          url: '#kanji',
+          depth: 2,
+          text: locale === 'en' ? 'Kanji' : 'Hán tự',
+        };
+      } else if (child.type === 'Culture') {
+        header = {
+          url: '#culture',
+          depth: 2,
+          text: locale === 'en' ? 'Culture' : 'Văn hóa',
+        };
+      } else if (child.type === 'TripTip') {
+        header = {
+          url: '#trip-tip',
+          depth: 2,
+          text: locale === 'en' ? 'Trip Tip' : 'Mẹo',
+        };
+      } else if (child.type === 'Challenges') {
         header = {
           url: '#challenges',
           depth: 2,
@@ -107,7 +171,7 @@ function extractHeaders(children, depth, out) {
       }
       out.push(header);
     } else if (child.children && depth > 0) {
-      extractHeaders(child.children, depth - 1, out);
+      extractHeaders(locale, child.children, depth - 1, out);
     }
   }
 }

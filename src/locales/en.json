@@ -11,6 +11,23 @@
     "survey": {
       "how_do_you_like_these_docs": "How do you like these docs?",
       "take_a_survey": "Take our survey!"
+    },
+    "expandable": {
+      "skit": "Skit",
+      "vocalbulary": "Vocalbulary",
+      "key_phrase": "Key Phrase",
+      "use_it": "Use It!",
+      "try_it_out": "Try It Out!",
+      "bonus_phrase": "Bonus Phrase",
+      "kanji": "Kanji",
+      "culture": "Culture",
+      "trip-tip": "Trip tip"
+    },
+    "expandablecallout": {
+      "deprecated": "Deprecated",
+      "pitfall": "Pitfall",
+      "note": "Note",
+      "wip": "Under Construction"
     }
   }
 }

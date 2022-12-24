@@ -11,6 +11,23 @@
     "survey": {
       "how_do_you_like_these_docs": "Bạn thấy thế nào về website ?",
       "take_a_survey": "Khảo sát!"
+    },
+    "expandable": {
+      "skit": "Hội thoại",
+      "vocalbulary": "Từ vựng",
+      "key_phrase": "Mẫu câu cơ bản",
+      "use_it": "Luyện tập",
+      "try_it_out": "Thực hành",
+      "bonus_phrase": "Mở rộng",
+      "kanji": "Hán tự",
+      "culture": "Văn hóa",
+      "trip-tip": "Mẹo"
+    },
+    "expandablecallout": {
+      "note": "Lưu ý",
+      "deprecated": "Deprecated",
+      "pitfall": "Pitfall",
+      "wip": "Under Construction"
     }
   }
 }
