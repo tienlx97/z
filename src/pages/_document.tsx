@@ -17,7 +17,7 @@ const MyDocument = () => {
 
         <link
           rel="preload"
-          href="https://mimikyu.vercel.app/fonts/fonts/HiraginoSansProW3.otf"
+          href="https://mimikyu.vercel.app/fonts/HiraginoSansProW3.otf"
           as="font"
           type="OpenType"
           crossOrigin="anonymous"
