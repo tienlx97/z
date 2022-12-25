@@ -14,9 +14,10 @@ const MyDocument = () => {
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
+
         <link
           rel="preload"
-          href="http://mimikyu.vercel.app/fonts/fonts/ヒラギノ角ゴProW3.otf"
+          href="https://mimikyu.vercel.app/fonts/fonts/HiraginoSansProW3.otf"
           as="font"
           type="OpenType"
           crossOrigin="anonymous"
