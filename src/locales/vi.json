@@ -28,6 +28,10 @@
       "deprecated": "Deprecated",
       "pitfall": "Pitfall",
       "wip": "Under Construction"
+    },
+    "vtable": {
+      "meaning": "Nghĩa",
+      "hiragana": "Hiragana"
     }
   }
 }

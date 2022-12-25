@@ -28,6 +28,10 @@
       "pitfall": "Pitfall",
       "note": "Note",
       "wip": "Under Construction"
+    },
+    "vtable": {
+      "meaning": "Meaning",
+      "hiragana": "Hiragana"
     }
   }
 }

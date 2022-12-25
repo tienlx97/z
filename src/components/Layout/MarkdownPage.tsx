@@ -14,6 +14,7 @@ import {Footer} from './Footer';
 import UtilityBar from 'components/UitilityBar';
 import Comment from 'components/Comment';
 import Head from 'next/head';
+import {MetaContext} from 'components/MDX/MetaContext';
 
 import(/* webpackPrefetch: true */ '../MDX/CodeBlock/CodeBlock');
 
@@ -66,15 +67,6 @@ export function MarkdownPage<
 
   return (
     <>
-      <Head>
-        <meta
-          property="og:title"
-          name={meta.id}
-          content={meta.id}
-          key="og:title"
-        />
-      </Head>
-
       <div className="pl-0">
         <Seo title={title} />
         {!isHomePage && (
@@ -98,7 +90,7 @@ export function MarkdownPage<
       </div>
       <UtilityBar isVisible={isVisible} onOpen={onOpen} />
       <div id="hide-comment"></div>
-      <Comment onClose={onClose} isOpenComment={open} />
+      <Comment term={meta.id} onClose={onClose} isOpenComment={open} />
     </>
   );
 }

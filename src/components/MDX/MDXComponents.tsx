@@ -36,7 +36,7 @@ import JapaneseSensLine from './Japan/JapaneseSensLine';
 import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
 import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
 import KatakanaAlphabet from './Japan/Alphabet/KatakanaAlphabet';
-import VocalbularyTable from './Japan/VocalbularyTable';
+import VocalbularyTable, {VItem} from './Japan/VocalbularyTable';
 import Expandable from './Japan/Expandable';
 
 import Speak from './Japan/Speak';
@@ -489,6 +489,7 @@ export const MDXComponents = {
   Speak,
   JaWL,
   VTable: VocalbularyTable,
+  VItem,
   Expandable,
   Skit,
   BonusPhrase,

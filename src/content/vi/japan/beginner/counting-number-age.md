@@ -15,50 +15,39 @@ title: Đếm số - tuổi
 
 
 <VTable>
-  <tr>
-    <td><Kanji><CodeStep step={1}>ゼロ</CodeStep>・れい</Kanji></td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><Kanji>いち</Kanji></td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td><Kanji>に</Kanji></td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td><Kanji>さん</Kanji></td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td><Kanji><CodeStep step={1}>よん</CodeStep>・し</Kanji></td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td><Kanji>ご</Kanji></td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td><Kanji>ろく</Kanji></td>
-    <td>6</td>
-  </tr>
-  <tr>
-    <td><Kanji><CodeStep step={1}>なな</CodeStep>・しち</Kanji></td>
-    <td>7</td>
-  </tr>
-  <tr>
-    <td><Kanji>はち</Kanji></td>
-    <td>8</td>
-  </tr>
-  <tr>
-    <td><Kanji><CodeStep step={1}>きゅう</CodeStep>・く</Kanji></td>
-    <td>9</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう</Kanji></td>
-    <td>10</td>
-  </tr>
+  <VItem meaning="0">
+    <Kanji><CodeStep step={1}>ゼロ</CodeStep>・れい</Kanji>
+  </VItem>
+  <VItem meaning="1">
+    <Kanji>いち</Kanji>
+  </VItem>
+  <VItem meaning="2">
+    <Kanji>に</Kanji>
+  </VItem>
+  <VItem meaning="3">
+    <Kanji>さん</Kanji>
+  </VItem>
+  <VItem meaning="4">
+    <Kanji><CodeStep step={1}>よん</CodeStep>・し</Kanji>
+  </VItem>
+  <VItem meaning="5">
+    <Kanji>ご</Kanji>
+  </VItem>
+  <VItem meaning="6">
+    <Kanji>ろく</Kanji>
+  </VItem>
+  <VItem meaning="7">
+    <Kanji><CodeStep step={1}>なな</CodeStep>・しち</Kanji>
+  </VItem>
+  <VItem meaning="8">
+    <Kanji>はち</Kanji>
+  </VItem>
+  <VItem meaning="9">
+    <Kanji><CodeStep step={1}>きゅう</CodeStep>・く</Kanji>
+  </VItem>
+  <VItem meaning="10">
+    <Kanji>じゅう</Kanji>
+  </VItem>
 </VTable>
 
 <Note>
@@ -70,46 +59,37 @@ title: Đếm số - tuổi
 #### Từ 11 - 19
 
 <VTable>
-  <tr>
-    <td><Kanji>じゅう　いち</Kanji></td>
-    <td>11</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　に</Kanji></td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　さん</Kanji></td>
-    <td>13</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　<CodeStep step={1}>よん</CodeStep></Kanji></td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　ご</Kanji></td>
-    <td>15</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　ろく</Kanji></td>
-    <td>16</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　<CodeStep step={1}>なな</CodeStep></Kanji></td>
-    <td>17</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　はち</Kanji></td>
-    <td>18</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅう　<CodeStep step={1}>きゅう</CodeStep></Kanji></td>
-    <td>19</td>
-  </tr>
+  <VItem meaning="11">
+    <Kanji>じゅう　いち</Kanji>
+  </VItem>
+  <VItem meaning="12">
+    <Kanji>じゅう　に</Kanji>
+  </VItem>
+  <VItem meaning="13">
+    <Kanji>じゅう　さん</Kanji>
+  </VItem>
+  <VItem meaning="14">
+    <Kanji>じゅう　<CodeStep step={1}>よん</CodeStep></Kanji>
+  </VItem>
+  <VItem meaning="15">
+    <Kanji>じゅう　ご</Kanji>
+  </VItem>
+  <VItem meaning="16">
+    <Kanji>じゅう　ろく</Kanji>
+  </VItem>
+  <VItem meaning="17">
+    <Kanji>じゅう　<CodeStep step={1}>なな</CodeStep></Kanji>
+  </VItem>
+  <VItem meaning="18">
+    <Kanji>じゅう　はち</Kanji>
+  </VItem>
+  <VItem meaning="19">
+    <Kanji>じゅう　<CodeStep step={1}>きゅう</CodeStep></Kanji>
+  </VItem>
 </VTable>
 
 <Note>
-Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><td><Kanji>じゅう</Kanji></td></CodeStep> + số 
+Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><Kanji>じゅう</Kanji></CodeStep> + số 
 </Note>
 
 <Solution />
@@ -117,26 +97,21 @@ Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><td><Kan
 #### Từ 20 - 99
 
 <VTable>
-  <tr>
-    <td><Kanji>に じゅう</Kanji></td>
-    <td>21</td>
-  </tr>
-  <tr>
-    <td><Kanji>に じゅう　いち</Kanji></td>
-    <td>21</td>
-  </tr>
-  <tr>
-    <td><Kanji>さん じゅう</Kanji></td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td><Kanji>よん じゅう</Kanji></td>
-    <td>40</td>
-  </tr>
-  <tr>
-    <td><Kanji>きゅう　じゅう　きゅう</Kanji></td>
-    <td>99</td>
-  </tr>
+  <VItem meaning="20">
+    <Kanji>に じゅう</Kanji>
+  </VItem>
+  <VItem meaning="21">
+    <Kanji>に じゅう　いち</Kanji>
+  </VItem>
+  <VItem meaning="30">
+    <Kanji>さん じゅう</Kanji>
+  </VItem>
+  <VItem meaning="40">
+    <Kanji>よん じゅう</Kanji>
+  </VItem>
+  <VItem meaning="99">
+    <Kanji>きゅう　じゅう　きゅう</Kanji>
+  </VItem>
 </VTable>
 
 <Solution />
@@ -158,59 +133,47 @@ Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><td><Kan
 Các trường hợp đặc biệt: 
 
 <VTable>
- <tr>
-  <td><Kanji>いっさい</Kanji></td>
-  <td>1</td>
- </tr>
-<tr>
-  <td><Kanji>はっさい</Kanji></td>
-  <td>8</td>
-</tr>
-<tr>
-  <td><Kanji>じゅっさい</Kanji></td>
-  <td>10</td>
-</tr>
-<tr>
-  <td><Kanji>にじゅっさい・はたち</Kanji></td>
-  <td>20</td>
-</tr>
+ <VItem meaning="1">
+  <Kanji>いっさい</Kanji>
+ </VItem>
+<VItem meaning="8">
+  <Kanji>はっさい</Kanji>
+</VItem>
+<VItem meaning="10">
+  <Kanji>じゅっさい</Kanji>
+</VItem>
+<VItem meaning="20">
+  <Kanji>にじゅっさい・はたち</Kanji>
+</VItem>
 </VTable>
 
 - Số đặc biệt thì `đuôi` chứa nó cũng đặc biệt
 
 <VTable>
-  <tr>
-    <td><Kanji>じゅう**いっさい**</Kanji></td>
-    <td>11</td>
-  </tr>
-  <tr>
-    <td><Kanji>にじゅういっさい</Kanji></td>
-    <td>21</td>
-  </tr>
-  <tr>
-    <td><Kanji>さんじゅういっさい</Kanji></td>
-    <td>31</td>
-  </tr>
-  <tr>
-    <td><Kanji>じゅ**はっさい**</Kanji></td>
-    <td>18</td>
-  </tr>
-  <tr>
-    <td><Kanji>にじゅはっさい</Kanji></td>
-    <td>28</td>
-  </tr>
-  <tr>
-    <td><Kanji>さんじゅはっさい</Kanji></td>
-    <td>38</td>
-  </tr>
-  <tr>
-    <td><Kanji>さん**じゅっさい**</Kanji></td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td><Kanji>よんじゅっさい</Kanji></td>
-    <td>40</td>
-  </tr>
+  <VItem meaning="11">
+    <Kanji>じゅう**いっさい**</Kanji>
+  </VItem>
+  <VItem meaning="21">
+    <Kanji>にじゅういっさい</Kanji>
+  </VItem>
+  <VItem meaning="31">
+    <Kanji>さんじゅういっさい</Kanji>
+  </VItem>
+  <VItem meaning="18">
+    <Kanji>じゅ**はっさい**</Kanji>
+  </VItem>
+  <VItem meaning="28">
+    <Kanji>にじゅはっさい</Kanji>
+  </VItem>
+  <VItem meaning="38">
+    <Kanji>さんじゅはっさい</Kanji>
+  </VItem>
+  <VItem meaning="30">
+    <Kanji>さん**じゅっさい**</Kanji>
+  </VItem>
+  <VItem meaning="40">
+    <Kanji>よんじゅっさい</Kanji>
+  </VItem>
 </VTable>
 
 </Note>

@@ -41,9 +41,9 @@ export const Seo = withRouter(
         key="og:url"
         content={`https://beta.reactjs.org${router.asPath.split(/[\?\#]/)[0]}`}
       />
-      {/* {title != null && (
+      {title != null && (
         <meta property="og:title" content={title} key="og:title" />
-      )} */}
+      )}
       {description != null && (
         <meta
           property="og:description"
@@ -86,7 +86,7 @@ export const Seo = withRouter(
         name="google-site-verification"
         content="j1duf8XRaKuZyGvhPd8GkYXHG7LI4GYbIvAXBsqTC9U"
       /> */}
-      <link
+      {/* <link
         rel="preload"
         href="/fonts/Source-Code-Pro-Regular.woff2"
         as="font"
@@ -106,7 +106,8 @@ export const Seo = withRouter(
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
-      />
+      /> */}
+
       {children}
     </Head>
   )

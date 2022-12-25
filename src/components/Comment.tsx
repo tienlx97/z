@@ -13,9 +13,11 @@ const THEME_MAPPING = {
 export default function Comment({
   isOpenComment,
   onClose,
+  term,
 }: {
   isOpenComment: boolean;
   onClose: any;
+  term: string;
 }) {
   const [preferredTheme, setPreferredTheme] = useState('dark');
 
@@ -64,7 +66,9 @@ export default function Comment({
           category="Show and tell"
           categoryId="DIC_kwDOIldgS84CTErr"
           theme={THEME_MAPPING[preferredTheme as keyof typeof THEME_MAPPING]}
-          mapping="og:title"
+          // mapping="og:title"
+          mapping="specific"
+          term={term}
           strict="1"
           emitMetadata="1"
           inputPosition="top"
