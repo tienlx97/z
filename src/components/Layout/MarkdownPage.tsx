@@ -3,7 +3,6 @@
  */
 
 import * as React from 'react';
-import {useRouter} from 'next/router';
 import {DocsPageFooter} from 'components/DocsFooter';
 import {Seo} from 'components/Seo';
 import PageHeading from 'components/PageHeading';
@@ -13,8 +12,6 @@ import {TocContext} from '../MDX/TocContext';
 import {Footer} from './Footer';
 import UtilityBar from 'components/UitilityBar';
 import Comment from 'components/Comment';
-import Head from 'next/head';
-import {MetaContext} from 'components/MDX/MetaContext';
 
 import(/* webpackPrefetch: true */ '../MDX/CodeBlock/CodeBlock');
 
