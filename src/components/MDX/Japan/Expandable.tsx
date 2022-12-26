@@ -163,7 +163,7 @@ export default function Expandable({
         </div>
         <Button
           active={true}
-          className={cn('-mr-5 sm:mr-0 px-2 sm:px-4', {
+          className={cn('w-[100px]', '-mr-5 sm:mr-0 px-2 sm:px-4', {
             'bg-blue-700 border-blue-700 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-700':
               isSkit,
             'bg-lime-700 border-lime-700 hover:bg-lime-600 focus:bg-lime-700 active:bg-lime-700':
