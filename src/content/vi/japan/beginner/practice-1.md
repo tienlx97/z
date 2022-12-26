@@ -4,7 +4,7 @@ title: Luyện tập
 ---
 
 <Intro>
-Trong bài này những câu nào chữ <Kanji>「は」</Kanji> được <CodeStep step={1}>in đậm</CodeStep> sẽ được đọc là <Kanji>wa</Kanji> (phân cách chủ ngữ với vị ngữ) sẽ học sau.
+Trong bài này những câu nào chữ <K>「は」</K> được <CodeStep step={1}>in đậm</CodeStep> sẽ được đọc là <K>wa</K> (phân cách chủ ngữ với vị ngữ) sẽ học sau.
 </Intro>
 
 <br/>

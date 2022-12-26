@@ -15,13 +15,22 @@ const MyDocument = () => {
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
 
-        <link
+        {/* <link
           rel="preload"
           href="https://mimikyu.vercel.app/fonts/HiraginoSansProW3.otf"
           as="font"
-          type="OpenType"
+          type="font/OpenType"
+          crossOrigin="anonymous"
+        /> */}
+
+        <link
+          rel="preload"
+          href="https://mimikyu.vercel.app/fonts/HiraginoSansProW3.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

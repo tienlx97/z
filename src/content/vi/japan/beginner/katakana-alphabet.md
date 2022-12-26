@@ -36,50 +36,50 @@ Chưa nghĩ ra các lưu ý, nào nghĩ ra update vô
 ## [ Tập đọc từ ]
 
 <JaWL m={4}>
- <Speak k="アメリカ"><Kanji>アメリカ</Kanji></Speak>
- <Speak k="ラオス"><Kanji>ラオス</Kanji></Speak>
- <Speak k="イラク"><Kanji>イラク</Kanji></Speak>
- <Speak k="ロシア"><Kanji>ロシア</Kanji></Speak>
+ <Speak k="アメリカ"><K>アメリカ</K></Speak>
+ <Speak k="ラオス"><K>ラオス</K></Speak>
+ <Speak k="イラク"><K>イラク</K></Speak>
+ <Speak k="ロシア"><K>ロシア</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="イタリア"><Kanji>イタリア</Kanji></Speak>
- <Speak k="スイス"><Kanji>スイス</Kanji></Speak>
- <Speak k="メキシュ"><Kanji>メキシュ</Kanji></Speak>
- <Speak k="アフリカ"><Kanji>アフリカ</Kanji></Speak>
+ <Speak k="イタリア"><K>イタリア</K></Speak>
+ <Speak k="スイス"><K>スイス</K></Speak>
+ <Speak k="メキシュ"><K>メキシュ</K></Speak>
+ <Speak k="アフリカ"><K>アフリカ</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="マニラ"><Kanji>マニラ</Kanji></Speak>
- <Speak k="アテネ"><Kanji>アテネ</Kanji></Speak>
- <Speak k="モスクワ"><Kanji>モスクワ</Kanji></Speak>
- <Speak k="ノウル"><Kanji>ノウル</Kanji></Speak>
+ <Speak k="マニラ"><K>マニラ</K></Speak>
+ <Speak k="アテネ"><K>アテネ</K></Speak>
+ <Speak k="モスクワ"><K>モスクワ</K></Speak>
+ <Speak k="ノウル"><K>ノウル</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="トマト"><Kanji>トマト</Kanji></Speak>
- <Speak k="ミルク"><Kanji>ミルク</Kanji></Speak>
- <Speak k="カメラ"><Kanji>カメラ</Kanji></Speak>
- <Speak k="テニス"><Kanji>テニス</Kanji></Speak>
+ <Speak k="トマト"><K>トマト</K></Speak>
+ <Speak k="ミルク"><K>ミルク</K></Speak>
+ <Speak k="カメラ"><K>カメラ</K></Speak>
+ <Speak k="テニス"><K>テニス</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="クラス"><Kanji>クラス</Kanji></Speak>
- <Speak k="テスト"><Kanji>テスト</Kanji></Speak>
- <Speak k="カラ"><Kanji>カラ</Kanji></Speak>
- <Speak k="キロ"><Kanji>キロ</Kanji></Speak>
+ <Speak k="クラス"><K>クラス</K></Speak>
+ <Speak k="テスト"><K>テスト</K></Speak>
+ <Speak k="カラ"><K>カラ</K></Speak>
+ <Speak k="キロ"><K>キロ</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="クリスマス"><Kanji>クリスマス</Kanji></Speak>
- <Speak k="カラオケ"><Kanji>カラオケ</Kanji></Speak>
- <Speak k="テキスト"><Kanji>テキスト</Kanji></Speak>
- <Speak k="メモ"><Kanji>メモ</Kanji></Speak>
+ <Speak k="クリスマス"><K>クリスマス</K></Speak>
+ <Speak k="カラオケ"><K>カラオケ</K></Speak>
+ <Speak k="テキスト"><K>テキスト</K></Speak>
+ <Speak k="メモ"><K>メモ</K></Speak>
 </JaWL>
 
 <JaWL m={4}>
- <Speak k="マスク"><Kanji>マスク</Kanji></Speak>
- <Speak k="キリスト"><Kanji>キリスト</Kanji></Speak>
- <Speak k="イスラム"><Kanji>イスラム</Kanji></Speak>
- <Speak k="ミス"><Kanji>ミス</Kanji></Speak>
+ <Speak k="マスク"><K>マスク</K></Speak>
+ <Speak k="キリスト"><K>キリスト</K></Speak>
+ <Speak k="イスラム"><K>イスラム</K></Speak>
+ <Speak k="ミス"><K>ミス</K></Speak>
 </JaWL>

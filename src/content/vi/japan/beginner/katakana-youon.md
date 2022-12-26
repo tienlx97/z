@@ -7,27 +7,27 @@ title: Ảo âm Katakana
 
 
 <JaWL m={3}>
- <Kanji>ニュージーランド</Kanji>
- <Kanji>シャンハイ</Kanji>
- <Kanji>ニュース</Kanji>
+ <K>ニュージーランド</K>
+ <K>シャンハイ</K>
+ <K>ニュース</K>
 </JaWL>
 
 <JaWL m={3}>
- <Kanji>ワイシャツ</Kanji>
- <Kanji>メニュー</Kanji>
- <Kanji>キャンプ</Kanji>
+ <K>ワイシャツ</K>
+ <K>メニュー</K>
+ <K>キャンプ</K>
 </JaWL>
 
 <JaWL m={3}>
- <Kanji>シャープペン</Kanji>
- <Kanji>ニューヨーク</Kanji>
- <Kanji>ジュース</Kanji>
+ <K>シャープペン</K>
+ <K>ニューヨーク</K>
+ <K>ジュース</K>
 </JaWL>
 
 <JaWL m={3}>
- <Kanji>チャーハン</Kanji>
- <Kanji>チョコレート</Kanji>
- <Kanji>ジョギング</Kanji>
+ <K>チャーハン</K>
+ <K>チョコレート</K>
+ <K>ジョギング</K>
 </JaWL>
 
 

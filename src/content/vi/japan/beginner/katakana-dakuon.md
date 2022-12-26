@@ -6,126 +6,126 @@ title: Biến âm Katakana
 ## [ Tập đọc từ ]
 
 <JaWL m={4}>
- <Kanji>ベトナム</Kanji>
- <Kanji>ブルネイ</Kanji>
- <Kanji>イギリス</Kanji>
- <Kanji>ドイツ</Kanji>
+ <K>ベトナム</K>
+ <K>ブルネイ</K>
+ <K>イギリス</K>
+ <K>ドイツ</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ギリシア</Kanji>
- <Kanji>ポルトガル</Kanji>
- <Kanji>ブルガリア</Kanji>
- <Kanji>カナダ</Kanji>
+ <K>ギリシア</K>
+ <K>ポルトガル</K>
+ <K>ブルガリア</K>
+ <K>カナダ</K>
 </JaWL>
 
 
 <JaWL m={4}>
- <Kanji>ブラジル</Kanji>
- <Kanji>ベネズエラ</Kanji>
- <Kanji>エジプト</Kanji>
- <Kanji>アジア</Kanji>
-</JaWL>
-
-
-
-<JaWL m={4}>
- <Kanji>パリ</Kanji>
- <Kanji>テルビ</Kanji>
- <Kanji>ビル</Kanji>
- <Kanji>アルバイト</Kanji>
+ <K>ブラジル</K>
+ <K>ベネズエラ</K>
+ <K>エジプト</K>
+ <K>アジア</K>
 </JaWL>
 
 
 
 <JaWL m={4}>
- <Kanji>ドル</Kanji>
- <Kanji>ピアニスト</Kanji>
- <Kanji>ヨガ</Kanji>
- <Kanji>バス</Kanji>
-</JaWL>
-
-<JaWL m={4}>
- <Kanji>ピアノ</Kanji>
- <Kanji>クラブ</Kanji>
- <Kanji>キログラム</Kanji>
- <Kanji>プログラム</Kanji>
-</JaWL>
-
-<JaWL m={4}>
- <Kanji>ドラム</Kanji>
- <Kanji>ポスト</Kanji>
- <Kanji>ガラス</Kanji>
- <Kanji>ピアス</Kanji>
-</JaWL>
-
-<JaWL m={4}>
- <Kanji>タイ</Kanji>
- <Kanji>ハノイ</Kanji>
- <Kanji>アイロン</Kanji>
- <Kanji>ナイフ</Kanji>
-</JaWL>
-
-<JaWL m={4}>
- <Kanji>トイレ</Kanji>
- <Kanji>バイク</Kanji>
- <Kanji>ライオン</Kanji>
- <Kanji>セイズ</Kanji>
-</JaWL>
-
-<JaWL m={4}>
- <Kanji>カンボジア</Kanji>
- <Kanji>インドネシア</Kanji>
- <Kanji>インド</Kanji>
- <Kanji>フラヌ</Kanji>
+ <K>パリ</K>
+ <K>テルビ</K>
+ <K>ビル</K>
+ <K>アルバイト</K>
 </JaWL>
 
 
+
 <JaWL m={4}>
- <Kanji>スペイン</Kanji>
- <Kanji>オランダ</Kanji>
- <Kanji>プノンペン</Kanji>
- <Kanji>バンコク</Kanji>
+ <K>ドル</K>
+ <K>ピアニスト</K>
+ <K>ヨガ</K>
+ <K>バス</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ロンドン</Kanji>
- <Kanji>ベルリン</Kanji>
- <Kanji>ワシントン</Kanji>
- <Kanji>ペキン</Kanji>
+ <K>ピアノ</K>
+ <K>クラブ</K>
+ <K>キログラム</K>
+ <K>プログラム</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>レモン</Kanji>
- <Kanji>ダナン</Kanji>
- <Kanji>ロンネル</Kanji>
- <Kanji>エンジニア</Kanji>
+ <K>ドラム</K>
+ <K>ポスト</K>
+ <K>ガラス</K>
+ <K>ピアス</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>パソコン</Kanji>
- <Kanji>レストラン</Kanji>
- <Kanji>オレンジ</Kanji>
- <Kanji>コンビニ</Kanji>
+ <K>タイ</K>
+ <K>ハノイ</K>
+ <K>アイロン</K>
+ <K>ナイフ</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ビタミン</Kanji>
- <Kanji>センダル</Kanji>
- <Kanji>プレゼント</Kanji>
- <Kanji>ドリアン</Kanji>
+ <K>トイレ</K>
+ <K>バイク</K>
+ <K>ライオン</K>
+ <K>セイズ</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ダンス</Kanji>
- <Kanji>メロン</Kanji>
- <Kanji>ワイン</Kanji>
- <Kanji>テント</Kanji>
+ <K>カンボジア</K>
+ <K>インドネシア</K>
+ <K>インド</K>
+ <K>フラヌ</K>
+</JaWL>
+
+
+<JaWL m={4}>
+ <K>スペイン</K>
+ <K>オランダ</K>
+ <K>プノンペン</K>
+ <K>バンコク</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>シングル</Kanji>
- <Kanji>エンジン</Kanji>
- <Kanji>バレンチン</Kanji>
- <Kanji>ピンク</Kanji>
+ <K>ロンドン</K>
+ <K>ベルリン</K>
+ <K>ワシントン</K>
+ <K>ペキン</K>
+</JaWL>
+
+<JaWL m={4}>
+ <K>レモン</K>
+ <K>ダナン</K>
+ <K>ロンネル</K>
+ <K>エンジニア</K>
+</JaWL>
+
+<JaWL m={4}>
+ <K>パソコン</K>
+ <K>レストラン</K>
+ <K>オレンジ</K>
+ <K>コンビニ</K>
+</JaWL>
+
+<JaWL m={4}>
+ <K>ビタミン</K>
+ <K>センダル</K>
+ <K>プレゼント</K>
+ <K>ドリアン</K>
+</JaWL>
+
+<JaWL m={4}>
+ <K>ダンス</K>
+ <K>メロン</K>
+ <K>ワイン</K>
+ <K>テント</K>
+</JaWL>
+
+<JaWL m={4}>
+ <K>シングル</K>
+ <K>エンジン</K>
+ <K>バレンチン</K>
+ <K>ピンク</K>
 </JaWL>

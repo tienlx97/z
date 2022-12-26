@@ -1,0 +1,93 @@
+{
+  "title": "Japanese",
+  "heading": true,
+  "path": "/japan",
+  "routes": [
+    {
+      "heading": true,
+      "path": "",
+      "routes": [
+        {
+          "title": "Bắt đầu",
+          "path": "/japan"
+        },
+        {
+          "title": "Vỡ lòng",
+          "path": "/japan/beginner",
+          "routes": [
+            {
+              "title": "Bảng chữ cái",
+              "path": "/japan/beginner/alphabet",
+              "tags": ["3-days"]
+            },
+            {
+              "title": "Luyện tập Hiragana 1",
+              "path": "/japan/beginner/practice-hiragana-1",
+              "tags": ["2-days"]
+            },
+            {
+              "title": "Luyện tập Hiragana 2",
+              "path": "/japan/beginner/practice-hiragana-2",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Biến âm",
+              "path": "/japan/beginner/dakuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Trường âm",
+              "path": "/japan/beginner/chouon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Trường âm い",
+              "path": "/japan/beginner/youon-i",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Âm nối",
+              "path": "/japan/beginner/youon-n",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Trường âm ゃ ゅ ょ",
+              "path": "/japan/beginner/youon-ya-yu-yo",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Xúc âm",
+              "path": "/japan/beginner/sokuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Luyện tập 1",
+              "path": "/japan/beginner/practice-1",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Bảng Katakana",
+              "path": "/japan/beginner/katakana-alphabet",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Biến âm Katakana",
+              "path": "/japan/beginner/katakana-dakuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Trường âm Katakana",
+              "path": "/japan/beginner/katakana-youon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Đếm số - tuổi",
+              "path": "/japan/beginner/counting-number-age",
+              "tags": ["1-days"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

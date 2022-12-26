@@ -22,29 +22,29 @@ Vì Biến âm ở bảng Hiragana và Katakana là như nhau nên chúng ta s�
 
 ## Biến âm ở hàng k
 
-- Thêm ten ten : <Speak kana="ka"><Kanji>か</Kanji></Speak> <Speak kana="ki"><Kanji>き</Kanji></Speak> <Speak kana="ku"><Kanji>く</Kanji></Speak> <Speak kana="ke"><Kanji>け</Kanji></Speak> <Speak kana="ko"><Kanji>こ</Kanji></Speak> ---  <Speak kana="ga"><Kanji>が</Kanji></Speak> <Speak kana="gi"><Kanji>ぎ</Kanji></Speak> <Speak kana="gu"><Kanji>ぐ</Kanji></Speak> <Speak kana="ge"><Kanji>げ</Kanji></Speak> <Speak kana="go"><Kanji>ご</Kanji></Speak>
-- Thay <Kanji>**k**</Kanji> thành <Kanji>**g**</Kanji> : 「ka ki ku ke ko」 -「ga gi gu ge go」
+- Thêm ten ten : <Speak kana="ka"><K>か</K></Speak> <Speak kana="ki"><K>き</K></Speak> <Speak kana="ku"><K>く</K></Speak> <Speak kana="ke"><K>け</K></Speak> <Speak kana="ko"><K>こ</K></Speak> ---  <Speak kana="ga"><K>が</K></Speak> <Speak kana="gi"><K>ぎ</K></Speak> <Speak kana="gu"><K>ぐ</K></Speak> <Speak kana="ge"><K>げ</K></Speak> <Speak kana="go"><K>ご</K></Speak>
+- Thay <K>**k**</K> thành <K>**g**</K> : 「ka ki ku ke ko」 -「ga gi gu ge go」
 
 
 ## Biến âm ở hàng s
 
-- Chữ <Speak kana="shi"><Kanji>し</Kanji></Speak> được chuyển thành <Speak kana="ji"><Kanji>じ</Kanji></Speak> (đọc là 'ji')
-- Thay <Kanji>**s**</Kanji> thành <Kanji>**z**</Kanji>: 「sa su se so」 -「za zu ze zo」 , các chữ cái còn lại: <Speak kana="sa"><Kanji>さ</Kanji></Speak> <Speak kana="su"><Kanji>す</Kanji></Speak>  <Speak kana="se"><Kanji>せ</Kanji></Speak>  <Speak kana="so"><Kanji>そ</Kanji></Speak> --- <Speak kana="za"><Kanji>ざ</Kanji></Speak> <Speak kana="zu"><Kanji>ず</Kanji></Speak>  <Speak kana="ze"><Kanji>ぜ</Kanji></Speak>  <Speak kana="zo"><Kanji>ぞ</Kanji></Speak>
+- Chữ <Speak kana="shi"><K>し</K></Speak> được chuyển thành <Speak kana="ji"><K>じ</K></Speak> (đọc là 'ji')
+- Thay <K>**s**</K> thành <K>**z**</K>: 「sa su se so」 -「za zu ze zo」 , các chữ cái còn lại: <Speak kana="sa"><K>さ</K></Speak> <Speak kana="su"><K>す</K></Speak>  <Speak kana="se"><K>せ</K></Speak>  <Speak kana="so"><K>そ</K></Speak> --- <Speak kana="za"><K>ざ</K></Speak> <Speak kana="zu"><K>ず</K></Speak>  <Speak kana="ze"><K>ぜ</K></Speak>  <Speak kana="zo"><K>ぞ</K></Speak>
 
 
 ## Biến âm ở hàng t
 
-- Chữ <Speak kana="chi"><Kanji>ち</Kanji></Speak> được chuyển thành <Speak kana="ji"><Kanji>ぢ</Kanji></Speak> (đọc là “ji”)
-- Chữ <Speak kana="tsu"><Kanji>つ</Kanji></Speak> được chuyển thành <Speak kana="zu"><Kanji>づ</Kanji></Speak> (đọc là “zu”)
-- Thay <Kanji>**t**</Kanji> thành <Kanji>**d**</Kanji>: 「ta te to」 -「da de do」, các chữ cái còn lại: <Speak kana="ta"><Kanji>た</Kanji></Speak> <Speak kana="te"><Kanji>て</Kanji></Speak>  <Speak kana="to"><Kanji>と</Kanji></Speak> --- <Speak kana="da"><Kanji>だ</Kanji></Speak> <Speak kana="de"><Kanji>で</Kanji></Speak>  <Speak kana="do"><Kanji>ど</Kanji></Speak>
+- Chữ <Speak kana="chi"><K>ち</K></Speak> được chuyển thành <Speak kana="ji"><K>ぢ</K></Speak> (đọc là “ji”)
+- Chữ <Speak kana="tsu"><K>つ</K></Speak> được chuyển thành <Speak kana="zu"><K>づ</K></Speak> (đọc là “zu”)
+- Thay <K>**t**</K> thành <K>**d**</K>: 「ta te to」 -「da de do」, các chữ cái còn lại: <Speak kana="ta"><K>た</K></Speak> <Speak kana="te"><K>て</K></Speak>  <Speak kana="to"><K>と</K></Speak> --- <Speak kana="da"><K>だ</K></Speak> <Speak kana="de"><K>で</K></Speak>  <Speak kana="do"><K>ど</K></Speak>
 
 
 ## Biến âm ở hàng h
-- Nếu thêm ten ten thì thay <Kanji>**h**</Kanji> thành <Kanji>**b**</Kanji>: 「ha hi fu he ho」 -「ba bi bu be bo」
-  + <Speak kana="ha"><Kanji>は</Kanji></Speak> <Speak kana="hi"><Kanji>ひ</Kanji></Speak> <Speak kana="fu"><Kanji>ふ</Kanji></Speak> <Speak kana="he"><Kanji>へ</Kanji></Speak> <Speak kana="ho"><Kanji>ほ</Kanji></Speak> ---  <Speak kana="ba"><Kanji>ば</Kanji></Speak> <Speak kana="bi"><Kanji>び</Kanji></Speak> <Speak kana="bu"><Kanji>ぶ</Kanji></Speak> <Speak kana="be"><Kanji>べ</Kanji></Speak> <Speak kana="bo"><Kanji>ぼ</Kanji></Speak>
+- Nếu thêm ten ten thì thay <K>**h**</K> thành <K>**b**</K>: 「ha hi fu he ho」 -「ba bi bu be bo」
+  + <Speak kana="ha"><K>は</K></Speak> <Speak kana="hi"><K>ひ</K></Speak> <Speak kana="fu"><K>ふ</K></Speak> <Speak kana="he"><K>へ</K></Speak> <Speak kana="ho"><K>ほ</K></Speak> ---  <Speak kana="ba"><K>ば</K></Speak> <Speak kana="bi"><K>び</K></Speak> <Speak kana="bu"><K>ぶ</K></Speak> <Speak kana="be"><K>べ</K></Speak> <Speak kana="bo"><K>ぼ</K></Speak>
 
-- Nếu thêm maru thì thay <Kanji>**h**</Kanji> thành <Kanji>**p**</Kanji>: 「ha hi fu he ho」 -「pa pi pu pe po」
-  + <Speak kana="ha"><Kanji>は</Kanji></Speak> <Speak kana="hi"><Kanji>ひ</Kanji></Speak> <Speak kana="fu"><Kanji>ふ</Kanji></Speak> <Speak kana="he"><Kanji>へ</Kanji></Speak> <Speak kana="ho"><Kanji>ほ</Kanji></Speak> ---  <Speak kana="pa"><Kanji>ぱ</Kanji></Speak> <Speak kana="pi"><Kanji>ぴ</Kanji></Speak> <Speak kana="pu"><Kanji>ぷ</Kanji></Speak> <Speak kana="pe"><Kanji>ぺ</Kanji></Speak> <Speak kana="po"><Kanji>ぽ</Kanji></Speak>
+- Nếu thêm maru thì thay <K>**h**</K> thành <K>**p**</K>: 「ha hi fu he ho」 -「pa pi pu pe po」
+  + <Speak kana="ha"><K>は</K></Speak> <Speak kana="hi"><K>ひ</K></Speak> <Speak kana="fu"><K>ふ</K></Speak> <Speak kana="he"><K>へ</K></Speak> <Speak kana="ho"><K>ほ</K></Speak> ---  <Speak kana="pa"><K>ぱ</K></Speak> <Speak kana="pi"><K>ぴ</K></Speak> <Speak kana="pu"><K>ぷ</K></Speak> <Speak kana="pe"><K>ぺ</K></Speak> <Speak kana="po"><K>ぽ</K></Speak>
 
 <Note>
   Click để nghe

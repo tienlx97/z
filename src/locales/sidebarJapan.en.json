@@ -1,0 +1,93 @@
+{
+  "title": "Japanese",
+  "heading": true,
+  "path": "/japan",
+  "routes": [
+    {
+      "heading": true,
+      "path": "",
+      "routes": [
+        {
+          "title": "Quick Start",
+          "path": "/japan"
+        },
+        {
+          "title": "Beginner",
+          "path": "/japan/beginner",
+          "routes": [
+            {
+              "title": "Alphabet ",
+              "path": "/japan/beginner/alphabet",
+              "tags": ["3-days"]
+            },
+            {
+              "title": "Practice Hiragana 1",
+              "path": "/japan/beginner/practice-hiragana-1",
+              "tags": ["2-days"]
+            },
+            {
+              "title": "Practice Hiragana 2",
+              "path": "/japan/beginner/practice-hiragana-2",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Dakuon",
+              "path": "/japan/beginner/dakuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Chouon",
+              "path": "/japan/beginner/chouon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Youon い",
+              "path": "/japan/beginner/youon-i",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Youon ん",
+              "path": "/japan/beginner/youon-n",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Youon ゃ ゅ ょ",
+              "path": "/japan/beginner/youon-ya-yu-yo",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Sokuon",
+              "path": "/japan/beginner/sokuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Practice 1",
+              "path": "/japan/beginner/practice-1",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Alphabet",
+              "path": "/japan/beginner/katakana-alphabet",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Dakuon",
+              "path": "/japan/beginner/katakana-dakuon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Katakana Youon",
+              "path": "/japan/beginner/katakana-youon",
+              "tags": ["1-days"]
+            },
+            {
+              "title": "Counting number, age",
+              "path": "/japan/beginner/counting-number-age",
+              "tags": ["1-days"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

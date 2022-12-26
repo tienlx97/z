@@ -4,7 +4,7 @@ title: Ảo âm ゃ ゅ ょ
 ---
 
 <Intro>
-- 3 chữ <CodeStep step={1}><Kanji>ゃ ゅ ょ</Kanji></CodeStep> khi viết nhỏ lại sẽ đóng vai trò là ảo âm.
+- 3 chữ <CodeStep step={1}><K>ゃ ゅ ょ</K></CodeStep> khi viết nhỏ lại sẽ đóng vai trò là ảo âm.
 - Khi đọc phải dứt khoát
 </Intro>
 
@@ -13,29 +13,29 @@ title: Ảo âm ゃ ゅ ょ
 ## [ Tập đọc từ ]
 
 <JaWL m={4}>
- <Kanji>きゃくま</Kanji>
- <Kanji>やきゅう</Kanji>
- <Kanji>きょうしつ</Kanji>
- <Kanji>きょうかい</Kanji>
+ <K>きゃくま</K>
+ <K>やきゅう</K>
+ <K>きょうしつ</K>
+ <K>きょうかい</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>にんぎょう</Kanji>
- <Kanji>しゃしん</Kanji>
- <Kanji>でんしゃ</Kanji>
- <Kanji>じゅぎょう</Kanji>
+ <K>にんぎょう</K>
+ <K>しゃしん</K>
+ <K>でんしゃ</K>
+ <K>じゅぎょう</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ちゃわん</Kanji>
- <Kanji>ぎゅうにゅう</Kanji>
- <Kanji>きゅうけい</Kanji>
- <Kanji>ひゃくけん</Kanji>
+ <K>ちゃわん</K>
+ <K>ぎゅうにゅう</K>
+ <K>きゅうけい</K>
+ <K>ひゃくけん</K>
 </JaWL>
 
 ## [ Tập đọc câu ]
 
-Những câu nào chữ <Kanji>「は」</Kanji> được <CodeStep step={1}>in đậm</CodeStep> sẽ được đọc là <Kanji>wa</Kanji> (sẽ học sau).
+Những câu nào chữ <K>「は」</K> được <CodeStep step={1}>in đậm</CodeStep> sẽ được đọc là <K>wa</K> (sẽ học sau).
 
 <JaSL>ここ<CodeStep step={1}>は</CodeStep>　おうせつまです。</JaSL>
 <JaSL>そこ<CodeStep step={1}>は</CodeStep>　べんじょです。</JaSL>

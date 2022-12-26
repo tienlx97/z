@@ -76,81 +76,81 @@ const headerTypes = new Set([
   'Recap',
   'TeamMember',
   //
-  'Skit',
-  'Vocalbulary',
-  'KeyPhrase',
-  'BonusPhrase',
-  'UseIt',
-  'TryItOut',
-  'KKanji',
-  'Culture',
-  'TripTip',
+  'SkitExpand',
+  'VocalbularyExpand',
+  'KeyPhraseExpand',
+  'BonusPhraseExpand',
+  'UseItExpand',
+  'TryItOutExpand',
+  'KanjiExpand',
+  'CultureExpand',
+  'TripTipExpand',
 ]);
 function extractHeaders(locale, children, depth, out) {
   for (const child of Children.toArray(children)) {
     if (child.type && headerTypes.has(child.type)) {
       let header;
-      if (child.type === 'Skit') {
+      if (child.type === 'SkitExpand') {
         header = {
           url: '#skit',
           depth: 2,
           text: locale === 'en' ? 'Skit' : 'Hội thoại',
         };
-      } else if (child.type === 'Vocalbulary') {
+      } else if (child.type === 'VocalbularyExpand') {
         header = {
           url: '#vocalbulary',
           depth: 2,
           text: locale === 'en' ? 'Vocalbulary' : 'Từ vựng',
         };
-      } else if (child.type === 'BonusPhrase') {
+      } else if (child.type === 'BonusPhraseExpand') {
         header = {
           url: '#bonus-phrase',
           depth: 2,
           text: locale === 'en' ? 'Bonus Phrase' : 'Mở rộng',
         };
-      } else if (child.type === 'KeyPhrase') {
+      } else if (child.type === 'KeyPhraseExpand') {
         header = {
           url: '#key-phrase',
           depth: 2,
           text: locale === 'en' ? 'Key Phrase' : 'Mẫu câu cơ bản',
         };
-      } else if (child.type === 'UseIt') {
+      } else if (child.type === 'UseItExpand') {
         header = {
           url: '#use-it',
           depth: 2,
           text: locale === 'en' ? 'Use It' : 'Luyện tập',
         };
-      } else if (child.type === 'TryItOut') {
+      } else if (child.type === 'TryItOutExpand') {
         header = {
           url: '#try-it-out',
           depth: 2,
           text: locale === 'en' ? 'Try It Out' : 'Thực hành',
         };
-      } else if (child.type === 'KKanji') {
+      } else if (child.type === 'KanjiExpand') {
         header = {
           url: '#kanji',
           depth: 2,
           text: locale === 'en' ? 'Kanji' : 'Hán tự',
         };
-      } else if (child.type === 'Culture') {
+      } else if (child.type === 'CultureExpand') {
         header = {
           url: '#culture',
           depth: 2,
           text: locale === 'en' ? 'Culture' : 'Văn hóa',
         };
-      } else if (child.type === 'TripTip') {
+      } else if (child.type === 'TripTipExpand') {
         header = {
           url: '#trip-tip',
           depth: 2,
           text: locale === 'en' ? 'Trip Tip' : 'Mẹo',
         };
-      } else if (child.type === 'Challenges') {
+      } else if (child.type === 'ChallengesExpand') {
         header = {
           url: '#challenges',
           depth: 2,
           text: 'Challenges',
         };
-      } else if (child.type === 'Recap') {
+      } else if (child.type === 'RecapExpand') {
         header = {
           url: '#recap',
           depth: 2,

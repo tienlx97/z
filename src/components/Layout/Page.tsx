@@ -8,12 +8,15 @@ import {useRouter} from 'next/router';
 import {Nav} from './Nav';
 import {RouteItem, SidebarContext} from './useRouteMeta';
 import {useActiveSection} from 'hooks/useActiveSection';
-import {Footer} from './Footer';
 import {Toc} from './Toc';
-// import SocialBanner from '../SocialBanner';
-import sidebarBlog from '../../sidebarBlog.json';
-import sidebarJapan from '../../sidebarJapan.json';
+import blogEN from 'locales/sidebarBlog.en.json';
+import blogVI from 'locales/sidebarBlog.vi.json';
+
+import japanEN from 'locales/sidebarJapan.en.json';
+import japanVI from 'locales/sidebarJapan.vi.json';
+
 import type {TocItem} from 'components/MDX/TocContext';
+import {useI18n} from 'next-localization';
 
 interface PageProps {
   children: React.ReactNode;
@@ -22,11 +25,13 @@ interface PageProps {
 
 export function Page({children, toc}: PageProps) {
   const {asPath} = useRouter();
+  const {locale} = useI18n();
   const section = useActiveSection();
-  let routeTree = sidebarBlog as RouteItem;
+
+  let routeTree = (locale() === 'en' ? blogEN : blogVI) as RouteItem;
   switch (section) {
     case 'japan':
-      routeTree = sidebarJapan as RouteItem;
+      routeTree = (locale() === 'en' ? japanEN : japanVI) as RouteItem;
       break;
   }
   return (

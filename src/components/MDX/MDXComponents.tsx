@@ -36,8 +36,11 @@ import JapaneseSensLine from './Japan/JapaneseSensLine';
 import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
 import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
 import KatakanaAlphabet from './Japan/Alphabet/KatakanaAlphabet';
-import VocalbularyTable, {VItem} from './Japan/VocalbularyTable';
+import VocalbularyTable, {VocalbularyTableItem} from './Japan/VocalbularyTable';
 import Expandable from './Japan/Expandable';
+import VocalbularyItem, {
+  VocalbularyWord,
+} from './Japan/vocalbulary/VocalbularyItem';
 
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
@@ -66,7 +69,7 @@ function CodeStep({children, step}: {children: any; step: number}) {
   );
 }
 
-const Kanji = ({children}: {children: any}) => (
+const K = ({children}: {children: any}) => (
   <span className="font-ja text-[16px] sm:text-[18px] md:text-xl lg:text-xl">
     {children}
   </span>
@@ -388,39 +391,39 @@ function Via({href, children}: {href: string; children: React.ReactNode}) {
   );
 }
 
-function Skit({children}: {children: any}) {
+function SkitExpand({children}: {children: any}) {
   return <Expandable type="skit">{children}</Expandable>;
 }
 
-function BonusPhrase({children}: {children: any}) {
+function BonusPhraseExpand({children}: {children: any}) {
   return <Expandable type="bonus-phrase">{children}</Expandable>;
 }
 
-function Culture({children}: {children: any}) {
+function CultureExpand({children}: {children: any}) {
   return <Expandable type="culture">{children}</Expandable>;
 }
 
-function KKanji({children}: {children: any}) {
+function KanjiExpand({children}: {children: any}) {
   return <Expandable type="kanji">{children}</Expandable>;
 }
 
-function KeyPhrase({children}: {children: any}) {
+function KeyPhraseExpand({children}: {children: any}) {
   return <Expandable type="key-phrase">{children}</Expandable>;
 }
 
-function TripTip({children}: {children: any}) {
+function TripTipExpand({children}: {children: any}) {
   return <Expandable type="trip-tip">{children}</Expandable>;
 }
 
-function TryItOut({children}: {children: any}) {
+function TryItOutExpand({children}: {children: any}) {
   return <Expandable type="try-it-out">{children}</Expandable>;
 }
 
-function UseIt({children}: {children: any}) {
+function UseItExpand({children}: {children: any}) {
   return <Expandable type="use-it">{children}</Expandable>;
 }
 
-function Vocalbulary({children}: {children: any}) {
+function VocalbularyExpand({children}: {children: any}) {
   return <Expandable type="vocalbulary">{children}</Expandable>;
 }
 
@@ -479,7 +482,7 @@ export const MDXComponents = {
   CodeStep,
   //
   JapaneseLetters,
-  Kanji,
+  K,
   AlphaWL: JapaneseWordLine,
   Via,
   JaSL: JapaneseSensLine,
@@ -489,17 +492,21 @@ export const MDXComponents = {
   Speak,
   JaWL,
   VTable: VocalbularyTable,
-  VItem,
+  VTableItem: VocalbularyTableItem,
+  // expand
   Expandable,
-  Skit,
-  BonusPhrase,
-  Culture,
-  KKanji,
-  KeyPhrase,
-  TripTip,
-  TryItOut,
-  UseIt,
-  Vocalbulary,
+  SkitExpand,
+  BonusPhraseExpand,
+  CultureExpand,
+  KanjiExpand,
+  KeyPhraseExpand,
+  TripTipExpand,
+  TryItOutExpand,
+  UseItExpand,
+
+  VocalbularyExpand,
+  VItem: VocalbularyItem,
+  VItemWord: VocalbularyWord,
 };
 
 for (let key in MDXComponents) {

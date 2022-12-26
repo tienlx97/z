@@ -15,39 +15,39 @@ title: Đếm số - tuổi
 
 
 <VTable>
-  <VItem meaning="0">
-    <Kanji><CodeStep step={1}>ゼロ</CodeStep>・れい</Kanji>
-  </VItem>
-  <VItem meaning="1">
-    <Kanji>いち</Kanji>
-  </VItem>
-  <VItem meaning="2">
-    <Kanji>に</Kanji>
-  </VItem>
-  <VItem meaning="3">
-    <Kanji>さん</Kanji>
-  </VItem>
-  <VItem meaning="4">
-    <Kanji><CodeStep step={1}>よん</CodeStep>・し</Kanji>
-  </VItem>
-  <VItem meaning="5">
-    <Kanji>ご</Kanji>
-  </VItem>
-  <VItem meaning="6">
-    <Kanji>ろく</Kanji>
-  </VItem>
-  <VItem meaning="7">
-    <Kanji><CodeStep step={1}>なな</CodeStep>・しち</Kanji>
-  </VItem>
-  <VItem meaning="8">
-    <Kanji>はち</Kanji>
-  </VItem>
-  <VItem meaning="9">
-    <Kanji><CodeStep step={1}>きゅう</CodeStep>・く</Kanji>
-  </VItem>
-  <VItem meaning="10">
-    <Kanji>じゅう</Kanji>
-  </VItem>
+  <VTableItem meaning="0">
+    <K><CodeStep step={1}>ゼロ</CodeStep>・れい</K>
+  </VTableItem>
+  <VTableItem meaning="1">
+    <K>いち</K>
+  </VTableItem>
+  <VTableItem meaning="2">
+    <K>に</K>
+  </VTableItem>
+  <VTableItem meaning="3">
+    <K>さん</K>
+  </VTableItem>
+  <VTableItem meaning="4">
+    <K><CodeStep step={1}>よん</CodeStep>・し</K>
+  </VTableItem>
+  <VTableItem meaning="5">
+    <K>ご</K>
+  </VTableItem>
+  <VTableItem meaning="6">
+    <K>ろく</K>
+  </VTableItem>
+  <VTableItem meaning="7">
+    <K><CodeStep step={1}>なな</CodeStep>・しち</K>
+  </VTableItem>
+  <VTableItem meaning="8">
+    <K>はち</K>
+  </VTableItem>
+  <VTableItem meaning="9">
+    <K><CodeStep step={1}>きゅう</CodeStep>・く</K>
+  </VTableItem>
+  <VTableItem meaning="10">
+    <K>じゅう</K>
+  </VTableItem>
 </VTable>
 
 <Note>
@@ -59,37 +59,37 @@ title: Đếm số - tuổi
 #### Từ 11 - 19
 
 <VTable>
-  <VItem meaning="11">
-    <Kanji>じゅう　いち</Kanji>
-  </VItem>
-  <VItem meaning="12">
-    <Kanji>じゅう　に</Kanji>
-  </VItem>
-  <VItem meaning="13">
-    <Kanji>じゅう　さん</Kanji>
-  </VItem>
-  <VItem meaning="14">
-    <Kanji>じゅう　<CodeStep step={1}>よん</CodeStep></Kanji>
-  </VItem>
-  <VItem meaning="15">
-    <Kanji>じゅう　ご</Kanji>
-  </VItem>
-  <VItem meaning="16">
-    <Kanji>じゅう　ろく</Kanji>
-  </VItem>
-  <VItem meaning="17">
-    <Kanji>じゅう　<CodeStep step={1}>なな</CodeStep></Kanji>
-  </VItem>
-  <VItem meaning="18">
-    <Kanji>じゅう　はち</Kanji>
-  </VItem>
-  <VItem meaning="19">
-    <Kanji>じゅう　<CodeStep step={1}>きゅう</CodeStep></Kanji>
-  </VItem>
+  <VTableItem meaning="11">
+    <K>じゅう　いち</K>
+  </VTableItem>
+  <VTableItem meaning="12">
+    <K>じゅう　に</K>
+  </VTableItem>
+  <VTableItem meaning="13">
+    <K>じゅう　さん</K>
+  </VTableItem>
+  <VTableItem meaning="14">
+    <K>じゅう　<CodeStep step={1}>よん</CodeStep></K>
+  </VTableItem>
+  <VTableItem meaning="15">
+    <K>じゅう　ご</K>
+  </VTableItem>
+  <VTableItem meaning="16">
+    <K>じゅう　ろく</K>
+  </VTableItem>
+  <VTableItem meaning="17">
+    <K>じゅう　<CodeStep step={1}>なな</CodeStep></K>
+  </VTableItem>
+  <VTableItem meaning="18">
+    <K>じゅう　はち</K>
+  </VTableItem>
+  <VTableItem meaning="19">
+    <K>じゅう　<CodeStep step={1}>きゅう</CodeStep></K>
+  </VTableItem>
 </VTable>
 
 <Note>
-Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><Kanji>じゅう</Kanji></CodeStep> + số 
+Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><K>じゅう</K></CodeStep> + số 
 </Note>
 
 <Solution />
@@ -97,21 +97,21 @@ Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><Kanji>�
 #### Từ 20 - 99
 
 <VTable>
-  <VItem meaning="20">
-    <Kanji>に じゅう</Kanji>
-  </VItem>
-  <VItem meaning="21">
-    <Kanji>に じゅう　いち</Kanji>
-  </VItem>
-  <VItem meaning="30">
-    <Kanji>さん じゅう</Kanji>
-  </VItem>
-  <VItem meaning="40">
-    <Kanji>よん じゅう</Kanji>
-  </VItem>
-  <VItem meaning="99">
-    <Kanji>きゅう　じゅう　きゅう</Kanji>
-  </VItem>
+  <VTableItem meaning="20">
+    <K>に じゅう</K>
+  </VTableItem>
+  <VTableItem meaning="21">
+    <K>に じゅう　いち</K>
+  </VTableItem>
+  <VTableItem meaning="30">
+    <K>さん じゅう</K>
+  </VTableItem>
+  <VTableItem meaning="40">
+    <K>よん じゅう</K>
+  </VTableItem>
+  <VTableItem meaning="99">
+    <K>きゅう　じゅう　きゅう</K>
+  </VTableItem>
 </VTable>
 
 <Solution />
@@ -121,11 +121,11 @@ Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><Kanji>�
 
 ## Cách đếm tuổi
 
-<span className="text-red-40 px-3 py-2 text-2xl border-solid border-[2px] border-purple-50">Số tuổi + <Kanji>さい</Kanji></span>
+<span className="text-red-40 px-3 py-2 text-2xl border-solid border-[2px] border-purple-50">Số tuổi + <K>さい</K></span>
 
-5 tuổi : ご<Kanji><CodeStep step={1}>さい</CodeStep></Kanji>
+5 tuổi : ご<K><CodeStep step={1}>さい</CodeStep></K>
 
-19 tuổi : じゅうきゅう<Kanji><CodeStep step={1}>さい</CodeStep></Kanji>
+19 tuổi : じゅうきゅう<K><CodeStep step={1}>さい</CodeStep></K>
 
 
 <Note>
@@ -133,52 +133,52 @@ Giống tiếng việt lấy 10 + số đơn vị => <CodeStep step={1}><Kanji>�
 Các trường hợp đặc biệt: 
 
 <VTable>
- <VItem meaning="1">
-  <Kanji>いっさい</Kanji>
- </VItem>
-<VItem meaning="8">
-  <Kanji>はっさい</Kanji>
-</VItem>
-<VItem meaning="10">
-  <Kanji>じゅっさい</Kanji>
-</VItem>
-<VItem meaning="20">
-  <Kanji>にじゅっさい・はたち</Kanji>
-</VItem>
+ <VTableItem meaning="1">
+  <K>いっさい</K>
+ </VTableItem>
+<VTableItem meaning="8">
+  <K>はっさい</K>
+</VTableItem>
+<VTableItem meaning="10">
+  <K>じゅっさい</K>
+</VTableItem>
+<VTableItem meaning="20">
+  <K>にじゅっさい・はたち</K>
+</VTableItem>
 </VTable>
 
 - Số đặc biệt thì `đuôi` chứa nó cũng đặc biệt
 
 <VTable>
-  <VItem meaning="11">
-    <Kanji>じゅう**いっさい**</Kanji>
-  </VItem>
-  <VItem meaning="21">
-    <Kanji>にじゅういっさい</Kanji>
-  </VItem>
-  <VItem meaning="31">
-    <Kanji>さんじゅういっさい</Kanji>
-  </VItem>
-  <VItem meaning="18">
-    <Kanji>じゅ**はっさい**</Kanji>
-  </VItem>
-  <VItem meaning="28">
-    <Kanji>にじゅはっさい</Kanji>
-  </VItem>
-  <VItem meaning="38">
-    <Kanji>さんじゅはっさい</Kanji>
-  </VItem>
-  <VItem meaning="30">
-    <Kanji>さん**じゅっさい**</Kanji>
-  </VItem>
-  <VItem meaning="40">
-    <Kanji>よんじゅっさい</Kanji>
-  </VItem>
+  <VTableItem meaning="11">
+    <K>じゅう**いっさい**</K>
+  </VTableItem>
+  <VTableItem meaning="21">
+    <K>にじゅういっさい</K>
+  </VTableItem>
+  <VTableItem meaning="31">
+    <K>さんじゅういっさい</K>
+  </VTableItem>
+  <VTableItem meaning="18">
+    <K>じゅ**はっさい**</K>
+  </VTableItem>
+  <VTableItem meaning="28">
+    <K>にじゅはっさい</K>
+  </VTableItem>
+  <VTableItem meaning="38">
+    <K>さんじゅはっさい</K>
+  </VTableItem>
+  <VTableItem meaning="30">
+    <K>さん**じゅっさい**</K>
+  </VTableItem>
+  <VTableItem meaning="40">
+    <K>よんじゅっさい</K>
+  </VTableItem>
 </VTable>
 
 </Note>
 
-<Culture>
+<CultureExpand>
 
 **Lễ thành nhân đánh dấu tuổi 20 tươi đẹp của giới trẻ Nhật Bản**
 
@@ -190,4 +190,4 @@ Nhật Bản nổi tiếng là quốc gia có rất nhiều ngày lễ. Có lẽ
 </figure>
 
 <Via href="https://namchauims.edu.vn/le-truong-thanh-o-nhat/">namchauims.edu.vn</Via>
-</Culture>
+</CultureExpand>

@@ -61,6 +61,7 @@ const DISK_CACHE_BREAKER = 7;
 // Put MDX output into JSON for client.
 export async function getStaticProps(context) {
   const languagePackage = await import(`../locales/${context.locale}.json`);
+
   const fs = require('fs');
   const {
     prepareMDX,

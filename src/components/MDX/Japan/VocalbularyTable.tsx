@@ -1,7 +1,7 @@
 import {useI18n} from 'next-localization';
 import React, {Children} from 'react';
 
-export const VItem = ({
+export const VocalbularyTableItem = ({
   meaning,
   children,
 }: {

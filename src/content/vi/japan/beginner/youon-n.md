@@ -4,61 +4,61 @@ title: Âm nối
 ---
 
 <Intro>
-Âm nối trong tiếng Nhật là từ <Kanji>「ん」</Kanji> và thường được đọc như chữ <Kanji>**「n」**</Kanji> trong tiếng Việt.
+Âm nối trong tiếng Nhật là từ <K>「ん」</K> và thường được đọc như chữ <K>**「n」**</K> trong tiếng Việt.
 
 </Intro>
 
-Những chữ cái cột <Kanji>**「e」**</Kanji> và cột <Kanji>**「o」**</Kanji> khi đọc chúng ta sẽ thành <Kanji>**ê**</Kanji>, <Kanji>**ô**</Kanji>. Nhưng khi ghép với <Kanji>**「ん」**</Kanji> thì sẽ lại đọc là <Kanji>**e**</Kanji>, <Kanji>**o**</Kanji>.
+Những chữ cái cột <K>**「e」**</K> và cột <K>**「o」**</K> khi đọc chúng ta sẽ thành <K>**ê**</K>, <K>**ô**</K>. Nhưng khi ghép với <K>**「ん」**</K> thì sẽ lại đọc là <K>**e**</K>, <K>**o**</K>.
 
-Ví dụ: <Kanji>て</Kanji> có phiên âm là <Kanji>**te**</Kanji> nhưng khi đọc sẽ đọc là <Kanji>**tê**</Kanji>. Nhưng khi ghép với <Kanji>「ん」</Kanji> được <Kanji>「てん」</Kanji> phiên âm là <Kanji>**ten**</Kanji> và và vẫn đọc là <Kanji>**ten**</Kanji>.
+Ví dụ: <K>て</K> có phiên âm là <K>**te**</K> nhưng khi đọc sẽ đọc là <K>**tê**</K>. Nhưng khi ghép với <K>「ん」</K> được <K>「てん」</K> phiên âm là <K>**ten**</K> và và vẫn đọc là <K>**ten**</K>.
 
 Nguyên tắc này được sử dụng với cả bảng chữ cái Hiragana và Katakana.
 
 <JaWL  m={2}>
-  <Kanji>にほん</Kanji>
-  <Kanji>さんまい</Kanji>  
+  <K>にほん</K>
+  <K>さんまい</K>  
 </JaWL>
 
 <JaWL m={2}>
-  <Kanji>かばん</Kanji>
-  <Kanji>りんご</Kanji>
+  <K>かばん</K>
+  <K>りんご</K>
 </JaWL>
 
 ## Trường hợp đặc biệt
 
-Riêng các trường hợp <CodeStep step={1}>theo sau</CodeStep>  <Kanji>「ん」</Kanji> là các âm thuộc dãy <CodeStep step={2}>**m p b**</CodeStep> thì lúc này <Kanji>「ん」</Kanji> sẽ được đọc là <CodeStep step={3}>**m**</CodeStep>
+Riêng các trường hợp <CodeStep step={1}>theo sau</CodeStep>  <K>「ん」</K> là các âm thuộc dãy <CodeStep step={2}>**m p b**</CodeStep> thì lúc này <K>「ん」</K> sẽ được đọc là <CodeStep step={3}>**m**</CodeStep>
 
 <JaWL m={2}>
-  <Kanji>こんばん</Kanji>
-  <Kanji>さんぽ</Kanji>  
+  <K>こんばん</K>
+  <K>さんぽ</K>  
 </JaWL>
 
 <JaWL m={2}>
-  <Kanji>にほんばし</Kanji>
-  <Kanji>しんぶん</Kanji>
+  <K>にほんばし</K>
+  <K>しんぶん</K>
 </JaWL>
 
 ## [ Tập đọc từ ]
 
 <JaWL m={4}>
-  <Kanji>たいしかん</Kanji>
-  <Kanji>ほんたい</Kanji>
-  <Kanji>にほん</Kanji>
-  <Kanji>けんか</Kanji>  
+  <K>たいしかん</K>
+  <K>ほんたい</K>
+  <K>にほん</K>
+  <K>けんか</K>  
 </JaWL>
 
 <JaWL  m={4}>
-  <Kanji>えん</Kanji>
-  <Kanji>おんな</Kanji>
-  <Kanji>はつおん</Kanji>
-  <Kanji>せんたくき</Kanji>  
+  <K>えん</K>
+  <K>おんな</K>
+  <K>はつおん</K>
+  <K>せんたくき</K>  
 </JaWL>
 
 <JaWL m={4}>
-  <Kanji>きおん</Kanji>
-  <Kanji>きけん</Kanji>
-  <Kanji>せんもん</Kanji>
-  <Kanji>さんまい</Kanji>  
+  <K>きおん</K>
+  <K>きけん</K>
+  <K>せんもん</K>
+  <K>さんまい</K>  
 </JaWL>
 
 ## [ Tập đọc câu ]

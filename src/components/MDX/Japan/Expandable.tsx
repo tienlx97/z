@@ -59,18 +59,22 @@ export default function Expandable({
       onToggle={(e: any) => {
         setIsExpanded(e.currentTarget!.open);
       }}
-      className={cn('my-12 rounded-lg shadow-inner relative', {
-        'dark:bg-opacity-20 dark:bg-blue-600 bg-blue-5': isSkit,
-        'dark:bg-opacity-20 dark:bg-lime-600 bg-lime-50': isVocalbulary,
-        'dark:bg-opacity-20 dark:bg-green-60 bg-green-5': isKeyPhrase,
-        'dark:bg-opacity-20 dark:bg-yellow-600 bg-yellow-5': isUseIt,
-        'dark:bg-opacity-20 dark:bg-amber-600 bg-amber-50': isTryItOut,
-        'dark:bg-opacity-20 dark:bg-pink-600 bg-pink-50': isBonus,
-        'dark:bg-opacity-20 dark:bg-indigo-600 bg-indigo-50': isKanji,
-        'dark:bg-opacity-20 dark:bg-sky-600 bg-sky-50': isCulture,
-      })}>
+      // my-12 rounded-lg shadow-inner relative
+      className={cn(
+        '-mx-5 rounded-none sm:mx-auto sm:rounded-lg my-8 shadow-inner relative',
+        {
+          'dark:bg-opacity-20 dark:bg-blue-600 bg-blue-5': isSkit,
+          'dark:bg-opacity-20 dark:bg-lime-600 bg-lime-50': isVocalbulary,
+          'dark:bg-opacity-20 dark:bg-green-60 bg-green-5': isKeyPhrase,
+          'dark:bg-opacity-20 dark:bg-yellow-600 bg-yellow-5': isUseIt,
+          'dark:bg-opacity-20 dark:bg-amber-600 bg-amber-50': isTryItOut,
+          'dark:bg-opacity-20 dark:bg-pink-600 bg-pink-50': isBonus,
+          'dark:bg-opacity-20 dark:bg-indigo-600 bg-indigo-50': isKanji,
+          'dark:bg-opacity-20 dark:bg-sky-600 bg-sky-50': isCulture,
+        }
+      )}>
       <summary
-        className="list-none p-8"
+        className="list-none p-8 flex flex-row justify-between items-center"
         tabIndex={-1 /* there's a button instead */}
         onClick={(e) => {
           // We toggle using a button instead of this whole area,
@@ -80,7 +84,7 @@ export default function Expandable({
           }
         }}>
         <div
-          className={cn('mb-4 uppercase font-bold flex items-center text-sm', {
+          className={cn('uppercase font-bold flex items-center text-sm', {
             'dark:text-blue-300 text-blue-600': isSkit,
             'dark:text-lime-300 text-lime-600': isVocalbulary,
             'dark:text-green-30 text-green-60': isKeyPhrase,
@@ -159,7 +163,7 @@ export default function Expandable({
         </div>
         <Button
           active={true}
-          className={cn({
+          className={cn('-mr-5 sm:mr-0 px-2 sm:px-4', {
             'bg-blue-700 border-blue-700 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-700':
               isSkit,
             'bg-lime-700 border-lime-700 hover:bg-lime-600 focus:bg-lime-700 active:bg-lime-700':
@@ -187,7 +191,7 @@ export default function Expandable({
         </Button>
       </summary>
       <div
-        className={cn('p-8 border-t', {
+        className={cn('py-3 px-3 sm:p-8 border-t', {
           'dark:border-blue-600 border-blue-500': isSkit,
           'dark:border-lime-600 border-lime-500': isVocalbulary,
           'dark:border-green-60 border-green-50': isKeyPhrase,

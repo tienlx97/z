@@ -4,66 +4,65 @@ id: 431c8f8c-04e2-43e1-86bb-f022a1d0e670
 ---
 
 
-<Skit>
+<SkitExpand>
 
 Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
 
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
 
-</Skit>
+</SkitExpand>
 
-<Vocalbulary>
+<VocalbularyExpand>
+  <VItem kana="あくま" meaning="Ác ma; ma quỷ" kanji="悪魔" hantu="ÁC MA" type="danh từ">
+    <VItemWord meaning="Ác ma; ma quỷ" eg="しょうあくま" egMeaning="Con quỷ nhỏ" />
+    <VItemWord meaning="Yêu ma" eg="悪魔は岩の間に隠れている。" egMeaning="Những con quỷ đang ẩn mình trong những tảng đá." />
+  </VItem>
+</VocalbularyExpand>
 
-Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
-
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
-
-</Vocalbulary>
-
-<KeyPhrase>
-
-Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
-
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
-
-</KeyPhrase>
-
-<UseIt>
+<KeyPhraseExpand>
 
 Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
 
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
 
-</UseIt>
+</KeyPhraseExpand>
 
-<TryItOut>
-
-Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
-
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
-
-</TryItOut>
-
-<BonusPhrase>
+<UseItExpand>
 
 Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
 
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
 
-</BonusPhrase>
+</UseItExpand>
 
-<KKanji>
-
-Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
-
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
-
-</KKanji>
-
-<Culture>
+<TryItOutExpand>
 
 Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
 
-<Kanji>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</Kanji>
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
 
-</Culture>
+</TryItOutExpand>
+
+<BonusPhraseExpand>
+
+Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
+
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
+
+</BonusPhraseExpand>
+
+<KanjiExpand>
+
+Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
+
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
+
+</KanjiExpand>
+
+<CultureExpand>
+
+Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
+
+<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
+
+</CultureExpand>

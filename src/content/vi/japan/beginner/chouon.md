@@ -9,7 +9,7 @@ Trường âm ー「長音」 trong tiếng Nhật là gì ? Cách sử dụng t
 
 ## Trường âm là gì ?
 
-Trường âm ー「長音」 là những nguyên âm <CodeStep step={1}>kéo dài</CodeStep>, có độ dài gấp đôi các nguyên âm <Kanji>「あ」「い」「う」「え」「お」 </Kanji>. Chẳng hạn như:「ああ」 (a + a ）「いい」(i + i).
+Trường âm ー「長音」 là những nguyên âm <CodeStep step={1}>kéo dài</CodeStep>, có độ dài gấp đôi các nguyên âm <K>「あ」「い」「う」「え」「お」 </K>. Chẳng hạn như:「ああ」 (a + a ）「いい」(i + i).
 
 Trường âm sẽ làm thay đổi nghĩa của từ.
 
@@ -18,13 +18,13 @@ Trường âm sẽ làm thay đổi nghĩa của từ.
 
 #### Hiragana {/*hiragana*/}
 
-Với bảng Hiragana, 5 nguyên âm <Kanji>あ, い, う, え, お </Kanji> được dùng để tạo trường âm. 
+Với bảng Hiragana, 5 nguyên âm <K>あ, い, う, え, お </K> được dùng để tạo trường âm. 
 
-- Hàng <Kanji>あ</Kanji> có trường âm là <CodeStep step={3}><Kanji>あ</Kanji></CodeStep>
-- Hàng <Kanji>い</Kanji> có trường âm là <CodeStep step={3}><Kanji>い</Kanji></CodeStep>
-- Hàng <Kanji>う</Kanji> có trường âm là <CodeStep step={3}><Kanji>う</Kanji></CodeStep> 
-- Hàng <Kanji>え</Kanji> có trường âm là <CodeStep step={3}><Kanji>え い</Kanji></CodeStep>
-- Hàng <Kanji>お</Kanji> có trường âm là <CodeStep step={3}><Kanji>お う</Kanji></CodeStep>
+- Hàng <K>あ</K> có trường âm là <CodeStep step={3}><K>あ</K></CodeStep>
+- Hàng <K>い</K> có trường âm là <CodeStep step={3}><K>い</K></CodeStep>
+- Hàng <K>う</K> có trường âm là <CodeStep step={3}><K>う</K></CodeStep> 
+- Hàng <K>え</K> có trường âm là <CodeStep step={3}><K>え い</K></CodeStep>
+- Hàng <K>お</K> có trường âm là <CodeStep step={3}><K>お う</K></CodeStep>
 
 <Solution />
 
@@ -33,13 +33,13 @@ Với bảng Hiragana, 5 nguyên âm <Kanji>あ, い, う, え, お </Kanji> đ�
 Với bảng Katakana, dấu 「―」 biểu thị trường âm chung cho tất cả các từ, đứng phía sau các nguyên âm hoặc âm ghép. 
 
 <JaWL m={2}>
-  <Kanji>カード (kādo)</Kanji>
-  <Kanji>ノート (nōto)</Kanji>
+  <K>カード (kādo)</K>
+  <K>ノート (nōto)</K>
 </JaWL>
 
 <JaWL m={2}>
-  <Kanji>ケーキ (kēki)</Kanji>
-  <Kanji>コーヒー (kōhī)</Kanji>
+  <K>ケーキ (kēki)</K>
+  <K>コーヒー (kōhī)</K>
 </JaWL>
 
 <Solution />
@@ -55,13 +55,13 @@ Khi phát âm các từ có trường âm cần chú ý kéo dài âm cho đúng
 Một số từ dễ nhầm lẫn do cách phát âm:
 
 <JaWL m={2}>
-  <Speak k="お婆さん"><Kanji>おばあさん</Kanji></Speak>
-  <Speak k="叔母さん"><Kanji>おばさん</Kanji></Speak>
+  <Speak k="お婆さん"><K>おばあさん</K></Speak>
+  <Speak k="叔母さん"><K>おばさん</K></Speak>
 </JaWL>
 
 <JaWL m={2}>
-  <Speak k="お爺さん"><Kanji>おじいさん</Kanji></Speak>
-  <Speak k="叔父さん"><Kanji>おじさん</Kanji></Speak>
+  <Speak k="お爺さん"><K>おじいさん</K></Speak>
+  <Speak k="叔父さん"><K>おじさん</K></Speak>
 </JaWL>
 
 <Via href="https://gojapan.vn/truong-am-trong-tieng-nhat/">gojapan.vn</Via>
@@ -105,66 +105,66 @@ Phát âm sai hoặc nhầm lẫn những từ có trường âm và không có 
 ## [ Tập đọc từ ]
 
 <JaWL m={4}>
-  <Kanji>おおきい</Kanji>
-  <Kanji>ちいさい</Kanji>
-  <Kanji>えいご</Kanji>
-  <Kanji>れいぼう</Kanji>
+  <K>おおきい</K>
+  <K>ちいさい</K>
+  <K>えいご</K>
+  <K>れいぼう</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>とけい</Kanji>
- <Kanji>せいかつ</Kanji>
- <Kanji>めいれい</Kanji>
- <Kanji>けいさつ</Kanji>
+ <K>とけい</K>
+ <K>せいかつ</K>
+ <K>めいれい</K>
+ <K>けいさつ</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>おおぜい</Kanji>
- <Kanji>ていねい</Kanji>
- <Kanji>せんせい</Kanji>
- <Kanji>けいかく</Kanji>
+ <K>おおぜい</K>
+ <K>ていねい</K>
+ <K>せんせい</K>
+ <K>けいかく</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>くうき</Kanji>
- <Kanji>ぎんこう</Kanji>
- <Kanji>どうろ</Kanji>
- <Kanji>ようふく</Kanji>
+ <K>くうき</K>
+ <K>ぎんこう</K>
+ <K>どうろ</K>
+ <K>ようふく</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>すうじ</Kanji>
- <Kanji>おうさま</Kanji>
- <Kanji>そうじ</Kanji>
- <Kanji>ぼうし</Kanji>
+ <K>すうじ</K>
+ <K>おうさま</K>
+ <K>そうじ</K>
+ <K>ぼうし</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>ろうそく</Kanji>
- <Kanji>ゆうびん</Kanji>
- <Kanji>こうえん</Kanji>
- <Kanji>どうぶつえん</Kanji>
+ <K>ろうそく</K>
+ <K>ゆうびん</K>
+ <K>こうえん</K>
+ <K>どうぶつえん</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>もうふ</Kanji>
- <Kanji>すうがく</Kanji>
- <Kanji>とおか</Kanji>
- <Kanji>とおり</Kanji>
+ <K>もうふ</K>
+ <K>すうがく</K>
+ <K>とおか</K>
+ <K>とおり</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>とおる</Kanji>
- <Kanji>おおあめ</Kanji>
- <Kanji>おおい</Kanji>
- <Kanji>とおい</Kanji>
+ <K>とおる</K>
+ <K>おおあめ</K>
+ <K>おおい</K>
+ <K>とおい</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>どうぞ</Kanji>
- <Kanji>たいふう</Kanji>
- <Kanji>ゆうがた</Kanji>
- <Kanji>さようなら</Kanji>
+ <K>どうぞ</K>
+ <K>たいふう</K>
+ <K>ゆうがた</K>
+ <K>さようなら</K>
 </JaWL>
 
 <Via href="http://dongdu.edu.vn">Đông Du vỡ lòng</Via>
@@ -172,7 +172,7 @@ Phát âm sai hoặc nhầm lẫn những từ có trường âm và không có 
 
 ## [ Tập đọc câu ]
 
-Lưu ý: những câu nào chữ <Kanji>「は」</Kanji> được <CodeStep step={2}>in đậm</CodeStep> sẽ được đọc là <Kanji>wa</Kanji> (phân cách chủ ngữ với vị ngữ) sẽ học sau.
+Lưu ý: những câu nào chữ <K>「は」</K> được <CodeStep step={2}>in đậm</CodeStep> sẽ được đọc là <K>wa</K> (phân cách chủ ngữ với vị ngữ) sẽ học sau.
 
 <JaSL>ふうとう<CodeStep step={2}>は</CodeStep>　どこに　ありません。</JaSL>
 <JaSL>もうふも　つくえの　うえに　ありません。</JaSL>

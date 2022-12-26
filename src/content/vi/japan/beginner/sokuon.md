@@ -34,10 +34,10 @@ Chẳng hạn trong từ たつと (dùng "tsu lớn") sẽ đọc là tatsuto (
 </Note>
 
 <JaWL m={4}>
-  <Speak k="切手"><Kanji>き**っ**て</Kanji></Speak>
-  <Speak k="雑誌"><Kanji>ざ**っ**し</Kanji></Speak>
-  <Speak k="日記"><Kanji>に**っ**き</Kanji></Speak>
-  <Speak k="切符"><Kanji>き**っ**ぷ</Kanji></Speak>
+  <Speak k="切手"><K>き**っ**て</K></Speak>
+  <Speak k="雑誌"><K>ざ**っ**し</K></Speak>
+  <Speak k="日記"><K>に**っ**き</K></Speak>
+  <Speak k="切符"><K>き**っ**ぷ</K></Speak>
 </JaWL>
 
 
@@ -45,36 +45,36 @@ Chẳng hạn trong từ たつと (dùng "tsu lớn") sẽ đọc là tatsuto (
 <br/>
 
 <JaWL m={4}>
- <Kanji>がっき</Kanji>
- <Kanji>はっけん</Kanji>
- <Kanji>けっこん</Kanji>
- <Kanji>せっけん</Kanji>
+ <K>がっき</K>
+ <K>はっけん</K>
+ <K>けっこん</K>
+ <K>せっけん</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>みっか</Kanji>
- <Kanji>よっか</Kanji>
- <Kanji>にってい</Kanji>
- <Kanji>むっつ</Kanji>
+ <K>みっか</K>
+ <K>よっか</K>
+ <K>にってい</K>
+ <K>むっつ</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>はってん</Kanji>
- <Kanji>かっぱ</Kanji>
- <Kanji>はっせん</Kanji>
- <Kanji>きっさてん</Kanji>
+ <K>はってん</K>
+ <K>かっぱ</K>
+ <K>はっせん</K>
+ <K>きっさてん</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>にっき</Kanji>
- <Kanji>ろぴゃく</Kanji>
- <Kanji>がっこう</Kanji>
- <Kanji>てっぽう</Kanji>
+ <K>にっき</K>
+ <K>ろぴゃく</K>
+ <K>がっこう</K>
+ <K>てっぽう</K>
 </JaWL>
 
 <JaWL m={4}>
- <Kanji>いっぱい</Kanji>
- <Kanji>あさって</Kanji>
- <Kanji>いっさつ</Kanji>
- <Kanji>しゅっしん</Kanji>
+ <K>いっぱい</K>
+ <K>あさって</K>
+ <K>いっさつ</K>
+ <K>しゅっしん</K>
 </JaWL>

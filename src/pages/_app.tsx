@@ -12,9 +12,14 @@ import {I18nProvider} from 'next-localization';
 // import '../styles/algolia.css';
 import '../styles/index.css';
 import '../styles/sandpack.css';
+import {RouteItem, SidebarContext} from 'components/Layout/useRouteMeta';
+import {useActiveSection} from 'hooks/useActiveSection';
+import {SBMobileContext} from 'context/SBMobile';
 
 export default function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter();
+
+  const {blog, japan} = pageProps as any;
 
   useEffect(() => {
     // Taken from StackOverflow. Trying to detect both Safari desktop and mobile.
@@ -35,7 +40,9 @@ export default function MyApp({Component, pageProps}: AppProps) {
     <I18nProvider
       lngDict={(pageProps as any).lngDict}
       locale={router?.locale as string}>
-      <Component {...pageProps} />
+      <SBMobileContext.Provider value={{blog, japan}}>
+        <Component {...pageProps} />
+      </SBMobileContext.Provider>
     </I18nProvider>
   );
 }
