@@ -1,6 +1,8 @@
 import React from 'react';
 import {convertMp3} from 'utils/convertJptoHex';
 
+import {u} from 'utils/unicodeChars';
+
 export const VocalbularyWord = ({
   meaning,
   eg,
@@ -19,15 +21,18 @@ export const VocalbularyWord = ({
       {polite && (
         <>
           <p className="font-ja pt-2 text-[18px]">
-            <span className="font-bold">&#160;›</span> {polite}
+            <span className="font-bold">{u.space}›</span> {polite}
           </p>
-          <p className="font-sans text-[18px] my-0">　{meaning}</p>
+          <p className="font-sans text-[18px] my-0">
+            {u.jaSpace}
+            {meaning}
+          </p>
         </>
       )}
 
       {!polite && (
         <p className="font-sans text-[18px] pt-2 font-bold my-0">
-          ﹣ {meaning}
+          {u.line} {meaning}
         </p>
       )}
 
@@ -60,17 +65,19 @@ const Speaker = () => {
 };
 
 export default function VocalbularyItem({
-  kana,
+  hira,
+  kata,
   kanji,
   hantu,
   type,
   children,
 }: {
-  kana: string;
+  hira?: string;
+  kata?: string;
   meaning: string;
   kanji?: string;
   hantu?: string;
-  type: string;
+  type: string | 'sentences' | 'nouns' | 'verb' | 'adverb';
   children: React.ReactNode;
 }) {
   const childrenArr = React.Children.toArray(children).filter(
@@ -78,7 +85,7 @@ export default function VocalbularyItem({
   );
 
   const handleSpeak = () => {
-    let url = convertMp3(kanji!);
+    let url = convertMp3(kanji ?? kata!);
     const audio = new Audio(url);
     const promise = audio.play();
 
@@ -96,13 +103,28 @@ export default function VocalbularyItem({
     }
   };
 
+  const renderType = () => {
+    switch (type) {
+      case 'sentences':
+        return 'mẫu câu';
+      case 'nouns':
+        return 'danh từ';
+      case 'verb':
+        return 'động từ';
+      case 'adverb':
+        return 'trạng từ';
+      default:
+        return type;
+    }
+  };
+
   return (
     <>
       <div className="relative w-full p-4 border-[1px] border-solid border-lime-500 dark:border-lime-600 rounded-xl">
         {/* main word */}
-        <div className="relative font-ja font-bold text-2xl min-h-[32px] mb-1 mt-0 dark:text-lime-300 text-lime-600">
-          {kana}
-          {kanji && (
+        <div className="relative font-ja font-medium text-2xl min-h-[32px] mb-1 mt-0 dark:text-lime-300 text-lime-600">
+          {hira ?? kata}
+          {type !== 'sentences' && (
             <div
               onClick={handleSpeak}
               className="absolute right-[16px] top-0 cursor-pointer p-2 bg-lime-700 border-lime-700 hover:bg-lime-600 focus:bg-lime-700 active:bg-lime-700 rounded-3xl">
@@ -112,18 +134,19 @@ export default function VocalbularyItem({
         </div>
         {kanji && (
           <p>
-            <span className="font-ja text-[16px] font-normal h-8 leading-8">
+            <span className="font-ja text-[16px] sm:text-[17px] font-normal h-8 leading-8">
               {kanji}
             </span>
-            <span className="font-sans text-[16px] h-8 leading-8 font-normal uppercase">
-              {'　•'}
-              {'　'}
+            <span className="text-[16px] font-sans h-8 leading-8 font-normal uppercase">
+              {u.jaSpace}
+              {u.dot}
+              {u.jaSpace}
               {hantu}
             </span>
           </p>
         )}
         <p className="dark:text-lime-300 text-lime-600 font-sans text-base font-extralight">
-          ☆ {type}
+          {u.star} {renderType()}
         </p>
         <div className="w-[15%] h-[1px] bg-lime-500 dark:bg-lime-600 my-1" />
 

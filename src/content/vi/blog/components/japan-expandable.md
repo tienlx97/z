@@ -13,7 +13,7 @@ Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and p
 </SkitExpand>
 
 <VocalbularyExpand>
-  <VItem kana="あくま" meaning="Ác ma; ma quỷ" kanji="悪魔" hantu="ÁC MA" type="danh từ">
+  <VItem hira="あくま" meaning="Ác ma; ma quỷ" kanji="悪魔" hantu="ÁC MA" type="danh từ">
     <VItemWord meaning="Ác ma; ma quỷ" eg="しょうあくま" egMeaning="Con quỷ nhỏ" />
     <VItemWord meaning="Yêu ma" eg="悪魔は岩の間に隠れている。" egMeaning="Những con quỷ đang ẩn mình trong những tảng đá." />
   </VItem>
