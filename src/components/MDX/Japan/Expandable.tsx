@@ -185,9 +185,12 @@ export default function Expandable({
           <span className="mr-1">
             <IconChevron displayDirection={isExpanded ? 'up' : 'down'} />
           </span>
-          {isExpanded
-            ? t('mdx.expandableexample.hide_details')
-            : t('mdx.expandableexample.show_details')}
+          <span className="w-full text-center">
+            {' '}
+            {isExpanded
+              ? t('mdx.expandableexample.hide_details')
+              : t('mdx.expandableexample.show_details')}
+          </span>
         </Button>
       </summary>
       <div
