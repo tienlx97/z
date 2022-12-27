@@ -27,7 +27,7 @@ export const VocalbularyWord = ({
 
       {!polite && (
         <p className="font-sans text-[18px] pt-2 font-bold my-0">
-          － {meaning}
+          ﹣ {meaning}
         </p>
       )}
 
