@@ -84,6 +84,27 @@
               "title": "Counting number, age",
               "path": "/japan/beginner/counting-number-age",
               "tags": ["1-days"]
+            },
+            {
+              "title": "Common Senstence",
+              "path": "/japan/beginner/daily-senstence",
+              "tags": ["1-days"]
+            }
+          ]
+        },
+        {
+          "title": "High Beginner",
+          "path": "/japan/high-beginner",
+          "routes": [
+            {
+              "title": "Unit 1",
+              "path": "/japan/high-beginner/unit-1",
+              "routes": [
+                {
+                  "title": "Vocalbulary",
+                  "path": "/japan/high-beginner/unit-1/vocalbulary"
+                }
+              ]
             }
           ]
         }

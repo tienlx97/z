@@ -87,8 +87,6 @@ export default function Nav() {
   const isEn = locale === 'en';
   const language = isEn ? 'vi' : 'en';
 
-  const {locale: l} = useI18n();
-
   // In desktop mode, use the route tree for current route.
   let routeTree: RouteItem = useContext(SidebarContext);
   // In mobile mode, let the user switch tabs there and back without navigating.
@@ -103,10 +101,10 @@ export default function Nav() {
     switch (tab) {
       case 'home':
       case 'blog':
-        routeTree = (l() === 'en' ? blogEN : blogVI) as RouteItem;
+        routeTree = (locale === 'en' ? blogEN : blogVI) as RouteItem;
         break;
       case 'japan':
-        routeTree = (l() === 'en' ? japanEN : japanVI) as RouteItem;
+        routeTree = (locale === 'en' ? japanEN : japanVI) as RouteItem;
         break;
     }
   }

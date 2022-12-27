@@ -84,6 +84,27 @@
               "title": "Đếm số - tuổi",
               "path": "/japan/beginner/counting-number-age",
               "tags": ["1-days"]
+            },
+            {
+              "title": "Câu nói hàng ngày",
+              "path": "/japan/beginner/daily-senstence",
+              "tags": ["1-days"]
+            }
+          ]
+        },
+        {
+          "title": "Sơ cấp",
+          "path": "/japan/high-beginner",
+          "routes": [
+            {
+              "title": "Bài 1",
+              "path": "/japan/high-beginner/unit-1",
+              "routes": [
+                {
+                  "title": "Từ vựng",
+                  "path": "/japan/high-beginner/unit-1/vocalbulary"
+                }
+              ]
             }
           ]
         }

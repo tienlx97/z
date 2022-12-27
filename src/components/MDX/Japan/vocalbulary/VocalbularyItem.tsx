@@ -6,22 +6,38 @@ export const VocalbularyWord = ({
   eg,
   egMeaning,
   children,
+  polite,
 }: {
   meaning: string;
   eg: string;
   egMeaning: string;
   children: React.ReactNode;
+  polite?: string;
 }) => {
   return (
     <div>
-      <p className="font-sans text-[18px] py-2 font-bold my-0">－ {meaning}</p>
-      <div className="mb-4">
-        <div className="mx-[20px]">
+      {polite && (
+        <>
+          <p className="font-ja pt-2 text-[18px]">
+            <span className="font-bold">&#160;›</span> {polite}
+          </p>
+          <p className="font-sans text-[18px] my-0">　{meaning}</p>
+        </>
+      )}
+
+      {!polite && (
+        <p className="font-sans text-[18px] pt-2 font-bold my-0">
+          － {meaning}
+        </p>
+      )}
+
+      {eg && (
+        <div className="mx-[20px] mt-1">
           <p className="font-ja text-[18px]">{eg}</p>
           <p className="font-sans text-[16px]">{egMeaning}</p>
           <div>{children}</div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -99,8 +115,8 @@ export default function VocalbularyItem({
             <span className="font-ja text-[16px] font-normal h-8 leading-8">
               {kanji}
             </span>
-            <span className="font-sans text-[16px] h-8 leading-8 font-normal">
-              {'　·'}
+            <span className="font-sans text-[16px] h-8 leading-8 font-normal uppercase">
+              {'　•'}
               {'　'}
               {hantu}
             </span>
