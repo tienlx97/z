@@ -3,19 +3,20 @@ import {convertMp3} from 'utils/convertJptoHex';
 
 import {u} from 'utils/unicodeChars';
 
-export const VocalbularyWord = ({
-  meaning,
-  eg,
-  egMeaning,
-  children,
-  polite,
-}: {
-  meaning: string;
-  eg: string;
-  egMeaning: string;
-  children: React.ReactNode;
-  polite?: string;
-}) => {
+// https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
+export function b64DecodeUnicode(str: string) {
+  // Going backwards: from bytestream, to percent-encoding, to original string.
+  return decodeURIComponent(
+    atob(str)
+      .split('')
+      .map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join('')
+  );
+}
+
+const VW = ({meaning, eg, egMeaning, polite}: DetailItem) => {
   return (
     <div>
       {polite && (
@@ -40,7 +41,7 @@ export const VocalbularyWord = ({
         <div className="mx-[20px] mt-1">
           <p className="font-ja text-[18px]">{eg}</p>
           <p className="font-sans text-[16px]">{egMeaning}</p>
-          <div>{children}</div>
+          {/* <div>{children}</div> */}
         </div>
       )}
     </div>
@@ -64,32 +65,38 @@ const Speaker = () => {
   );
 };
 
-export default function VocalbularyItem({
-  hira,
-  kata,
-  kanji,
-  hantu,
-  type,
-  children,
-  dataSrc,
-}: {
+export interface DetailItem {
+  meaning: string;
+  eg?: string;
+  egMeaning?: string;
+  polite?: string;
+  children?: string;
+}
+
+export interface JapanWord {
   hira?: string;
   kata?: string;
-  meaning: string;
   kanji?: string;
   hantu?: string;
   type: string | 'sentences' | 'nouns' | 'verb' | 'adverb';
-  dataSrc?: any;
-  children: React.ReactNode;
-}) {
-  const childrenArr = React.Children.toArray(children).filter(
-    (c) => c !== '\n'
-  );
+  detail: DetailItem[];
+}
 
-  if (dataSrc) {
-    console.log(dataSrc);
-  }
+export default function VItemSrc({src2Base64}: {src2Base64: string}) {
+  const wordList: JapanWord[] = JSON.parse(b64DecodeUnicode(src2Base64))
+    .vocalbulary as JapanWord[];
 
+  return wordList.map((word, index) => {
+    return (
+      <React.Fragment key={index}>
+        <VItem {...word} />
+        <br />
+      </React.Fragment>
+    );
+  });
+}
+
+function VItem({hira, kata, kanji, hantu, type, detail}: JapanWord) {
   const handleSpeak = () => {
     let url = convertMp3(kanji ?? kata!);
     const audio = new Audio(url);
@@ -125,42 +132,43 @@ export default function VocalbularyItem({
   };
 
   return (
-    <>
-      <div className="relative w-full p-4 border-[1px] border-solid border-lime-500 dark:border-lime-600 rounded-xl">
-        {/* main word */}
-        <div className="relative font-ja font-medium text-2xl min-h-[32px] mb-1 mt-0 dark:text-lime-300 text-lime-600">
-          {hira ?? kata}
-          {type !== 'sentences' && (
-            <div
-              onClick={handleSpeak}
-              className="absolute right-[16px] top-0 cursor-pointer p-2 bg-lime-700 border-lime-700 hover:bg-lime-600 focus:bg-lime-700 active:bg-lime-700 rounded-3xl">
-              <Speaker />
-            </div>
-          )}
-        </div>
-        {kanji && (
-          <p>
-            <span className="font-ja text-[16px] sm:text-[17px] font-normal h-8 leading-8">
-              {kanji}
-            </span>
-            <span className="text-[16px] font-sans h-8 leading-8 font-normal uppercase">
-              {u.jaSpace}
-              {u.dot}
-              {u.jaSpace}
-              {hantu}
-            </span>
-          </p>
+    <div className="relative w-full p-4 border-[1px] border-solid border-lime-500 dark:border-lime-600 rounded-xl">
+      {/* main word */}
+      <div className="relative font-ja font-medium text-2xl min-h-[32px] mb-1 mt-0 dark:text-lime-300 text-lime-600">
+        {hira ?? kata}
+        {type !== 'sentences' && (
+          <div
+            onClick={handleSpeak}
+            className="absolute right-[16px] top-0 cursor-pointer p-2 bg-lime-700 border-lime-700 hover:bg-lime-600 focus:bg-lime-700 active:bg-lime-700 rounded-3xl">
+            <Speaker />
+          </div>
         )}
-        <p className="dark:text-lime-300 text-lime-600 font-sans text-base font-extralight">
-          {u.star} {renderType()}
-        </p>
-        <div className="w-[15%] h-[1px] bg-lime-500 dark:bg-lime-600 my-1" />
-
-        {childrenArr.map((c, index) => {
-          return <React.Fragment key={index}>{c}</React.Fragment>;
-        })}
       </div>
-      <br />
-    </>
+      {kanji && (
+        <p>
+          <span className="font-ja text-[16px] sm:text-[17px] font-normal h-8 leading-8">
+            {kanji}
+          </span>
+          <span className="text-[16px] font-sans h-8 leading-8 font-normal uppercase">
+            {u.jaSpace}
+            {u.dot}
+            {u.jaSpace}
+            {hantu}
+          </span>
+        </p>
+      )}
+      <p className="dark:text-lime-300 text-lime-600 font-sans text-base font-extralight">
+        {u.star} {renderType()}
+      </p>
+      <div className="w-[15%] h-[1px] bg-lime-500 dark:bg-lime-600 my-1" />
+
+      {detail.map((c, index) => {
+        return (
+          <React.Fragment key={index}>
+            <VW {...c} />
+          </React.Fragment>
+        );
+      })}
+    </div>
   );
 }

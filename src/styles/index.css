@@ -346,13 +346,13 @@ ol.mdx-illustration-block {
 }
 
 /* grid */
-div.grid {
+div.AlphabetUtility--grid {
   position: absolute;
   box-sizing: border-box;
   z-index: -1;
 }
 
-div.grid0 {
+div.AlphabetUtility--grid0 {
   left: 0;
   top: 0;
   bottom: 0;
@@ -360,7 +360,7 @@ div.grid0 {
   border: 1px solid #ccc;
 }
 
-div.grid1 {
+div.AlphabetUtility--grid1 {
   top: 25%;
   left: 0;
   width: 100%;
@@ -369,7 +369,7 @@ div.grid1 {
   border-bottom: 1px solid #ccc;
 }
 
-div.grid2 {
+div.AlphabetUtility--grid2 {
   top: 0;
   left: 25%;
   width: 50%;
@@ -378,7 +378,7 @@ div.grid2 {
   border-right: 1px solid #ccc;
 }
 
-div.grid3 {
+div.AlphabetUtility--grid3 {
   top: 0;
   left: 0;
   width: 100%;
@@ -386,7 +386,7 @@ div.grid3 {
   border-bottom: 1px solid #ccc;
 }
 
-div.grid4 {
+div.AlphabetUtility--grid4 {
   top: 0;
   left: 0;
   width: 50%;
@@ -394,7 +394,7 @@ div.grid4 {
   border-right: 1px solid #ccc;
 }
 
-div.grid5 {
+div.AlphabetUtility--grid5 {
   left: 9.175%;
   top: 9.175%;
   width: 81.65%;
@@ -402,13 +402,13 @@ div.grid5 {
   border: 1px solid #ccc;
 }
 
-.dark div.grid {
+.dark div.AlphabetUtility--grid {
   position: absolute;
   box-sizing: border-box;
   z-index: -1;
 }
 
-.dark div.grid0 {
+.dark div.AlphabetUtility--grid0 {
   left: 0;
   top: 0;
   bottom: 0;
@@ -416,7 +416,7 @@ div.grid5 {
   border: 1px solid gray;
 }
 
-.dark div.grid1 {
+.dark div.AlphabetUtility--grid1 {
   top: 25%;
   left: 0;
   width: 100%;
@@ -425,7 +425,7 @@ div.grid5 {
   border-bottom: 1px solid gray;
 }
 
-.dark div.grid2 {
+.dark div.AlphabetUtility--grid2 {
   top: 0;
   left: 25%;
   width: 50%;
@@ -434,7 +434,7 @@ div.grid5 {
   border-right: 1px solid gray;
 }
 
-.dark div.grid3 {
+.dark div.AlphabetUtility--grid3 {
   top: 0;
   left: 0;
   width: 100%;
@@ -442,7 +442,7 @@ div.grid5 {
   border-bottom: 1px solid gray;
 }
 
-.dark div.grid4 {
+.dark div.AlphabetUtility--grid4 {
   top: 0;
   left: 0;
   width: 50%;
@@ -450,7 +450,7 @@ div.grid5 {
   border-right: 1px solid gray;
 }
 
-.dark div.grid5 {
+.dark div.AlphabetUtility--grid5 {
   left: 9.175%;
   top: 9.175%;
   width: 81.65%;
@@ -689,4 +689,100 @@ svg.acjk path[id] {
   border-top: none;
   border-left: none;
   border-right: none;
+}
+
+/* multiple choice */
+
+.multiple-choice--answer__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.multiple-choice--answer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .multiple-choice--answer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* multiple choice question */
+.AnswerWrapper {
+  grid-template-columns: 1fr 1fr
+}
+
+@media (max-width: 38.75rem) {
+  .AnswerWrapper {
+    grid-template-columns: 1fr
+  }
+}
+
+/* AssemblyIcon */
+
+.AssemblyIcon {
+  /* fill: currentColor; */
+  /* color: inherit; */
+  display: inline-block
+}
+
+.AssemblyIcon--small-deprecated {
+  height: 1rem;
+  width: 1rem
+}
+
+.AssemblyIcon--small {
+  height: 1.5rem;
+  width: 1.5rem
+}
+
+.AssemblyIcon--medium-deprecated {
+  height: 1.25rem;
+  width: 1.25rem
+}
+
+.AssemblyIcon--large-deprecated, .AssemblyIcon--medium {
+  height: 2rem;
+  width: 2rem
+}
+
+.AssemblyIcon--large, .AssemblyIcon--xlarge-deprecated {
+  height: 3rem;
+  width: 3rem
+}
+
+.AssemblyIcon--xlarge {
+  height: 4rem;
+  width: 4rem
+}
+
+.AssemblyIcon--xxlarge, .AssemblyIcon--xxlarge-deprecated {
+  height: 5.5rem;
+  width: 5.5rem
+}
+
+/* continue button */
+
+
+@-webkit-keyframes slideup-b1jcf4jl {
+  0% {
+    bottom: -5.3125rem
+  }
+
+  to {
+    bottom: 0
+  }
+}
+
+@keyframes slideup-b1jcf4jl {
+  0% {
+    bottom: -5.3125rem
+  }
+
+  to {
+    bottom: 0
+  }
 }

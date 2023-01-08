@@ -42,6 +42,11 @@ import VocalbularyItem, {
   VocalbularyWord,
 } from './Japan/vocalbulary/VocalbularyItem';
 
+import VItemSrc from './Japan/vocalbulary/VItemSrc';
+import {Multiplechoice} from './Japan/Quiz/MultipleChoice';
+
+import {MultipleChoiceQuestionWrapper} from 'feature/MultipleChoiceQuestion/components/MultipleChoiceQuestion';
+
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
 
@@ -507,6 +512,9 @@ export const MDXComponents = {
   VocalbularyExpand,
   VItem: VocalbularyItem,
   VItemWord: VocalbularyWord,
+  VItemSrc,
+  Multiplechoice,
+  MultipleChoiceQuestionWrapper,
 };
 
 for (let key in MDXComponents) {

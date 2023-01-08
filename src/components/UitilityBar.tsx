@@ -12,7 +12,7 @@ export default function UtilityBar({
   return (
     <div
       className={cn(
-        'sticky flex justify-center opacity-0 bottom-[16px] utility-animation',
+        'z-[400] sticky flex justify-center opacity-0 bottom-[28px] utility-animation',
         {
           '!opacity-100': isVisible,
         }

@@ -6,6 +6,7 @@ import {Fragment, useMemo} from 'react';
 import {MDXComponents} from 'components/MDX/MDXComponents';
 import {MarkdownPage} from 'components/Layout/MarkdownPage';
 import {Page} from 'components/Layout/Page';
+import {remarkEmbedComponent} from '../../plugins/remarkEmbedComponent';
 
 export default function Layout({content, toc, meta}) {
   const parsedContent = useMemo(
@@ -127,6 +128,10 @@ export async function getStaticProps(context) {
   const jsxCode = await compileMdx(mdxWithFakeImports, {
     remarkPlugins: [
       ...remarkPlugins,
+      [
+        remarkEmbedComponent,
+        {root: rootDir, params: context.params.markdownPath},
+      ],
       (await import('remark-gfm')).default,
       (await import('remark-frontmatter')).default,
     ],

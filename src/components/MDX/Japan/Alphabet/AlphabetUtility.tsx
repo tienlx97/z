@@ -34,11 +34,11 @@ export default function AlphabetUtility({
 
         {grid && (
           <>
-            <div className="grid grid1"></div>
-            <div className="grid grid2"></div>
-            <div className="grid grid3"></div>
-            <div className="grid grid4"></div>
-            <div className="grid grid5"></div>
+            <div className="AlphabetUtility-grid AlphabetUtility--grid1"></div>
+            <div className="AlphabetUtility--grid AlphabetUtility--grid2"></div>
+            <div className="AlphabetUtility--grid AlphabetUtility--grid3"></div>
+            <div className="AlphabetUtility--grid AlphabetUtility--grid4"></div>
+            <div className="AlphabetUtility--grid AlphabetUtility--grid5"></div>
           </>
         )}
       </div>
