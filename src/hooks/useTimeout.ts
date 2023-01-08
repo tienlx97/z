@@ -13,6 +13,7 @@ export default function useTimeout(callback: any, delay: number | null) {
       timeoutRef.current = window.setTimeout(tick, delay);
       return () => window.clearTimeout(timeoutRef.current);
     }
+    return;
   }, [delay]);
   return timeoutRef;
 }
