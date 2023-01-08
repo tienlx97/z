@@ -64,10 +64,10 @@ export const MultipleChoiceQuestionAnswersLabel = ({
         {
           // color: var(--mint-500-mint-400);
           'text-green-600 mb-6 leading-6 tracking-normal font-semibold text-base':
-            GradedAnswerUtils.isCorrect(gradedAnswer) &&
-            !GradedAnswerUtils.isSubmittedAnswerNotNullAndIsCorrect(
-              gradedAnswer
-            ),
+            // !GradedAnswerUtils.isSubmittedAnswerNotNullAndIsCorrect(
+            //   gradedAnswer
+            // ) &&
+            GradedAnswerUtils.isCorrect(gradedAnswer),
           //     color: var(--error-red);
           'text-red-600 mb-6 leading-6 tracking-normal font-semibold text-base':
             // GradedAnswerUtils.isSubmittedAnswer(gradedAnswer) === true &&
