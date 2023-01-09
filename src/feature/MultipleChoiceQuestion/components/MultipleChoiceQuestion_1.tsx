@@ -32,7 +32,7 @@ export const MultipleChoiceQuestion_1 = ({
 
   const generateRandom = (min: number, max: number, arr: number[]): number => {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return arr.includes(num) ? generateRandom(min, max) : num;
+    return arr.includes(num) ? generateRandom(min, max, arr) : num;
   };
 
   const genQuestion = (index: number, maxIndex: number) => {
