@@ -72,7 +72,7 @@ export const MultipleChoiceQuestion_1 = ({
   const genQuestions = () => {
     for (let index = 0; index < wordList.length; index++) {
       const japanWord = wordList[index];
-      const questionAnswer = genQuestion(japanWord);
+      const questionAnswer = genQuestion(japanWord, wordList.length);
 
       const expectedResult = generateRandom(0, 4, []);
 
