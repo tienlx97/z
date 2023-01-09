@@ -33,7 +33,7 @@ export const MultipleChoiceQuestion_1 = ({
   const [expectedResults, setExpectedResults] = useState<number[]>([]);
 
   const generateRandom = (min: number, max: number, arr: number[]): number => {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
+    const num = Math.floor(Math.random() * (max - min)) + min;
     return arr.includes(num) ? generateRandom(min, max, arr) : num;
   };
 
