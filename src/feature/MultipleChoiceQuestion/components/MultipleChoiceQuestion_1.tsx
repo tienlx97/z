@@ -27,6 +27,7 @@ export const MultipleChoiceQuestion_1 = ({
     .vocalbulary as JapanWord[];
 
   const [questions, setQuestions] = useState<Question[] | null>(null);
+  const [expectedResults, setExpectedResults] = useState<number[] | null>(null);
 
   const generateRandom = (min: number, max: number, arr: number[]): number => {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -70,12 +71,64 @@ export const MultipleChoiceQuestion_1 = ({
   const genQuestions = () => {
     for (let index = 0; index < wordList.length; index++) {
       const ele = array[index];
-      const [question, expectedAnswer, fakeAnswer1, fakeAnswer2, fakeAnswer3] =
-        genQuestion(ele);
+      const que = genQuestion(ele);
 
-        setQuestions({
-          
-        })
+      const expectedResult = generateRandom(0, 4, []);
+
+      setExpectedResults((oldArray) => [...oldArray, expectedResult]);
+
+      const answerList: any = [];
+      const duplicateList: number[] = [];
+      duplicateList.push(expectedAnswer);
+      duplicateList[expectedResult] = {
+        attributes: [
+          {
+            languageCode: "vi",
+            mediaType: 1,
+            plainText: que[expectedResult + 2],
+            richText: null,
+            type: "TextAttribute",
+          },
+        ],
+      };
+
+      const r1 = generateRandom(0, 4, duplicateList);
+      duplicateList[r1] = {
+        attributes: [
+          {
+            languageCode: "vi",
+            mediaType: 1,
+            plainText: "lately",
+            richText: null,
+            type: "TextAttribute",
+          },
+        ],
+      };
+
+      setQuestions((oldArray) => [
+        ...oldArray,
+        {
+          hasExactlyOneCorrectAnswer: true,
+          hint: null,
+          metadata: {
+            answerSide: "word",
+            promptSide: true,
+          },
+          prompt: {
+            attributes: [
+              {
+                languageCode: "ja",
+                mediaType: 1,
+                plainText: question,
+                richText: null,
+                type: "TextAttribute",
+              },
+            ],
+          },
+          questionType: 4,
+          type: "MultipleChoiceQuestion",
+        },
+      ]);
     }
   };
 };
