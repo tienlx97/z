@@ -41,32 +41,25 @@ export const MultipleChoiceQuestion_1 = ({
     const japanWord = wordList[index];
 
     const ja = japanWord.hira ?? japanWord.kata!;
-    const vi =
-      japanWord.detail[Math.floor(Math.random() * japanWord.detail.length)]
-        .meaning;
+    const meaning0 = generateRandom(0, japanWord.detail.length);
+    const vi = japanWord.detail[meaning0].meaning;
 
     const duplicateList: number[] = [];
     duplicateList.push(index);
 
     const index1 = generateRandom(0, maxIndex, duplicateList);
-    const answer1 =
-      wordList[index1].detail[
-        Math.floor(Math.random() * wordList[index1].detail.length)
-      ].meaning;
+    const meaning1 = generateRandom(0, wordList[index1].detail.length);
+    const answer1 = wordList[index1].detail[meaning1].meaning;
 
     duplicateList.push(index1);
     const index2 = generateRandom(0, maxIndex, duplicateList);
-    const answer2 =
-      wordList[index2].detail[
-        Math.floor(Math.random() * wordList[index2].detail.length)
-      ].meaning;
+    const meaning2 = generateRandom(0, wordList[index2].detail.length);
+    const answer2 = wordList[index2].detail[meaning2].meaning;
 
     duplicateList.push(index2);
     const index3 = generateRandom(0, maxIndex, duplicateList);
-    const answer3 =
-      wordList[index3].detail[
-        Math.floor(Math.random() * wordList[index3].detail.length)
-      ].meaning;
+    const meaning3 = generateRandom(0, wordList[index2].detail.length);
+    const answer3 = wordList[index3].detail[meaning3].meaning;
 
     return [ja, vi, answer1, answer2, answer3];
   };
