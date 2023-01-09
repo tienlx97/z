@@ -446,3 +446,7 @@ export const MultipleChoiceQuestionWrapper = () => {
     </>
   );
 };
+
+export const MultipleChoiceQuestion_1 = () => {
+
+}
