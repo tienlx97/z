@@ -89,7 +89,7 @@ export const MultipleChoiceQuestion_1 = ({
           },
         ],
       };
-      duplicateList.push(expectedAnswer);
+      duplicateList.push(expectedResult);
       const r1 = generateRandom(0, 4, duplicateList);
       answerList[r1] = {
         attributes: [
