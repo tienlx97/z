@@ -89,8 +89,8 @@ export const MultipleChoiceQuestion_1 = ({
           },
         ],
       };
-
-      const r1 = generateRandom(0, 4, duplicateList.push(expectedAnswer));
+      duplicateList.push(expectedAnswer);
+      const r1 = generateRandom(0, 4, duplicateList);
       answerList[r1] = {
         attributes: [
           {
@@ -102,8 +102,8 @@ export const MultipleChoiceQuestion_1 = ({
           },
         ],
       };
-
-      const r2 = generateRandom(0, 4, duplicateList.push(r1));
+      duplicateList.push(r1);
+      const r2 = generateRandom(0, 4, duplicateList);
       answerList[r2] = {
         attributes: [
           {
@@ -115,8 +115,8 @@ export const MultipleChoiceQuestion_1 = ({
           },
         ],
       };
-
-      const r3 = generateRandom(0, 4, duplicateList.push(r2));
+      duplicateList.push(r2);
+      const r3 = generateRandom(0, 4, duplicateList);
       answerList[r3] = {
         attributes: [
           {
