@@ -1,16 +1,16 @@
-import React, {useCallback, useEffect} from 'react';
-import usePrevious from 'hooks/usePrevious';
-import {once} from 'lodash';
-import {nullthrows} from '../utils/nullthrows';
-import {GradedAnswer, MULTIPLE_CHOICE_QUESTION, Question} from '../types';
-import {MultipleChoiceQuestionPrompt} from './MultipleChoiceQuestionPrompt';
-import GradedAnswerUtils from '../utils/graded-answer-utils';
+import React, { useCallback, useEffect } from "react";
+import usePrevious from "hooks/usePrevious";
+import { once } from "lodash";
+import { nullthrows } from "../utils/nullthrows";
+import { GradedAnswer, MULTIPLE_CHOICE_QUESTION, Question } from "../types";
+import { MultipleChoiceQuestionPrompt } from "./MultipleChoiceQuestionPrompt";
+import GradedAnswerUtils from "../utils/graded-answer-utils";
 import {
   MultipleChoiceQuestionKind,
   MultipleChoiceQuestionProvider,
   useMultipleChoiceQuestion,
-} from '../context/MultipleChoideQuestionContext';
-import {ContinueButton} from './ContinueButton';
+} from "../context/MultipleChoideQuestionContext";
+import { ContinueButton } from "./ContinueButton";
 
 type MultipleChoiceQuestionProps = {
   // question: Question;
@@ -20,16 +20,16 @@ type MultipleChoiceQuestionProps = {
 
 export const MultipleChoiceQuestion = (props: MultipleChoiceQuestionProps) => {
   // const {gradedAnswer, question, shouldShowPreviouslyMissedLabel} = props;
-  const {shouldShowPreviouslyMissedLabel} = props;
+  const { shouldShowPreviouslyMissedLabel } = props;
 
   const [state, dispatch] = useMultipleChoiceQuestion();
 
-  const {question, gradedAnswer} = state;
+  const { question, gradedAnswer } = state;
 
   // Get question, gradedAnswer from context
 
   if (question.type !== MULTIPLE_CHOICE_QUESTION) {
-    throw Error('Trying to render the wrong question type');
+    throw Error("Trying to render the wrong question type");
   }
 
   const previousGradedAnswer = usePrevious(gradedAnswer);
@@ -96,57 +96,57 @@ export const MultipleChoiceQuestion = (props: MultipleChoiceQuestionProps) => {
   );
 };
 
-export const MultipleChoiceQuestionWrapper = () => {
+export const MultipleChoiceQuestion_1 = () => {
   const questions: Question[] = [
     {
       hasExactlyOneCorrectAnswer: true,
       hint: null,
       metadata: {
-        answerSide: 'word',
+        answerSide: "word",
         promptSide: true,
       },
       options: [
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'lately',
+              plainText: "lately",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'separated',
+              plainText: "separated",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'almost',
+              plainText: "almost",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'celibate',
+              plainText: "celibate",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
@@ -154,66 +154,66 @@ export const MultipleChoiceQuestionWrapper = () => {
       prompt: {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: "vi",
             mediaType: 1,
-            plainText: 'gần đây',
+            plainText: "gần đây",
             richText: null,
-            type: 'TextAttribute',
+            type: "TextAttribute",
           },
         ],
       },
       questionType: 4,
-      type: 'MultipleChoiceQuestion',
+      type: "MultipleChoiceQuestion",
     },
     {
       hasExactlyOneCorrectAnswer: true,
       hint: null,
       metadata: {
-        answerSide: 'word',
+        answerSide: "word",
         promptSide: true,
       },
       options: [
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hell',
+              plainText: "hell",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hello',
+              plainText: "hello",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'heloow',
+              plainText: "heloow",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'dfd df',
+              plainText: "dfd df",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
@@ -221,66 +221,66 @@ export const MultipleChoiceQuestionWrapper = () => {
       prompt: {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: "vi",
             mediaType: 1,
-            plainText: 'xin chao',
+            plainText: "xin chao",
             richText: null,
-            type: 'TextAttribute',
+            type: "TextAttribute",
           },
         ],
       },
       questionType: 4,
-      type: 'MultipleChoiceQuestion',
+      type: "MultipleChoiceQuestion",
     },
     {
       hasExactlyOneCorrectAnswer: true,
       hint: null,
       metadata: {
-        answerSide: 'word',
+        answerSide: "word",
         promptSide: true,
       },
       options: [
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hell',
+              plainText: "hell",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hello',
+              plainText: "hello",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'heloow',
+              plainText: "heloow",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'dfd df',
+              plainText: "dfd df",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
@@ -288,66 +288,66 @@ export const MultipleChoiceQuestionWrapper = () => {
       prompt: {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: "vi",
             mediaType: 1,
-            plainText: 'xin chao',
+            plainText: "xin chao",
             richText: null,
-            type: 'TextAttribute',
+            type: "TextAttribute",
           },
         ],
       },
       questionType: 4,
-      type: 'MultipleChoiceQuestion',
+      type: "MultipleChoiceQuestion",
     },
     {
       hasExactlyOneCorrectAnswer: true,
       hint: null,
       metadata: {
-        answerSide: 'word',
+        answerSide: "word",
         promptSide: true,
       },
       options: [
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hell',
+              plainText: "hell",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hello',
+              plainText: "hello",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'heloow',
+              plainText: "heloow",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'dfd df',
+              plainText: "dfd df",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
@@ -355,66 +355,66 @@ export const MultipleChoiceQuestionWrapper = () => {
       prompt: {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: "vi",
             mediaType: 1,
-            plainText: 'xin chao',
+            plainText: "xin chao",
             richText: null,
-            type: 'TextAttribute',
+            type: "TextAttribute",
           },
         ],
       },
       questionType: 4,
-      type: 'MultipleChoiceQuestion',
+      type: "MultipleChoiceQuestion",
     },
     {
       hasExactlyOneCorrectAnswer: true,
       hint: null,
       metadata: {
-        answerSide: 'word',
+        answerSide: "word",
         promptSide: true,
       },
       options: [
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hell',
+              plainText: "hell",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'hello',
+              plainText: "hello",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'heloow',
+              plainText: "heloow",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
         {
           attributes: [
             {
-              languageCode: 'vi',
+              languageCode: "vi",
               mediaType: 1,
-              plainText: 'dfd df',
+              plainText: "dfd df",
               richText: null,
-              type: 'TextAttribute',
+              type: "TextAttribute",
             },
           ],
         },
@@ -422,16 +422,16 @@ export const MultipleChoiceQuestionWrapper = () => {
       prompt: {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: "vi",
             mediaType: 1,
-            plainText: 'xin chao',
+            plainText: "xin chao",
             richText: null,
-            type: 'TextAttribute',
+            type: "TextAttribute",
           },
         ],
       },
       questionType: 4,
-      type: 'MultipleChoiceQuestion',
+      type: "MultipleChoiceQuestion",
     },
   ];
 
@@ -440,13 +440,10 @@ export const MultipleChoiceQuestionWrapper = () => {
       <br />
       <MultipleChoiceQuestionProvider
         questions={questions}
-        expectedResults={[0, 1, 2, 3, 0]}>
+        expectedResults={[0, 1, 2, 3, 0]}
+      >
         <MultipleChoiceQuestion shouldShowPreviouslyMissedLabel={false} />
       </MultipleChoiceQuestionProvider>
     </>
   );
 };
-
-export const MultipleChoiceQuestion_1 = () => {
-
-}

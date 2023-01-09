@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Question } from "../types";
 
 interface DetailItem {
@@ -26,8 +26,8 @@ export const MultipleChoiceQuestion_1 = ({
   const wordList: JapanWord[] = JSON.parse(b64DecodeUnicode(src2Base64))
     .vocalbulary as JapanWord[];
 
-  const [questions, setQuestions] = useState<Question[] | null>(null);
-  const [expectedResults, setExpectedResults] = useState<number[] | null>(null);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [expectedResults, setExpectedResults] = useState<number[]>([]);
 
   const generateRandom = (min: number, max: number, arr: number[]): number => {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -70,41 +70,66 @@ export const MultipleChoiceQuestion_1 = ({
 
   const genQuestions = () => {
     for (let index = 0; index < wordList.length; index++) {
-      const ele = array[index];
-      const que = genQuestion(ele);
+      const japanWord = array[index];
+      const questionAnswer = genQuestion(japanWord);
 
       const expectedResult = generateRandom(0, 4, []);
 
-      setExpectedResults((oldArray) => [...oldArray, expectedResult]);
-
       const answerList: any = [];
+
       const duplicateList: number[] = [];
-      duplicateList.push(expectedAnswer);
-      duplicateList[expectedResult] = {
+      answerList[expectedResult] = {
         attributes: [
           {
             languageCode: "vi",
             mediaType: 1,
-            plainText: que[expectedResult + 2],
+            plainText: questionAnswer[1],
             richText: null,
             type: "TextAttribute",
           },
         ],
       };
 
-      const r1 = generateRandom(0, 4, duplicateList);
-      duplicateList[r1] = {
+      const r1 = generateRandom(0, 4, duplicateList.push(expectedAnswer));
+      answerList[r1] = {
         attributes: [
           {
             languageCode: "vi",
             mediaType: 1,
-            plainText: "lately",
+            plainText: questionAnswer[r1 + 2],
             richText: null,
             type: "TextAttribute",
           },
         ],
       };
 
+      const r2 = generateRandom(0, 4, duplicateList.push(r1));
+      answerList[r2] = {
+        attributes: [
+          {
+            languageCode: "vi",
+            mediaType: 1,
+            plainText: questionAnswer[r2 + 2],
+            richText: null,
+            type: "TextAttribute",
+          },
+        ],
+      };
+
+      const r3 = generateRandom(0, 4, duplicateList.push(r2));
+      answerList[r3] = {
+        attributes: [
+          {
+            languageCode: "vi",
+            mediaType: 1,
+            plainText: questionAnswer[r3 + 2],
+            richText: null,
+            type: "TextAttribute",
+          },
+        ],
+      };
+
+      setExpectedResults((oldArray) => [...oldArray, expectedResult]);
       setQuestions((oldArray) => [
         ...oldArray,
         {
@@ -114,12 +139,13 @@ export const MultipleChoiceQuestion_1 = ({
             answerSide: "word",
             promptSide: true,
           },
+          options: answerList,
           prompt: {
             attributes: [
               {
                 languageCode: "ja",
                 mediaType: 1,
-                plainText: question,
+                plainText: questionAnswer[0],
                 richText: null,
                 type: "TextAttribute",
               },
@@ -131,4 +157,20 @@ export const MultipleChoiceQuestion_1 = ({
       ]);
     }
   };
+
+  useEffect(() => {
+    genQuestions();
+  }, []);
+
+  return (
+    <>
+      <br />
+      <MultipleChoiceQuestionProvider
+        questions={questions}
+        expectedResults={expectedResults}
+      >
+        <MultipleChoiceQuestion shouldShowPreviouslyMissedLabel={false} />
+      </MultipleChoiceQuestionProvider>
+    </>
+  );
 };

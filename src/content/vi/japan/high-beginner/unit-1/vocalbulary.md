@@ -17,4 +17,4 @@ Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and p
 
 </TryItOutExpand>
 
-<MultipleChoiceQuestionWrapper />
+<MultipleChoiceQuestion_1 src2Base64="data.json" />
