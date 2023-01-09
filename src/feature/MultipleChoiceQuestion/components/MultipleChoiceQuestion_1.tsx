@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Question } from "../types";
 import { b64DecodeUnicode } from "feature/MultipleChoiceQuestion/utils/b64DecodeUnicode";
 import { MultipleChoiceQuestionProvider } from "../context/MultipleChoideQuestionContext";
+import { MultipleChoiceQuestion } from "./MultipleChoiceQuestion";
 
 interface DetailItem {
   meaning: string;
