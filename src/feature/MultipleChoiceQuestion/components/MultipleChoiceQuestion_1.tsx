@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Question } from "../types";
+import { b64DecodeUnicode } from "feature/MultipleChoiceQuestion/utils/b64DecodeUnicode";
 
 interface DetailItem {
   meaning: string;
