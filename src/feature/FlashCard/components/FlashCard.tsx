@@ -51,16 +51,6 @@ export const FlashCard = ({
   const previousFlippedDifferentCurrentFlipped =
     undefined !== previousFlipped && previousFlipped !== isFlipped;
 
-  // const clazzFront = cn({
-  //   h17h0v5c: previousFlippedDifferentCurrentFlipped && isFlipped,
-  //   v862hqe: previousFlippedDifferentCurrentFlipped && !isFlipped,
-  // });
-
-  // const clazzBack = cn({
-  //   h17h0v5c: previousFlippedDifferentCurrentFlipped && !isFlipped,
-  //   v862hqe: previousFlippedDifferentCurrentFlipped && isFlipped,
-  // });
-
   return (
     // Stage
     <div

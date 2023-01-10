@@ -1,4 +1,4 @@
-import React, {useState, useId} from 'react';
+import React, {useState, useId, useEffect, useRef} from 'react';
 import cn from 'classnames';
 
 const animationName = {
@@ -31,9 +31,13 @@ const animationName = {
       children: React.ReactNode;
       onAnimationEnd: any;
     }) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const counter = useRef(0);
+      console.log(counter.current++);
+
       return (
         <article
-          // key={Math.floor(Math.random() * 1000)}
+          key={Math.floor(Math.random() * 1000)}
           style={
             {
               '--z1xlk8pd-3': 125 / 16 + 'rem',

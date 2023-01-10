@@ -53,10 +53,7 @@ export const ButtonGroup = ({
 }: ButtonGroupProps) => {
   return (
     <div className="flex gap-4 justify-around">
-      <AnswerControls
-        ariaLabel="1"
-        isDisabled={isHidden}
-        onClick={onKnow ?? onDontKnow!}>
+      <AnswerControls ariaLabel="1" isDisabled={isHidden} onClick={onKnow!}>
         Next Question
       </AnswerControls>
     </div>

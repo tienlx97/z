@@ -55,7 +55,7 @@ export const CardAnimation = ({children, controller}: CardAnimationProps) => {
   return (
     useEffect(() => {
       previousChildren && setComp(previousChildren);
-    }, [children.key]),
+    }, [children.key, previousChildren]),
     (
       <QuestionGrid className="min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]">
         {Comp && AnimationExit && (
