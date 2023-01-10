@@ -47,12 +47,17 @@ export const MultipleChoiceQuestion = (props: MultipleChoiceQuestionProps) => {
     // }
 
     if (!previousGradedAnswer && gradedAnswer) {
+      let time = 1500;
+      if (gradedAnswer.isCorrect) {
+        time = 800;
+      }
+
       window.setTimeout(() => {
         dispatch({
           type: MultipleChoiceQuestionKind.NEXT_QUESTION,
           payload: null,
         });
-      }, 1000);
+      }, time);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gradedAnswer]);

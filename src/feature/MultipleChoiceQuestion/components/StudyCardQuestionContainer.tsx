@@ -8,6 +8,7 @@ import {
 } from './QuestionElementView';
 import {QuestionElementUtils} from '../utils/question-element-utils';
 import {FlagStudiableMetadataContainer} from './FlagStudiableMetadataContainer';
+import {useMultipleChoiceQuestion} from '../context/MultipleChoideQuestionContext';
 
 type StudyCardQuestionContainerProps = {
   allowEditing?: boolean;
@@ -47,6 +48,8 @@ export const StudyCardQuestionContainer = ({
   questionSource,
   slots,
 }: StudyCardQuestionContainerProps) => {
+  const [state] = useMultipleChoiceQuestion();
+
   let audioRawVal = QuestionElementUtils.elementType(questionElement).audio;
   const audioVal = audioRawVal == null ? undefined : audioRawVal.url;
 
@@ -129,10 +132,13 @@ export const StudyCardQuestionContainer = ({
             )}
             {shouldRenderFeedbackFlag ? (
               <div className="flex items-center ml-5">
-                <FlagStudiableMetadataContainer
+                {/* <FlagStudiableMetadataContainer
                   questionType={questionType}
                   studiableMetadataType={studiableMetadataType}
-                />
+                /> */}
+                <span className="flex font-semibold text-[0.875rem] tracking-normal text-[#939bb4] dark:text-[#646f90]">
+                  {state.index + 1} of {state.size}
+                </span>
               </div>
             ) : null}
           </div>

@@ -8,6 +8,7 @@ type MultipleChoiceQuestionState = {
   expectedResults: number[];
   // current question index
   index: number;
+  size: number;
   question: Question;
   // at bottom question
   stop: boolean;
@@ -110,6 +111,7 @@ export const MultipleChoiceQuestionProvider = ({
     stop: false,
     question: questions[0],
     gradedAnswer: null,
+    size: questions.length,
   });
 
   return (
