@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   QuestionGrid,
-  QuestionGrid_Button,
+  QuestionGrid_Options,
   QuestionGrid_Card,
   QuestionGrid_Center,
-  QuestionGrid_Element,
+  QuestionGrid_Elements,
   QuestionGrid_TopLeft,
   QuestionGrid_TopRight,
-} from './QuestionGrid';
+} from 'feature/CardAnimation/components/QuestionGrid';
 
 type FlashcardSideProps = {
   questionElement: any;
@@ -29,15 +29,16 @@ export const FlashcardSide = ({
       {elements.topRight ? (
         <QuestionGrid_TopRight>{elements.topRight}</QuestionGrid_TopRight>
       ) : null}
-      <QuestionGrid_Element>
+      <QuestionGrid_Elements>
+        {/* convert, trim, cut image/text */}
         <div className="h-full w-full flex justify-center items-center">
           <div className="text-4xl">
             {questionElement.attributes[0].plainText}
           </div>
         </div>
-      </QuestionGrid_Element>
+      </QuestionGrid_Elements>
       {elements.buttons ? (
-        <QuestionGrid_Button>{elements.buttons}</QuestionGrid_Button>
+        <QuestionGrid_Options>{elements.buttons}</QuestionGrid_Options>
       ) : null}
     </QuestionGrid_Card>
   );

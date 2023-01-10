@@ -1,12 +1,14 @@
-import {useCardAnimation} from 'feature/hooks/useCardAnimation';
+import React, {useState, useId} from 'react';
+import {useCardAnimation} from 'feature/CardAnimation/hooks/useCardAnimation';
 import {Question} from 'feature/MultipleChoiceQuestion/types';
-import React, {useState} from 'react';
-import {CardAnimation} from './CardAnimation';
+import {CardAnimation} from 'feature/CardAnimation/components/CardAnimation';
 import {FlashCard} from './FlashCard';
+import {ButtonGroup} from './ButtonGroup';
 
 export const FlashCardWrapper = () => {
-  const hooks = useCardAnimation();
+  const controller = useCardAnimation();
 
+  const [isFlipped, setIsFlipped] = useState(false);
   const [question, setQuestion] = useState({
     front: {
       attributes: [
@@ -46,28 +48,30 @@ export const FlashCardWrapper = () => {
       <div className="text-[.875rem] text-[#646f90]">Definition</div>
     ),
 
-    buttons: () => (
-      <div className="flex gap-4 justify-around">
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-
-            hooks.animate('know');
-          }}
-          className="text-[#edeff4] border-[.125rem] border-solid border-[#346f90] rounded-lg flex items-center relative justify-center w-full mb-4 p-4 font-semibold">
-          Next card
-        </div>
-      </div>
-    ),
+    buttons: ({isShowing}: {isShowing: boolean}) => {
+      return <ButtonGroup isHidden={!isShowing} onKnow={onKnow} />;
+    },
   };
 
+  const onClickCard = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  const onKnow = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault(), e.stopPropagation();
+
+    controller.animate('know');
+  };
+
+  const [id] = useState(Math.floor(Math.random() * 1000));
+
   return (
-    <CardAnimation controller={hooks}>
+    <CardAnimation controller={controller}>
       <FlashCard
-        key={Math.floor(Math.random() * 1000)}
+        onClickCard={onClickCard}
+        isFlipped={isFlipped}
+        key={id}
+        data-key={id}
         question={question}
         elements={elements}
       />

@@ -34,47 +34,47 @@ const Current = ({className, ...props}: JSX.IntrinsicElements['div']) => {
 export const CardAnimation = ({children, controller}: CardAnimationProps) => {
   const previousChildren = usePrevious(children);
 
-  let cAnimations, tAnimations;
-  const [state1, setState1] = React.useState<any>();
+  let animationExitVariable, animationEnterVariable;
+  const [Comp, setComp] = React.useState<React.ReactNode>();
 
   const AnimationExit: keyof JSX.IntrinsicElements =
-    null == (cAnimations = controller.animations)
+    null == (animationExitVariable = controller.animations)
       ? undefined
-      : cAnimations.exit;
+      : animationExitVariable.exit;
 
-  const AnimationEnter: keyof JSX.IntrinsicElements = state1
-    ? null == (tAnimations = controller.animations)
+  const AnimationEnter: keyof JSX.IntrinsicElements = Comp
+    ? null == (animationEnterVariable = controller.animations)
       ? undefined
-      : tAnimations.enter
+      : animationEnterVariable.enter
     : null;
 
   const onAnimationEnd = () => {
-    setState1(undefined);
-    controller.onAnimationEnd();
+    setComp(undefined), controller.onAnimationEnd();
   };
 
-  useEffect(() => {
-    previousChildren && setState1(previousChildren);
-  }, [children.key]);
-
   return (
-    <QuestionGrid className="min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]">
-      {state1 && AnimationExit ? (
-        <Previous>
-          <AnimationExit onAnimationEnd={onAnimationEnd}>
-            {state1}
-          </AnimationExit>
-        </Previous>
-      ) : null}
-      <Current>
-        {AnimationEnter ? (
-          <AnimationEnter onAnimationEnd={onAnimationEnd}>
-            {children}
-          </AnimationEnter>
-        ) : (
-          children
+    useEffect(() => {
+      previousChildren && setComp(previousChildren);
+    }, [children.key]),
+    (
+      <QuestionGrid className="min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]">
+        {Comp && AnimationExit && (
+          <Previous>
+            <AnimationExit onAnimationEnd={onAnimationEnd}>
+              {Comp}
+            </AnimationExit>
+          </Previous>
         )}
-      </Current>
-    </QuestionGrid>
+        <Current key={children.key}>
+          {AnimationEnter ? (
+            <AnimationEnter onAnimationEnd={onAnimationEnd}>
+              {children}
+            </AnimationEnter>
+          ) : (
+            children
+          )}
+        </Current>
+      </QuestionGrid>
+    )
   );
 };

@@ -52,7 +52,7 @@ import JaWL from './Japan/JaWL';
 
 //
 
-import {FlashCardWrapper} from 'feature/CardAnimation/components/FlashCardWrapper';
+import {FlashCardWrapper} from 'feature/FlashCard/components/FlashCardWrapper';
 
 import {useI18n} from 'next-localization';
 

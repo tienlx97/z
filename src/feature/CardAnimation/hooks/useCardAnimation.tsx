@@ -33,23 +33,21 @@ const animationName = {
     }) => {
       return (
         <article
-          key={Math.floor(Math.random() * 1000)}
+          // key={Math.floor(Math.random() * 1000)}
           style={
             {
-              '--animation-distance': 125 / 16 + 'rem',
-              '--animation-rotation': '-2deg',
-              '--animation-base-color': '#98F1D1',
+              '--z1xlk8pd-3': 125 / 16 + 'rem',
+              '--z1xlk8pd-4': '-2deg',
+              '--z1xlk8pd-5': '#98F1D1',
             } as any
           }
           className={cn(
             // StudyCardLayout0
-            'bg-[#f6f7fb] dark:bg-[#2e3856] rounded-lg flex flex-col justify-between my-0 mx-auto max-w-[52.5rem] min-h-[29.25rem] py-5 px-6 sm:p-4 lg:py-6 lg:px-8 mb-0',
-            'KnowExitAnimation z-[999] w-full min-h-[unset] max-h-[unset] leading-5 tracking-normal justify-center h-full font-bold text-[1.5rem]  items-center'
+            '[transition:_all_.5s_ease] [-webkit-transition:_all_.5s_ease] py-6 px-8 min-h-[29.25rem] max-w-[52.5rem] [margin:0_auto_var(--svwhkoh-3)] justify-between flex-col flex [box-shadow:0_.25rem_1rem_0_var(--shadow-with-opacity)] rounded-lg bg-[#f6f7fb] dark:bg-[#2e3856] sm:p-4 lg:py-6 lg:px-8 mb-0',
+            'KnowExitAnimation'
           )}
-          onAnimationEnd={onAnimationEnd}
-          // StudyCardWrapper : here
-        >
-          ds
+          onAnimationEnd={onAnimationEnd}>
+          Know
         </article>
       );
     },

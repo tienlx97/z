@@ -56,7 +56,7 @@ export const QuestionGrid_Center = ({
   );
 };
 
-export const QuestionGrid_Element = ({
+export const QuestionGrid_Elements = ({
   className,
   ...props
 }: JSX.IntrinsicElements['div']) => {
@@ -71,7 +71,7 @@ export const QuestionGrid_Element = ({
   );
 };
 
-export const QuestionGrid_Button = ({
+export const QuestionGrid_Options = ({
   className,
   ...props
 }: JSX.IntrinsicElements['div']) => {

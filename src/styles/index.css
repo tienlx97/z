@@ -798,6 +798,7 @@ svg.acjk path[id] {
 /* flashcard */
 
 
+
 .h17h0v5c {
   -webkit-animation: flipOut-h17h0v5c .25s ease-in-out 1;
   animation: flipOut-h17h0v5c .25s ease-in-out 1;
@@ -832,6 +833,7 @@ svg.acjk path[id] {
     transform: rotateX(180deg)
   }
 }
+
 
 .v862hqe {
   -webkit-animation: flipIn-v862hqe .25s ease-in-out 1;
@@ -942,6 +944,31 @@ svg.acjk path[id] {
 /* CAr */
 
 .KnowExitAnimation {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  --animation-distance: var(--z1xlk8pd-3);
+  --animation-rotation: var(--z1xlk8pd-4);
+  --animation-base-color: var(--z1xlk8pd-5);
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1;
   animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1;
-  -webkit-animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1
+  border: .0625rem solid var(--animation-base-color);
+  color: var(--animation-base-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.3333333333333333;
+  max-width: unset;
+  min-height: unset;
+  width: 100%;
+  z-index: 999
 }
