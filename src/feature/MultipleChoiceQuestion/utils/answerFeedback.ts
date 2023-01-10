@@ -33,29 +33,29 @@ const Counter_3 = counter(3);
 //   }
 // };
 
-const translate5 = (e: any) => {
+const translate5 = (t: any) => {
   switch (Counter_5()) {
     case 1:
-      return 'Awesome!';
+      return t('mdx.multiple_choice.label.awesome');
     case 2:
-      return 'Excellent!';
+      return t('mdx.multiple_choice.label.excellent');
     case 3:
-      return "You've got this!";
+      return t('mdx.multiple_choice.label.you_got_this');
     case 4:
-      return "You're doing great!";
+      return t('mdx.multiple_choice.label.you_doing_great');
     default:
-      return 'Brilliant work!';
+      return t('mdx.multiple_choice.label.brilliant_work');
   }
 };
 
-const translate3 = (e: any) => {
+const translate3 = (t: any) => {
   switch (Counter_3()) {
     case 1:
-      return "Not quite. You're still learning!";
+      return t('mdx.multiple_choice.label.not_quite');
     case 2:
-      return 'No worries. Learning is a process!';
+      return t('mdx.multiple_choice.label.no_worries');
     default:
-      return "No problem. You're still learning!";
+      return t('mdx.multiple_choice.label.no_problem');
   }
 };
 

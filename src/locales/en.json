@@ -33,6 +33,24 @@
     "vtable": {
       "meaning": "Meaning",
       "hiragana": "Hiragana"
+    },
+    "multiple_choice": {
+      "label": {
+        "you_selected": "You selected",
+        "later": "Give this one a go later!",
+        "here_is_correct": "Here is the correct answer",
+        "nice_done": "Nicely done! You got it this time.",
+        "select_correct_definition": "Select the correct definition",
+        "select_correct_term": "Select the correct term",
+        "awesome": "Awesome",
+        "excellent": "Excellent!",
+        "you_got_this": "You got this!",
+        "you_doing_great": "You're doing great!",
+        "brilliant_work": "Brilliant work!",
+        "not_quite": "Not quite. You're still learning!",
+        "no_worries": "No worries. Learning is a process!",
+        "no_problem": "No problem. You're still learning!"
+      }
     }
   }
 }

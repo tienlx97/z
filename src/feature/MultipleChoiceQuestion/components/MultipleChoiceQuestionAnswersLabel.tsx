@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useTransition} from 'react';
 import cn from 'classnames';
+import {useI18n} from 'next-localization';
+
 import GradedAnswerUtils from '../utils/graded-answer-utils';
 import {AnswerFeedback} from '../utils/answerFeedback';
 import {QuestionElementUtils} from '../utils/question-element-utils';
@@ -19,38 +21,40 @@ export const MultipleChoiceQuestionAnswersLabel = ({
   question,
   shouldShowPreviouslyMissedLabel,
 }: MultipleChoiceQuestionAnswersLabelProps) => {
+  const {t} = useI18n();
+
   const questionFeedBackStr = (function () {
     if (currentValue !== undefined && gradedAnswer === null) {
-      return 'You selected';
+      return t('mdx.multiple_choice.label.you_selected');
     }
 
     if (GradedAnswerUtils.isNotNull(gradedAnswer)) {
       if (!gradedAnswer.feedback.submittedAnswer) {
-        return 'Give this one a go later!';
+        return t('mdx.multiple_choice.label.later');
       }
       if (
         currentValue === undefined &&
         GradedAnswerUtils.isSubmittedAnswerNotNullAndIsCorrect(gradedAnswer)
       ) {
-        return 'Here is the correct answer';
+        return t('mdx.multiple_choice.label.here_is_correct');
       }
 
       if (GradedAnswerUtils.isCorrect(gradedAnswer)) {
         return shouldShowPreviouslyMissedLabel
-          ? 'Nicely done! You got it this time.'
-          : AnswerFeedback.translate5('traslate hook');
+          ? t('mdx.multiple_choice.label.nice_done')
+          : AnswerFeedback.translate5(t);
       }
 
       if (GradedAnswerUtils.isNotCorrect(gradedAnswer)) {
-        return AnswerFeedback.translate3('translate hook');
+        return AnswerFeedback.translate3(t);
       }
     }
 
     return answerLabel !== undefined
       ? answerLabel
       : question.metadata.answerSide === 'DEFINITION'.toLowerCase()
-      ? 'Select the correct definition'
-      : 'Select the correct term';
+      ? t('mdx.multiple_choice.label.select_correct_definition')
+      : t('mdx.multiple_choice.label.select_correct_term');
   })();
 
   return (

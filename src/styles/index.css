@@ -794,3 +794,154 @@ svg.acjk path[id] {
     bottom: 0
   }
 }
+
+/* flashcard */
+
+
+.h17h0v5c {
+  -webkit-animation: flipOut-h17h0v5c .25s ease-in-out 1;
+  animation: flipOut-h17h0v5c .25s ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+@-webkit-keyframes flipOut-h17h0v5c {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+}
+
+@keyframes flipOut-h17h0v5c {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+}
+
+.v862hqe {
+  -webkit-animation: flipIn-v862hqe .25s ease-in-out 1;
+  animation: flipIn-v862hqe .25s ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
+}
+
+@-webkit-keyframes flipIn-v862hqe {
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(1turn);
+    -ms-transform: rotateX(1turn);
+    transform: rotateX(1turn)
+  }
+}
+
+@keyframes flipIn-v862hqe {
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(1turn);
+    -ms-transform: rotateX(1turn);
+    transform: rotateX(1turn)
+  }
+}
+
+
+@-webkit-keyframes shuffleOut-z1xlk8pd-svwhkoh {
+  0% {
+    -webkit-transform: scale(.95) rotate(0) translateZ(0);
+    -ms-transform: scale(.95) rotate(0) translateZ(0);
+    transform: scale(.95) rotate(0) translateZ(0)
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(var(--animation-rotation)) translateZ(0);
+    -ms-transform: scale(1) rotate(var(--animation-rotation)) translateZ(0);
+    transform: scale(1) rotate(var(--animation-rotation)) translateZ(0)
+  }
+
+  75% {
+    -webkit-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    -ms-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0)
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    -ms-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0)
+  }
+}
+
+@keyframes shuffleOut-z1xlk8pd-svwhkoh {
+  0% {
+    -webkit-transform: scale(.95) rotate(0) translateZ(0);
+    -ms-transform: scale(.95) rotate(0) translateZ(0);
+    transform: scale(.95) rotate(0) translateZ(0)
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(var(--animation-rotation)) translateZ(0);
+    -ms-transform: scale(1) rotate(var(--animation-rotation)) translateZ(0);
+    transform: scale(1) rotate(var(--animation-rotation)) translateZ(0)
+  }
+
+  75% {
+    -webkit-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    -ms-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0)
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    -ms-transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0);
+    transform: scale(1) rotate(0) translate3d(var(--animation-distance), 0, 0)
+  }
+}
+
+/* Question Grid */
+
+@media (max-width: 48rem) {
+  .QuestionGridCard {
+    @apply p-4
+  }
+}
+
+@media (max-width: 64rem) {
+  .QuestionGridCard {
+    @apply px-8 py-6
+  }
+}
+
+/* CAr */
+
+.KnowExitAnimation {
+  animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1;
+  -webkit-animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1
+}

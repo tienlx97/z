@@ -50,6 +50,10 @@ import {MultipleChoiceQuestion_1} from 'feature/MultipleChoiceQuestion/component
 import Speak from './Japan/Speak';
 import JaWL from './Japan/JaWL';
 
+//
+
+import {FlashCardWrapper} from 'feature/CardAnimation/components/FlashCardWrapper';
+
 import {useI18n} from 'next-localization';
 
 function CodeStep({children, step}: {children: any; step: number}) {
@@ -524,6 +528,8 @@ export const MDXComponents = {
   VItemSrc,
   Multiplechoice,
   MultipleChoiceQuestion_1,
+  //
+  FlashCardWrapper,
 };
 
 for (let key in MDXComponents) {
