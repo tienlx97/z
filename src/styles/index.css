@@ -721,6 +721,14 @@ svg.acjk path[id] {
   }
 }
 
+.lang-ja {
+  @apply font-ja
+}
+
+.lang-vi {
+  @apply font-sans
+}
+
 /* AssemblyIcon */
 
 .AssemblyIcon {

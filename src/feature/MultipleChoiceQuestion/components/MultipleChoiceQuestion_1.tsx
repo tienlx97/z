@@ -34,8 +34,12 @@ const randomNumber = (
 
 export const MultipleChoiceQuestion_1 = ({
   src2Base64,
+  kanji = false,
+  questionJapan = true,
 }: {
   src2Base64: string;
+  kanji?: boolean;
+  questionJapan?: boolean;
 }) => {
   const [wordList, _] = useState<JapanWord[]>(
     JSON.parse(b64DecodeUnicode(src2Base64)).vocalbulary as JapanWord[]
@@ -59,23 +63,69 @@ export const MultipleChoiceQuestion_1 = ({
     return {specificAnswer, randomIndex};
   };
 
+  const createKanjiIfExist = (maxIndex: number, duplicateList: number[]) => {
+    const randomIndex = randomNumber(0, maxIndex, duplicateList);
+    // const randomMeaning = randomNumber(
+    //   0,
+    //   wordList[randomIndex].detail.length,
+    //   []
+    // );
+    // const specificAnswer = wordList[randomIndex].detail[randomMeaning].meaning;
+
+    const word = wordList[randomIndex];
+
+    const specificAnswer = kanji
+      ? word.kanji ?? word.hira ?? word.kata!
+      : word.hira ?? word.kata!;
+    return {specificAnswer, randomIndex};
+  };
+
   const generateAQuestion = (index: number, maxIndex: number): string[] => {
     const japanWord = wordList[index];
-    const jaQuestion = japanWord.hira ?? japanWord.kata!;
+
+    if (questionJapan) {
+      const questionLabel = kanji
+        ? japanWord.kanji ?? japanWord.hira ?? japanWord.kata!
+        : japanWord.hira ?? japanWord.kata!;
+
+      // for now just get first meaning
+      const correctMeaning = japanWord.detail[0].meaning;
+      // const correctMeaning =
+      //   japanWord.detail[randomNumber(0, japanWord.detail.length, [])].meaning;
+      const duplicateList: number[] = [];
+      duplicateList.push(index);
+      const answer1 = createMeaning(maxIndex, duplicateList);
+      duplicateList.push(answer1.randomIndex);
+      const answer2 = createMeaning(maxIndex, duplicateList);
+      duplicateList.push(answer2.randomIndex);
+      const answer3 = createMeaning(maxIndex, duplicateList);
+
+      return [
+        questionLabel,
+        correctMeaning,
+        answer1.specificAnswer,
+        answer2.specificAnswer,
+        answer3.specificAnswer,
+      ];
+    }
+
+    const questionLabel = japanWord.detail[0].meaning;
     // for now just get first meaning
-    const correctMeaning = japanWord.detail[0].meaning;
+    const correctMeaning = kanji
+      ? japanWord.kanji ?? japanWord.hira ?? japanWord.kata!
+      : japanWord.hira ?? japanWord.kata!;
     // const correctMeaning =
     //   japanWord.detail[randomNumber(0, japanWord.detail.length, [])].meaning;
     const duplicateList: number[] = [];
     duplicateList.push(index);
-    const answer1 = createMeaning(maxIndex, duplicateList);
+    const answer1 = createKanjiIfExist(maxIndex, duplicateList);
     duplicateList.push(answer1.randomIndex);
-    const answer2 = createMeaning(maxIndex, duplicateList);
+    const answer2 = createKanjiIfExist(maxIndex, duplicateList);
     duplicateList.push(answer2.randomIndex);
-    const answer3 = createMeaning(maxIndex, duplicateList);
+    const answer3 = createKanjiIfExist(maxIndex, duplicateList);
 
     return [
-      jaQuestion,
+      questionLabel,
       correctMeaning,
       answer1.specificAnswer,
       answer2.specificAnswer,
@@ -117,7 +167,7 @@ export const MultipleChoiceQuestion_1 = ({
       answerList[expectedCorrectPosition] = {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: questionJapan ? 'vi' : 'ja',
             mediaType: 1,
             plainText: aQuestion[1],
             richText: null,
@@ -135,7 +185,7 @@ export const MultipleChoiceQuestion_1 = ({
       answerList[answerPos1] = {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: questionJapan ? 'vi' : 'ja',
             mediaType: 1,
             plainText: aQuestion[2],
             richText: null,
@@ -146,7 +196,7 @@ export const MultipleChoiceQuestion_1 = ({
       answerList[answerPos2] = {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: questionJapan ? 'vi' : 'ja',
             mediaType: 1,
             plainText: aQuestion[3],
             richText: null,
@@ -157,7 +207,7 @@ export const MultipleChoiceQuestion_1 = ({
       answerList[answerPos3] = {
         attributes: [
           {
-            languageCode: 'vi',
+            languageCode: questionJapan ? 'vi' : 'ja',
             mediaType: 1,
             plainText: aQuestion[4],
             richText: null,
@@ -177,7 +227,7 @@ export const MultipleChoiceQuestion_1 = ({
         prompt: {
           attributes: [
             {
-              languageCode: 'ja',
+              languageCode: questionJapan ? 'ja' : 'vi',
               mediaType: 1,
               plainText: aQuestion[0],
               richText: null,
@@ -213,28 +263,3 @@ export const MultipleChoiceQuestion_1 = ({
     </>
   ) : null;
 };
-
-/**
-{
-          hasExactlyOneCorrectAnswer: true,
-          hint: null,
-          metadata: {
-            answerSide: 'word',
-            promptSide: true,
-          },
-          options: answerList,
-          prompt: {
-            attributes: [
-              {
-                languageCode: 'ja',
-                mediaType: 1,
-                plainText: aQuestion[0],
-                richText: null,
-                type: 'TextAttribute',
-              },
-            ],
-          },
-          questionType: 4,
-          type: 'MultipleChoiceQuestion',
-        },
- */

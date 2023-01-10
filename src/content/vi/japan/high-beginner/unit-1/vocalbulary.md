@@ -9,6 +9,10 @@ title: Gia đình, con người
   <VItemSrc src2Base64="data.json" />
 </VocalbularyExpand>
 
-<QuizExpand>
+<QuizExpand name="Quiz 1">
   <MultipleChoiceQuestion_1 src2Base64="data.json" />
+</QuizExpand>
+
+<QuizExpand name="Quiz 2">
+  <MultipleChoiceQuestion_1 questionJapan={false}  src2Base64="data.json" />
 </QuizExpand>

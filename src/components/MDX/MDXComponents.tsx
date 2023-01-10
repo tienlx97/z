@@ -412,8 +412,12 @@ function KanjiExpand({children}: {children: any}) {
   return <Expandable type="kanji">{children}</Expandable>;
 }
 
-function QuizExpand({children}: {children: any}) {
-  return <Expandable type="quiz">{children}</Expandable>;
+function QuizExpand({children, name}: {name: string; children: any}) {
+  return (
+    <Expandable name={name} type="quiz">
+      {children}
+    </Expandable>
+  );
 }
 
 function KeyPhraseExpand({children}: {children: any}) {

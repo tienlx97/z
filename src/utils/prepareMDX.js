@@ -121,13 +121,15 @@ function extractHeaders(locale, children, depth, out) {
           depth: 2,
           text: locale === 'en' ? 'Use It' : 'Luyện tập',
         };
-      } else if (child.type === 'QuizExpand') {
-        header = {
-          url: '#quiz',
-          depth: 2,
-          text: 'Quiz',
-        };
-      } else if (child.type === 'TryItOutExpand') {
+      }
+      // else if (child.type === 'QuizExpand') {
+      //   header = {
+      //     url: '#quiz',
+      //     depth: 2,
+      //     text: 'Quiz',
+      //   };
+      // }
+      else if (child.type === 'TryItOutExpand') {
         header = {
           url: '#try-it-out',
           depth: 2,

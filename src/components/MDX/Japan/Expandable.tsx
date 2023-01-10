@@ -19,6 +19,7 @@ import {IconQuiz} from 'components/Icon/IconQuiz';
 export default function Expandable({
   children,
   type,
+  name,
 }: {
   children: React.ReactNode;
   type:
@@ -32,6 +33,7 @@ export default function Expandable({
     | 'culture'
     | 'trip-tip'
     | 'quiz';
+  name?: string;
 }) {
   const isSkit = type === 'skit';
   const isVocalbulary = type === 'vocalbulary';
@@ -168,7 +170,7 @@ export default function Expandable({
             <>
               <IconQuiz className="inline mr-2 dark:text-indigo-300 text-indigo-400" />
               <H4 as="h2" id={type}>
-                {t('mdx.expandable.quiz')}
+                {name ?? t('mdx.expandable.quiz')}
               </H4>
             </>
           )}
