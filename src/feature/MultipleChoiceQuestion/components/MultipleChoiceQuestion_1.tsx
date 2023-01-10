@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Question } from "../types";
-import { b64DecodeUnicode } from "feature/MultipleChoiceQuestion/utils/b64DecodeUnicode";
-import { MultipleChoiceQuestionProvider } from "../context/MultipleChoideQuestionContext";
-import { MultipleChoiceQuestion } from "./MultipleChoiceQuestion";
+import React, {useState, useEffect} from 'react';
+import {Question} from '../types';
+import {b64DecodeUnicode} from 'feature/MultipleChoiceQuestion/utils/b64DecodeUnicode';
+import {MultipleChoiceQuestionProvider} from '../context/MultipleChoideQuestionContext';
+import {MultipleChoiceQuestion} from './MultipleChoiceQuestion';
 
 interface DetailItem {
   meaning: string;
@@ -17,158 +17,224 @@ interface JapanWord {
   kata?: string;
   kanji?: string;
   hantu?: string;
-  type: string | "sentences" | "nouns" | "verb" | "adverb";
+  type: string | 'sentences' | 'nouns' | 'verb' | 'adverb';
   detail: DetailItem[];
 }
+
+const randomNumber = (
+  min: number,
+  max: number,
+  duplicateArr: number[]
+): number => {
+  const num = Math.floor(Math.random() * (max - min) + min);
+  return duplicateArr.includes(num)
+    ? randomNumber(min, max, duplicateArr)
+    : num;
+};
 
 export const MultipleChoiceQuestion_1 = ({
   src2Base64,
 }: {
   src2Base64: string;
 }) => {
-  const wordList: JapanWord[] = JSON.parse(b64DecodeUnicode(src2Base64))
-    .vocalbulary as JapanWord[];
+  const [wordList, _] = useState<JapanWord[]>(
+    JSON.parse(b64DecodeUnicode(src2Base64)).vocalbulary as JapanWord[]
+  );
 
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [expectedResults, setExpectedResults] = useState<number[]>([]);
+  const [expectedQuestionsPosition, setExpectedQuestionsPosition] = useState<
+    number[]
+  >([]);
 
-  const generateRandom = (min: number, max: number, arr: number[]): number => {
-    const num = Math.floor(Math.random() * (max - min)) + min;
-    return arr.includes(num) ? generateRandom(min, max, arr) : num;
+  const createMeaning = (maxIndex: number, duplicateList: number[]) => {
+    const randomIndex = randomNumber(0, maxIndex, duplicateList);
+    // const randomMeaning = randomNumber(
+    //   0,
+    //   wordList[randomIndex].detail.length,
+    //   []
+    // );
+    // const specificAnswer = wordList[randomIndex].detail[randomMeaning].meaning;
+
+    const specificAnswer = wordList[randomIndex].detail[0].meaning;
+    return {specificAnswer, randomIndex};
   };
 
-  const genQuestion = (index: number, maxIndex: number) => {
+  const generateAQuestion = (index: number, maxIndex: number): string[] => {
     const japanWord = wordList[index];
-
-    const ja = japanWord.hira ?? japanWord.kata!;
-    const meaning0 = generateRandom(0, japanWord.detail.length, []);
-    const vi = japanWord.detail[meaning0].meaning;
-
+    const jaQuestion = japanWord.hira ?? japanWord.kata!;
+    // for now just get first meaning
+    const correctMeaning = japanWord.detail[0].meaning;
+    // const correctMeaning =
+    //   japanWord.detail[randomNumber(0, japanWord.detail.length, [])].meaning;
     const duplicateList: number[] = [];
     duplicateList.push(index);
+    const answer1 = createMeaning(maxIndex, duplicateList);
+    duplicateList.push(answer1.randomIndex);
+    const answer2 = createMeaning(maxIndex, duplicateList);
+    duplicateList.push(answer2.randomIndex);
+    const answer3 = createMeaning(maxIndex, duplicateList);
 
-    const index1 = generateRandom(0, maxIndex, duplicateList);
-    const meaning1 = generateRandom(0, wordList[index1].detail.length, []);
-    const answer1 = wordList[index1].detail[meaning1].meaning;
-
-    duplicateList.push(index1);
-    const index2 = generateRandom(0, maxIndex, duplicateList);
-    const meaning2 = generateRandom(0, wordList[index2].detail.length, []);
-    const answer2 = wordList[index2].detail[meaning2].meaning;
-
-    duplicateList.push(index2);
-    const index3 = generateRandom(0, maxIndex, duplicateList);
-    const meaning3 = generateRandom(0, wordList[index2].detail.length, []);
-    const answer3 = wordList[index3].detail[meaning3].meaning;
-
-    return [ja, vi, answer1, answer2, answer3];
+    return [
+      jaQuestion,
+      correctMeaning,
+      answer1.specificAnswer,
+      answer2.specificAnswer,
+      answer3.specificAnswer,
+    ];
   };
 
-  const genQuestions = () => {
+  const genQuestionList = () => {
+    const questionList: Question[] = [];
+    const expectedResultList: number[] = [];
+    const dupicateQuestionArr: number[] = [];
+
     for (let index = 0; index < wordList.length; index++) {
-      const questionAnswer = genQuestion(index, wordList.length);
+      const aQuestion = generateAQuestion(index, wordList.length);
 
-      const expectedResult = generateRandom(0, 4, []);
+      // random correct answer position
+      const aQuestionIndex = randomNumber(
+        0,
+        wordList.length,
+        dupicateQuestionArr
+      );
+      dupicateQuestionArr.push(aQuestionIndex);
+      const expectedCorrectPosition = randomNumber(0, 4, []);
 
-      const answerList: any = [];
-
+      const answerList: {
+        attributes: [
+          {
+            languageCode: string;
+            mediaType: number;
+            plainText: string;
+            richText: any | null;
+            type: string;
+          }
+        ];
+      }[] = [];
       const duplicateList: number[] = [];
-      answerList[expectedResult] = {
+      duplicateList.push(expectedCorrectPosition);
+
+      answerList[expectedCorrectPosition] = {
         attributes: [
           {
-            languageCode: "vi",
+            languageCode: 'vi',
             mediaType: 1,
-            plainText: questionAnswer[1],
+            plainText: aQuestion[1],
             richText: null,
-            type: "TextAttribute",
-          },
-        ],
-      };
-      duplicateList.push(expectedResult);
-      const r1 = generateRandom(0, 4, duplicateList);
-      answerList[r1] = {
-        attributes: [
-          {
-            languageCode: "vi",
-            mediaType: 1,
-            plainText: questionAnswer[r1 + 2],
-            richText: null,
-            type: "TextAttribute",
-          },
-        ],
-      };
-      duplicateList.push(r1);
-      const r2 = generateRandom(0, 4, duplicateList);
-      answerList[r2] = {
-        attributes: [
-          {
-            languageCode: "vi",
-            mediaType: 1,
-            plainText: questionAnswer[r2 + 2],
-            richText: null,
-            type: "TextAttribute",
-          },
-        ],
-      };
-      duplicateList.push(r2);
-      const r3 = generateRandom(0, 4, duplicateList);
-      answerList[r3] = {
-        attributes: [
-          {
-            languageCode: "vi",
-            mediaType: 1,
-            plainText: questionAnswer[r3 + 2],
-            richText: null,
-            type: "TextAttribute",
+            type: 'TextAttribute',
           },
         ],
       };
 
-      setExpectedResults((oldArray) => [...oldArray, expectedResult]);
-      setQuestions((oldArray) => [
-        ...oldArray,
-        {
+      const answerPos1 = randomNumber(0, 4, duplicateList);
+      duplicateList.push(answerPos1);
+      const answerPos2 = randomNumber(0, 4, duplicateList);
+      duplicateList.push(answerPos2);
+      const answerPos3 = randomNumber(0, 4, duplicateList);
+
+      answerList[answerPos1] = {
+        attributes: [
+          {
+            languageCode: 'vi',
+            mediaType: 1,
+            plainText: aQuestion[2],
+            richText: null,
+            type: 'TextAttribute',
+          },
+        ],
+      };
+      answerList[answerPos2] = {
+        attributes: [
+          {
+            languageCode: 'vi',
+            mediaType: 1,
+            plainText: aQuestion[3],
+            richText: null,
+            type: 'TextAttribute',
+          },
+        ],
+      };
+      answerList[answerPos3] = {
+        attributes: [
+          {
+            languageCode: 'vi',
+            mediaType: 1,
+            plainText: aQuestion[4],
+            richText: null,
+            type: 'TextAttribute',
+          },
+        ],
+      };
+
+      questionList[aQuestionIndex] = {
+        hasExactlyOneCorrectAnswer: true,
+        hint: null,
+        metadata: {
+          answerSide: 'word',
+          promptSide: true,
+        },
+        options: answerList,
+        prompt: {
+          attributes: [
+            {
+              languageCode: 'ja',
+              mediaType: 1,
+              plainText: aQuestion[0],
+              richText: null,
+              type: 'TextAttribute',
+            },
+          ],
+        },
+        questionType: 4,
+        type: 'MultipleChoiceQuestion',
+      } as Question;
+
+      expectedResultList[aQuestionIndex] = expectedCorrectPosition;
+    }
+
+    setQuestions(questionList);
+    setExpectedQuestionsPosition(expectedResultList);
+  };
+
+  useEffect(() => {
+    genQuestionList();
+  }, [wordList]);
+
+  return wordList &&
+    questions.length === wordList.length &&
+    expectedQuestionsPosition.length === wordList.length ? (
+    <>
+      <br />
+      <MultipleChoiceQuestionProvider
+        questions={questions}
+        expectedResults={expectedQuestionsPosition}>
+        <MultipleChoiceQuestion shouldShowPreviouslyMissedLabel={false} />
+      </MultipleChoiceQuestionProvider>
+    </>
+  ) : null;
+};
+
+/**
+{
           hasExactlyOneCorrectAnswer: true,
           hint: null,
           metadata: {
-            answerSide: "word",
+            answerSide: 'word',
             promptSide: true,
           },
           options: answerList,
           prompt: {
             attributes: [
               {
-                languageCode: "ja",
+                languageCode: 'ja',
                 mediaType: 1,
-                plainText: questionAnswer[0],
+                plainText: aQuestion[0],
                 richText: null,
-                type: "TextAttribute",
+                type: 'TextAttribute',
               },
             ],
           },
           questionType: 4,
-          type: "MultipleChoiceQuestion",
+          type: 'MultipleChoiceQuestion',
         },
-      ]);
-    }
-  };
-
-  useEffect(() => {
-    genQuestions();
-    console.log(JSON.stringify(questions));
-  }, []);
-
-  // return (
-  //   <>
-  //     <br />
-  //     <MultipleChoiceQuestionProvider
-  //       questions={questions}
-  //       expectedResults={expectedResults}
-  //     >
-  //       <MultipleChoiceQuestion shouldShowPreviouslyMissedLabel={false} />
-  //     </MultipleChoiceQuestionProvider>
-  //   </>
-  // );
-
-  return <div>{JSON.stringify(wordList)}</div>;
-};
+ */

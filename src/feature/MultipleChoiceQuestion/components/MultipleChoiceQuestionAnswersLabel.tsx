@@ -60,16 +60,16 @@ export const MultipleChoiceQuestionAnswersLabel = ({
     <section
       className={cn(
         'mb-6 leading-6 tracking-normal font-semibold text-base [@media(max-width:48px)]:pb-4 [@media(max-width:38.75rem)]:pb-4',
-        '',
+        'text-[#586380] dark:text-[#d9dde8]',
         {
           // color: var(--mint-500-mint-400);
-          'text-green-600 mb-6 leading-6 tracking-normal font-semibold text-base':
+          'text-[#18ae79] dark:text-[#59e8b5] mb-6 leading-6 tracking-normal font-semibold text-base':
             // !GradedAnswerUtils.isSubmittedAnswerNotNullAndIsCorrect(
             //   gradedAnswer
             // ) &&
             GradedAnswerUtils.isCorrect(gradedAnswer),
           //     color: var(--error-red);
-          'text-red-600 mb-6 leading-6 tracking-normal font-semibold text-base':
+          'text-[#b00020] dark:[#ff7873] mb-6 leading-6 tracking-normal font-semibold text-base':
             // GradedAnswerUtils.isSubmittedAnswer(gradedAnswer) === true &&
             GradedAnswerUtils.isNotCorrect(gradedAnswer) === true,
           'mb-6 leading-6 tracking-normal font-semibold text-base':

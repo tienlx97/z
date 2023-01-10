@@ -14,6 +14,7 @@ import {IconTryItOut} from 'components/Icon/IconTryItOut';
 import {IconKeyPhrase} from 'components/Icon/IconKeyPhrase';
 import {IconKanji} from 'components/Icon/IconKanji';
 import {IconUseIt} from 'components/Icon/IconUseIt';
+import {IconQuiz} from 'components/Icon/IconQuiz';
 
 export default function Expandable({
   children,
@@ -29,7 +30,8 @@ export default function Expandable({
     | 'bonus-phrase'
     | 'kanji'
     | 'culture'
-    | 'trip-tip';
+    | 'trip-tip'
+    | 'quiz';
 }) {
   const isSkit = type === 'skit';
   const isVocalbulary = type === 'vocalbulary';
@@ -39,6 +41,7 @@ export default function Expandable({
   const isTryItOut = type === 'try-it-out';
   const isKanji = type === 'kanji';
   const isCulture = type === 'culture';
+  const isQuiz = type === 'quiz';
 
   const {asPath} = useRouter();
   const {t} = useI18n();
@@ -69,7 +72,8 @@ export default function Expandable({
           'dark:bg-opacity-20 dark:bg-yellow-600 bg-yellow-5': isUseIt,
           'dark:bg-opacity-20 dark:bg-amber-600 bg-amber-50': isTryItOut,
           'dark:bg-opacity-20 dark:bg-pink-600 bg-pink-50': isBonus,
-          'dark:bg-opacity-20 dark:bg-indigo-600 bg-indigo-50': isKanji,
+          'dark:bg-opacity-20 dark:bg-indigo-600 bg-indigo-50':
+            isKanji || isQuiz,
           'dark:bg-opacity-20 dark:bg-sky-600 bg-sky-50': isCulture,
         }
       )}>
@@ -91,7 +95,7 @@ export default function Expandable({
             'dark:text-amber-300 text-amber-600': isTryItOut,
             'dark:text-yellow-300 text-yellow-600': isUseIt,
             'dark:text-pink-300 text-pink-600': isBonus,
-            'dark:text-indigo-300 text-indigo-500': isKanji,
+            'dark:text-indigo-300 text-indigo-500': isKanji || isQuiz,
             'dark:text-sky-300 text-sky-500': isCulture,
           })}>
           {isSkit && (
@@ -160,6 +164,14 @@ export default function Expandable({
               </H4>
             </>
           )}
+          {isQuiz && (
+            <>
+              <IconQuiz className="inline mr-2 dark:text-indigo-300 text-indigo-400" />
+              <H4 as="h2" id={type}>
+                {t('mdx.expandable.quiz')}
+              </H4>
+            </>
+          )}
         </div>
         <Button
           active={true}
@@ -177,7 +189,7 @@ export default function Expandable({
             'bg-pink-700 border-pink-700 hover:bg-pink-600 focus:bg-pink-700 active:bg-pink-700':
               isBonus,
             'bg-indigo-700 border-indigo-700 hover:bg-indigo-600 focus:bg-indigo-700 active:bg-indigo-700':
-              isKanji,
+              isKanji || isQuiz,
             'bg-sky-700 border-sky-700 hover:bg-sky-600 focus:bg-sky-700 active:bg-sky-700':
               isCulture,
           })}
@@ -201,7 +213,7 @@ export default function Expandable({
           'dark:border-amber-600 border-amber-500': isTryItOut,
           'dark:border-yellow-600 border-yellow-500': isUseIt,
           'dark:border-pink-600 border-pink-500': isBonus,
-          'dark:border-indigo-600 border-indigo-100 ': isKanji,
+          'dark:border-indigo-600 border-indigo-100 ': isKanji || isQuiz,
           'dark:border-sky-600 border-sky-100 ': isCulture,
         })}>
         {children}

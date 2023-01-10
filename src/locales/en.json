@@ -21,7 +21,8 @@
       "bonus_phrase": "Bonus Phrase",
       "kanji": "Kanji",
       "culture": "Culture",
-      "trip-tip": "Trip tip"
+      "trip-tip": "Trip tip",
+      "quiz": "Quiz"
     },
     "expandablecallout": {
       "deprecated": "Deprecated",

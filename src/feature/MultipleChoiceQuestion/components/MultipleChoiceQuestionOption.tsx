@@ -44,7 +44,7 @@ export const MultipleChoiceQuestionOption = ({
       <div
         aria-selected={variant === Variant.Selected}
         className={cn(
-          'w-full h-full relative flex text-[#edeff4] items-center',
+          'w-full h-full relative flex text-[#303545] dark:text-[#edeff4] items-center',
           {
             'min-h-[7.5rem] justify-center [@media(max-width:48rem)]:w-full [@media(max-width:48rem)]:min-h-[3.75rem]':
               urlOrPlainTextBoolean,

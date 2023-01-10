@@ -85,6 +85,7 @@ const headerTypes = new Set([
   'KanjiExpand',
   'CultureExpand',
   'TripTipExpand',
+  'QuizExpand',
 ]);
 function extractHeaders(locale, children, depth, out) {
   for (const child of Children.toArray(children)) {
@@ -119,6 +120,12 @@ function extractHeaders(locale, children, depth, out) {
           url: '#use-it',
           depth: 2,
           text: locale === 'en' ? 'Use It' : 'Luyện tập',
+        };
+      } else if (child.type === 'QuizExpand') {
+        header = {
+          url: '#quiz',
+          depth: 2,
+          text: 'Quiz',
         };
       } else if (child.type === 'TryItOutExpand') {
         header = {

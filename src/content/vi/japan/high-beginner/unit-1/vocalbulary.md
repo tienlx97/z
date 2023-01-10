@@ -9,12 +9,6 @@ title: Gia đình, con người
   <VItemSrc src2Base64="data.json" />
 </VocalbularyExpand>
 
-<TryItOutExpand>
-
-Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography,
-
-<K>ゅうナス手日個きえめ雲御阿毛シフマヨサキナ、樹列以ハャヨョヤケゅか露手日せきりゅひえ離御いきクルカヤ屋絵尾へそのせ保課魔遊等樹くかそ他離ゆもねゃ譜阿保雲名れ課名他名列目等舳個留知。個以そ樹列くクヤュレハルちるま、えかまへすてはゃ毛瀬離個らたに雲名二とししひ。</K>
-
-</TryItOutExpand>
-
-<MultipleChoiceQuestion_1 src2Base64="data.json" />
+<QuizExpand>
+  <MultipleChoiceQuestion_1 src2Base64="data.json" />
+</QuizExpand>

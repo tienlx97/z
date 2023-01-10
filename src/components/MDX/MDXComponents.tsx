@@ -2,130 +2,126 @@
  * Copyright (c) Facebook, Inc. and its affiliates.
  */
 
-import { Children, useContext, useMemo } from "react";
-import * as React from "react";
-import cn from "classnames";
+import {Children, useContext, useMemo} from 'react';
+import * as React from 'react';
+import cn from 'classnames';
 
-import CodeBlock from "./CodeBlock";
-import { CodeDiagram } from "./CodeDiagram";
-import ConsoleBlock from "./ConsoleBlock";
-import ExpandableCallout from "./ExpandableCallout";
-import ExpandableExample from "./ExpandableExample";
-import { H1, H2, H3, H4 } from "./Heading";
-import HomepageHero from "./HomepageHero";
-import InlineCode from "./InlineCode";
-import Intro from "./Intro";
-import Link from "./Link";
-import { PackageImport } from "./PackageImport";
-import Recap from "./Recap";
-import Sandpack from "./Sandpack";
-import Diagram from "./Diagram";
-import DiagramGroup from "./DiagramGroup";
-import SimpleCallout from "./SimpleCallout";
-import TerminalBlock from "./TerminalBlock";
-import YouWillLearnCard from "./YouWillLearnCard";
-import { Challenges, Hint, Solution } from "./Challenges";
-import { IconNavArrow } from "../Icon/IconNavArrow";
-import ButtonLink from "components/ButtonLink";
-import { TocContext } from "./TocContext";
-import type { Toc, TocItem } from "./TocContext";
+import CodeBlock from './CodeBlock';
+import {CodeDiagram} from './CodeDiagram';
+import ConsoleBlock from './ConsoleBlock';
+import ExpandableCallout from './ExpandableCallout';
+import ExpandableExample from './ExpandableExample';
+import {H1, H2, H3, H4} from './Heading';
+import HomepageHero from './HomepageHero';
+import InlineCode from './InlineCode';
+import Intro from './Intro';
+import Link from './Link';
+import {PackageImport} from './PackageImport';
+import Recap from './Recap';
+import Sandpack from './Sandpack';
+import Diagram from './Diagram';
+import DiagramGroup from './DiagramGroup';
+import SimpleCallout from './SimpleCallout';
+import TerminalBlock from './TerminalBlock';
+import YouWillLearnCard from './YouWillLearnCard';
+import {Challenges, Hint, Solution} from './Challenges';
+import {IconNavArrow} from '../Icon/IconNavArrow';
+import ButtonLink from 'components/ButtonLink';
+import {TocContext} from './TocContext';
+import type {Toc, TocItem} from './TocContext';
 // from japan
-import JapaneseLetters from "./Japan/Alphabet/JapaneseLetters";
-import JapaneseWordLine from "./Japan/JapaneseWordLine";
-import JapaneseSensLine from "./Japan/JapaneseSensLine";
-import DakuonAlphabet from "./Japan/Alphabet/DakuonAlphabet";
-import YouonAlphabet from "./Japan/Alphabet/YouonAlphabet";
-import KatakanaAlphabet from "./Japan/Alphabet/KatakanaAlphabet";
-import VocalbularyTable, {
-  VocalbularyTableItem,
-} from "./Japan/VocalbularyTable";
-import Expandable from "./Japan/Expandable";
+import JapaneseLetters from './Japan/Alphabet/JapaneseLetters';
+import JapaneseWordLine from './Japan/JapaneseWordLine';
+import JapaneseSensLine from './Japan/JapaneseSensLine';
+import DakuonAlphabet from './Japan/Alphabet/DakuonAlphabet';
+import YouonAlphabet from './Japan/Alphabet/YouonAlphabet';
+import KatakanaAlphabet from './Japan/Alphabet/KatakanaAlphabet';
+import VocalbularyTable, {VocalbularyTableItem} from './Japan/VocalbularyTable';
+import Expandable from './Japan/Expandable';
 import VocalbularyItem, {
   VocalbularyWord,
-} from "./Japan/vocalbulary/VocalbularyItem";
+} from './Japan/vocalbulary/VocalbularyItem';
 
-import VItemSrc from "./Japan/vocalbulary/VItemSrc";
-import { Multiplechoice } from "./Japan/Quiz/MultipleChoice";
+import VItemSrc from './Japan/vocalbulary/VItemSrc';
+import {Multiplechoice} from './Japan/Quiz/MultipleChoice';
 
-import { MultipleChoiceQuestion_1 } from "feature/MultipleChoiceQuestion/components/MultipleChoiceQuestion_1";
+import {MultipleChoiceQuestion_1} from 'feature/MultipleChoiceQuestion/components/MultipleChoiceQuestion_1';
 
-import Speak from "./Japan/Speak";
-import JaWL from "./Japan/JaWL";
+import Speak from './Japan/Speak';
+import JaWL from './Japan/JaWL';
 
-import { useI18n } from "next-localization";
+import {useI18n} from 'next-localization';
 
-function CodeStep({ children, step }: { children: any; step: number }) {
+function CodeStep({children, step}: {children: any; step: number}) {
   return (
     <span
       data-step={step}
       className={cn(
-        "code-step bg-opacity-10 dark:bg-opacity-20 relative rounded px-[6px] py-[1.5px] border-b-[2px] border-opacity-60",
+        'code-step bg-opacity-10 dark:bg-opacity-20 relative rounded px-[6px] py-[1.5px] border-b-[2px] border-opacity-60',
         {
-          "bg-blue-40 border-blue-40 text-blue-60 dark:text-blue-30":
+          'bg-blue-40 border-blue-40 text-blue-60 dark:text-blue-30':
             step === 1,
-          "bg-yellow-40 border-yellow-40 text-yellow-60 dark:text-yellow-30":
+          'bg-yellow-40 border-yellow-40 text-yellow-60 dark:text-yellow-30':
             step === 2,
-          "bg-purple-40 border-purple-40 text-purple-60 dark:text-purple-30":
+          'bg-purple-40 border-purple-40 text-purple-60 dark:text-purple-30':
             step === 3,
-          "bg-green-40 border-green-40 text-green-60 dark:text-green-30":
+          'bg-green-40 border-green-40 text-green-60 dark:text-green-30':
             step === 4,
         }
-      )}
-    >
+      )}>
       {children}
     </span>
   );
 }
 
-const K = ({ children }: { children: any }) => (
+const K = ({children}: {children: any}) => (
   <span className="font-ja text-[16px] sm:text-[18px] md:text-xl lg:text-xl">
     {children}
   </span>
 );
 
-const P = (p: JSX.IntrinsicElements["p"]) => (
+const P = (p: JSX.IntrinsicElements['p']) => (
   <p className="whitespace-pre-wrap my-4" {...p} />
 );
 
-const Strong = (strong: JSX.IntrinsicElements["strong"]) => (
+const Strong = (strong: JSX.IntrinsicElements['strong']) => (
   <strong className="font-bold" {...strong} />
 );
 
-const OL = (p: JSX.IntrinsicElements["ol"]) => (
+const OL = (p: JSX.IntrinsicElements['ol']) => (
   <ol className="ml-6 my-3 list-decimal" {...p} />
 );
-const LI = (p: JSX.IntrinsicElements["li"]) => (
+const LI = (p: JSX.IntrinsicElements['li']) => (
   <li className="leading-relaxed mb-1" {...p} />
 );
-const UL = (p: JSX.IntrinsicElements["ul"]) => (
+const UL = (p: JSX.IntrinsicElements['ul']) => (
   <ul className="ml-6 my-3 list-disc" {...p} />
 );
 
 const Divider = () => (
   <hr className="my-6 block border-b border-border dark:border-border-dark" />
 );
-const Wip = ({ children }: { children: React.ReactNode }) => (
+const Wip = ({children}: {children: React.ReactNode}) => (
   <ExpandableCallout type="wip">{children}</ExpandableCallout>
 );
-const Pitfall = ({ children }: { children: React.ReactNode }) => (
+const Pitfall = ({children}: {children: React.ReactNode}) => (
   <ExpandableCallout type="pitfall">{children}</ExpandableCallout>
 );
-const Deprecated = ({ children }: { children: React.ReactNode }) => (
+const Deprecated = ({children}: {children: React.ReactNode}) => (
   <ExpandableCallout type="deprecated">{children}</ExpandableCallout>
 );
-const Note = ({ children }: { children: React.ReactNode }) => (
+const Note = ({children}: {children: React.ReactNode}) => (
   <ExpandableCallout type="note">{children}</ExpandableCallout>
 );
 
 const Blockquote = ({
   children,
   ...props
-}: JSX.IntrinsicElements["blockquote"]) => {
+}: JSX.IntrinsicElements['blockquote']) => {
   return (
     <blockquote
       className="mdx-blockquote py-4 px-8 my-8 shadow-inner bg-highlight dark:bg-highlight-dark bg-opacity-50 rounded-lg leading-6 flex relative"
-      {...props}
-    >
+      {...props}>
       <span className="block relative">{children}</span>
     </blockquote>
   );
@@ -152,8 +148,7 @@ function LearnMore({
               className="mt-1"
               label="Read More"
               href={path}
-              type="primary"
-            >
+              type="primary">
               Read More
               <IconNavArrow displayDirection="right" className="inline ml-1" />
             </ButtonLink>
@@ -165,27 +160,25 @@ function LearnMore({
   );
 }
 
-function Math({ children }: { children: any }) {
+function Math({children}: {children: any}) {
   return (
     <span
       style={{
-        fontFamily: "STIXGeneral-Regular, Georgia, serif",
-        fontSize: "1.2rem",
-      }}
-    >
+        fontFamily: 'STIXGeneral-Regular, Georgia, serif',
+        fontSize: '1.2rem',
+      }}>
       {children}
     </span>
   );
 }
 
-function MathI({ children }: { children: any }) {
+function MathI({children}: {children: any}) {
   return (
     <span
       style={{
-        fontFamily: "STIXGeneral-Italic, Georgia, serif",
-        fontSize: "1.2rem",
-      }}
-    >
+        fontFamily: 'STIXGeneral-Italic, Georgia, serif',
+        fontSize: '1.2rem',
+      }}>
       {children}
     </span>
   );
@@ -198,11 +191,11 @@ function YouWillLearn({
   children: any;
   isChapter?: boolean;
 }) {
-  const { t } = useI18n();
+  const {t} = useI18n();
 
   let title = isChapter
-    ? t("mdx.youwilllearn.in_this_chapter")
-    : t("mdx.youwilllearn.you_will_learn");
+    ? t('mdx.youwilllearn.in_this_chapter')
+    : t('mdx.youwilllearn.you_will_learn');
   return <SimpleCallout title={title}>{children}</SimpleCallout>;
 }
 
@@ -212,8 +205,8 @@ function Recipes(props: any) {
 }
 
 function AuthorCredit({
-  author = "Rachel Lee Nabors",
-  authorLink = "http://rachelnabors.com/",
+  author = 'Rachel Lee Nabors',
+  authorLink = 'http://rachelnabors.com/',
 }: {
   author: string;
   authorLink: string;
@@ -222,14 +215,13 @@ function AuthorCredit({
     <div className="sr-only group-hover:not-sr-only group-focus-within:not-sr-only hover:sr-only">
       <p className="bg-card dark:bg-card-dark text-center text-sm text-secondary dark:text-secondary-dark leading-tight  p-2 rounded-lg absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full group-hover:flex group-hover:opacity-100 after:content-[''] after:absolute after:left-1/2 after:top-[95%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-card after:dark:border-t-card-dark opacity-0 transition-opacity duration-300">
         <cite>
-          Illustrated by{" "}
+          Illustrated by{' '}
           {authorLink ? (
             <a
               target="_blank"
               rel="noreferrer"
               className="text-link dark:text-link-dark"
-              href={authorLink}
-            >
+              href={authorLink}>
               {author}
             </a>
           ) : (
@@ -260,7 +252,7 @@ function Illustration({
   author: string;
   authorLink: string;
 }) {
-  const { isInBlock } = React.useContext(IllustrationContext);
+  const {isInBlock} = React.useContext(IllustrationContext);
 
   return (
     <div className="relative group before:absolute before:-inset-y-16 before:inset-x-0 my-16 mx-0 2xl:mx-auto max-w-4xl 2xl:max-w-6xl">
@@ -268,7 +260,7 @@ function Illustration({
         <img
           src={src}
           alt={alt}
-          style={{ maxHeight: 300 }}
+          style={{maxHeight: 300}}
           className="bg-white rounded-lg"
         />
         {caption ? (
@@ -282,7 +274,7 @@ function Illustration({
   );
 }
 
-const isInBlockTrue = { isInBlock: true };
+const isInBlockTrue = {isInBlock: true};
 
 function IllustrationBlock({
   sequential,
@@ -370,7 +362,7 @@ function InlineToc() {
   return <InlineTocItem items={root.children} />;
 }
 
-function InlineTocItem({ items }: { items: Array<NestedTocNode> }) {
+function InlineTocItem({items}: {items: Array<NestedTocNode>}) {
   return (
     <UL>
       {items.map((node) => (
@@ -383,12 +375,8 @@ function InlineTocItem({ items }: { items: Array<NestedTocNode> }) {
   );
 }
 
-function LinkWithTodo({
-  href,
-  children,
-  ...props
-}: JSX.IntrinsicElements["a"]) {
-  if (href?.startsWith("TODO")) {
+function LinkWithTodo({href, children, ...props}: JSX.IntrinsicElements['a']) {
+  if (href?.startsWith('TODO')) {
     return children;
   }
 
@@ -399,7 +387,7 @@ function LinkWithTodo({
   );
 }
 
-function Via({ href, children }: { href: string; children: React.ReactNode }) {
+function Via({href, children}: {href: string; children: React.ReactNode}) {
   return (
     <div className="flex justify-end items-center text-[12px] gap-x-1 italic">
       <span>Theo </span>
@@ -408,39 +396,43 @@ function Via({ href, children }: { href: string; children: React.ReactNode }) {
   );
 }
 
-function SkitExpand({ children }: { children: any }) {
+function SkitExpand({children}: {children: any}) {
   return <Expandable type="skit">{children}</Expandable>;
 }
 
-function BonusPhraseExpand({ children }: { children: any }) {
+function BonusPhraseExpand({children}: {children: any}) {
   return <Expandable type="bonus-phrase">{children}</Expandable>;
 }
 
-function CultureExpand({ children }: { children: any }) {
+function CultureExpand({children}: {children: any}) {
   return <Expandable type="culture">{children}</Expandable>;
 }
 
-function KanjiExpand({ children }: { children: any }) {
+function KanjiExpand({children}: {children: any}) {
   return <Expandable type="kanji">{children}</Expandable>;
 }
 
-function KeyPhraseExpand({ children }: { children: any }) {
+function QuizExpand({children}: {children: any}) {
+  return <Expandable type="quiz">{children}</Expandable>;
+}
+
+function KeyPhraseExpand({children}: {children: any}) {
   return <Expandable type="key-phrase">{children}</Expandable>;
 }
 
-function TripTipExpand({ children }: { children: any }) {
+function TripTipExpand({children}: {children: any}) {
   return <Expandable type="trip-tip">{children}</Expandable>;
 }
 
-function TryItOutExpand({ children }: { children: any }) {
+function TryItOutExpand({children}: {children: any}) {
   return <Expandable type="try-it-out">{children}</Expandable>;
 }
 
-function UseItExpand({ children }: { children: any }) {
+function UseItExpand({children}: {children: any}) {
   return <Expandable type="use-it">{children}</Expandable>;
 }
 
-function VocalbularyExpand({ children }: { children: any }) {
+function VocalbularyExpand({children}: {children: any}) {
   return <Expandable type="vocalbulary">{children}</Expandable>;
 }
 
@@ -468,10 +460,10 @@ export const MDXComponents = {
   }) => <ExpandableExample {...props} type="DeepDive" />,
   Diagram,
   DiagramGroup,
-  FullWidth({ children }: { children: any }) {
+  FullWidth({children}: {children: any}) {
     return children;
   },
-  MaxWidth({ children }: { children: any }) {
+  MaxWidth({children}: {children: any}) {
     return <div className="max-w-4xl ml-0 2xl:mx-auto">{children}</div>;
   },
   Pitfall,
@@ -520,6 +512,7 @@ export const MDXComponents = {
   TripTipExpand,
   TryItOutExpand,
   UseItExpand,
+  QuizExpand,
 
   VocalbularyExpand,
   VItem: VocalbularyItem,
