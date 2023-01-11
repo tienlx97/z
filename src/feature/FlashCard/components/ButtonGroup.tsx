@@ -3,6 +3,8 @@ import cn from 'classnames';
 
 type ButtonGroupProps = {
   isHidden?: boolean;
+  disablePrevButton: boolean;
+  disableNextButton: boolean;
   onKnow?: (e?: any) => void;
   onDontKnow?: (e?: any) => void;
 };
@@ -41,7 +43,10 @@ const AnswerControls = ({
         'max-[48rem]:max-w-none',
         'focus:border-[#939bb4] dark:focus:border-[#edeff4] focus:outline-none',
         'hover:border-[#939bb4] dark:hover:border-[#edeff4] hover:outline-none',
-        (buttonObj as any).c ?? null
+        (buttonObj as any).c ?? null,
+        {
+          'pointer-events-none': isDisabled,
+        }
       )}
       {...buttonObj}>
       {children}
@@ -53,14 +58,22 @@ export const ButtonGroup = ({
   onDontKnow,
   onKnow,
   isHidden = false,
+  disablePrevButton,
+  disableNextButton,
 }: ButtonGroupProps) => {
   return (
     <div className="flex gap-4 justify-around">
-      <AnswerControls ariaLabel="1" isDisabled={isHidden} onClick={onDontKnow!}>
+      <AnswerControls
+        ariaLabel="1"
+        isDisabled={isHidden || disablePrevButton}
+        onClick={onDontKnow!}>
         Undo Card
       </AnswerControls>
 
-      <AnswerControls ariaLabel="1" isDisabled={isHidden} onClick={onKnow!}>
+      <AnswerControls
+        ariaLabel="1"
+        isDisabled={isHidden || disableNextButton}
+        onClick={onKnow!}>
         Next Card
       </AnswerControls>
     </div>

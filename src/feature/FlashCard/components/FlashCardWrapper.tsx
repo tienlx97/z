@@ -120,6 +120,8 @@ export const FlashCardWrapper = ({
     buttons: ({isShowing}: {isShowing: boolean}) => {
       return (
         <ButtonGroup
+          disablePrevButton={index === 0}
+          disableNextButton={index === cards.length}
           isHidden={!isShowing}
           onKnow={onKnow}
           onDontKnow={onDontKnow}
