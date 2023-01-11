@@ -9,12 +9,15 @@ title: Gia đình, con người
   <VItemSrc src2Base64="data.json" />
 </VocalbularyExpand>
 
-<FlashCardWrapper />
 
-<QuizExpand name="Quiz 1">
+<QuizExpand name="Flash Card">
+  <FlashCardWrapper />
+</QuizExpand>
+
+<QuizExpand name="Multiple Chocie 1">
   <MultipleChoiceQuestion_1 src2Base64="data.json" />
 </QuizExpand>
 
-<QuizExpand name="Quiz 2">
+<QuizExpand name="Multiple Choice 2">
   <MultipleChoiceQuestion_1 questionJapan={false}  src2Base64="data.json" />
 </QuizExpand>

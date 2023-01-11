@@ -34,9 +34,9 @@ export const MultipleChoiceQuestion = (props: MultipleChoiceQuestionProps) => {
 
   const previousGradedAnswer = usePrevious(gradedAnswer);
 
-  // auto get next question if answer is correct
+  // auto get Next Card if answer is correct
   useEffect(() => {
-    // auto click next question after 1s
+    // auto click Next Card after 1s
     // if (!previousGradedAnswer && gradedAnswer?.isCorrect) {
     //   window.setTimeout(() => {
     //     dispatch({
@@ -70,7 +70,7 @@ export const MultipleChoiceQuestion = (props: MultipleChoiceQuestionProps) => {
     //       : gradedAnswer?.feedback.submittedAnswer?.value
     //   );
     //   // actions.advance(nuulThrow);
-    //   //  dispatch to call next question
+    //   //  dispatch to call Next Card
     //   dispatch({
     //     type: MultipleChoiceQuestionKind.NEXT_QUESTION,
     //     payload: null,

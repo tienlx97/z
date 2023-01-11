@@ -37,7 +37,10 @@ const AnswerControls = ({
       aria-label={ariaLabel}
       onClick={onClick}
       className={cn(
-        'text-[#edeff4] border-[.125rem] border-solid border-[#346f90] rounded-lg flex items-center relative justify-center w-full mb-4 p-4 font-semibold',
+        'text-[#303545] dark:text-[#edeff4] border-[.125rem] border-solid border-[#edeff4] dark:border-[#939bb4] rounded-lg flex items-center relative justify-center w-full mb-4 p-4 font-semibold',
+        'max-[48rem]:max-w-none',
+        'focus:border-[#303545] dark:focus:border-[#edeff4] focus:outline-none',
+        'hover:border-[#303545] dark:hover:border-[#edeff4] hover:outline-none',
         (buttonObj as any).c ?? null
       )}
       {...buttonObj}>
@@ -54,7 +57,7 @@ export const ButtonGroup = ({
   return (
     <div className="flex gap-4 justify-around">
       <AnswerControls ariaLabel="1" isDisabled={isHidden} onClick={onKnow!}>
-        Next Question
+        Next Card
       </AnswerControls>
     </div>
   );

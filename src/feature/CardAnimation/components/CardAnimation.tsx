@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import cn from 'classnames';
 import usePrevious from 'hooks/usePrevious';
 import {QuestionGrid} from './QuestionGrid';
+const jsx = require('react/jsx-runtime');
 
 type CardAnimationProps = {
   children: React.ReactElement;
@@ -37,12 +38,12 @@ export const CardAnimation = ({children, controller}: CardAnimationProps) => {
   let animationExitVariable, animationEnterVariable;
   const [Comp, setComp] = React.useState<React.ReactNode>();
 
-  const AnimationExit: keyof JSX.IntrinsicElements =
+  const AnimationExitComponent =
     null == (animationExitVariable = controller.animations)
       ? undefined
       : animationExitVariable.exit;
 
-  const AnimationEnter: keyof JSX.IntrinsicElements = Comp
+  const AnimationEnterComponent = Comp
     ? null == (animationEnterVariable = controller.animations)
       ? undefined
       : animationEnterVariable.enter
@@ -55,26 +56,60 @@ export const CardAnimation = ({children, controller}: CardAnimationProps) => {
   return (
     useEffect(() => {
       previousChildren && setComp(previousChildren);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [children.key, previousChildren]),
-    (
-      <QuestionGrid className="min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]">
-        {Comp && AnimationExit && (
-          <Previous>
-            <AnimationExit onAnimationEnd={onAnimationEnd}>
-              {Comp}
-            </AnimationExit>
-          </Previous>
-        )}
-        <Current key={children.key}>
-          {AnimationEnter ? (
-            <AnimationEnter onAnimationEnd={onAnimationEnd}>
-              {children}
-            </AnimationEnter>
-          ) : (
-            children
-          )}
-        </Current>
-      </QuestionGrid>
-    )
+    jsx.jsxs(QuestionGrid, {
+      className:
+        'min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]',
+      children: [
+        Comp !== undefined && Comp !== null && AnimationExitComponent
+          ? jsx.jsx(Previous, {
+              children: jsx.jsx(AnimationExitComponent, {
+                onAnimationEnd: onAnimationEnd,
+                children: Comp,
+              }),
+            })
+          : null,
+
+        jsx.jsx(
+          Current,
+          {
+            children: AnimationEnterComponent
+              ? jsx.jsx(AnimationEnterComponent, {
+                  onAnimationEnd: onAnimationEnd,
+                  children: children,
+                })
+              : children,
+          },
+          children.key
+        ),
+      ],
+    })
   );
 };
+//   return (
+//     useEffect(() => {
+//       previousChildren && setComp(previousChildren);
+//     }, [children.key, previousChildren]),
+//     (
+//       <QuestionGrid className="min-h-[29.25rem] grid [perspective:62.5rem] [-ms-perspective:62.5rem] [-moz-perspective:62.5rem] [-webkit-perspective:62.5rem]">
+//         {Comp && AnimationExit && (
+//           <Previous>
+//             <AnimationExit onAnimationEnd={onAnimationEnd}>
+//               {Comp}
+//             </AnimationExit>
+//           </Previous>
+//         )}
+//         <Current key={children.key}>
+//           {AnimationEnter ? (
+//             <AnimationEnter onAnimationEnd={onAnimationEnd}>
+//               {children}
+//             </AnimationEnter>
+//           ) : (
+//             children
+//           )}
+//         </Current>
+//       </QuestionGrid>
+//     )
+//   );
+// };

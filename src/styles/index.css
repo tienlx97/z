@@ -871,7 +871,7 @@ svg.acjk path[id] {
 }
 
 
-@-webkit-keyframes shuffleOut-z1xlk8pd-svwhkoh {
+@-webkit-keyframes shuffleOut-card {
   0% {
     -webkit-transform: scale(.95) rotate(0) translateZ(0);
     -ms-transform: scale(.95) rotate(0) translateZ(0);
@@ -899,7 +899,7 @@ svg.acjk path[id] {
   }
 }
 
-@keyframes shuffleOut-z1xlk8pd-svwhkoh {
+@keyframes shuffleOut-card {
   0% {
     -webkit-transform: scale(.95) rotate(0) translateZ(0);
     -ms-transform: scale(.95) rotate(0) translateZ(0);
@@ -948,13 +948,12 @@ svg.acjk path[id] {
   -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  --animation-distance: var(--z1xlk8pd-3);
-  --animation-rotation: var(--z1xlk8pd-4);
-  --animation-base-color: var(--z1xlk8pd-5);
   -webkit-align-items: center;
   align-items: center;
-  -webkit-animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1;
-  animation: shuffleOut-z1xlk8pd-svwhkoh .5s 1;
+  -webkit-animation: shuffleOut-card .5s 1;
+  animation: shuffleOut-card .5s 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   border: .0625rem solid var(--animation-base-color);
   color: var(--animation-base-color);
   font-size: 1.5rem;

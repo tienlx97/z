@@ -20,7 +20,7 @@ export const QuestionGrid_Card = ({
   return (
     <div
       className={cn(
-        ' bg-[#2e3856] py-8 px-6 rounded-lg',
+        'bg-[#fff] dark:bg-[#2e3856] py-8 px-6 rounded-lg',
         'QuestionGridCard',
         className
       )}

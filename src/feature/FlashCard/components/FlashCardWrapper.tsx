@@ -45,7 +45,9 @@ export const FlashCardWrapper = () => {
 
   const elements = {
     topLeft: () => (
-      <div className="text-[.875rem] text-[#646f90]">Definition</div>
+      <div className="text-[.875rem] text-[#646f90] dark:text-[#939bb4]">
+        Definition
+      </div>
     ),
 
     buttons: ({isShowing}: {isShowing: boolean}) => {
@@ -59,11 +61,12 @@ export const FlashCardWrapper = () => {
 
   const onKnow = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault(), e.stopPropagation();
-
     controller.animate('know');
+
+    setId(Math.random() * 1000);
   };
 
-  const [id] = useState(Math.floor(Math.random() * 1000));
+  const [id, setId] = useState(Math.random() * 1000);
 
   return (
     <CardAnimation controller={controller}>
@@ -71,7 +74,6 @@ export const FlashCardWrapper = () => {
         onClickCard={onClickCard}
         isFlipped={isFlipped}
         key={id}
-        data-key={id}
         question={question}
         elements={elements}
       />

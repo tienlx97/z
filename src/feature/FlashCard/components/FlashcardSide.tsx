@@ -32,7 +32,7 @@ export const FlashcardSide = ({
       <QuestionGrid_Elements>
         {/* convert, trim, cut image/text */}
         <div className="h-full w-full flex justify-center items-center">
-          <div className="text-4xl">
+          <div className="text-4xl text-[#303545] dark:text-[#f6f7fb]">
             {questionElement.attributes[0].plainText}
           </div>
         </div>
