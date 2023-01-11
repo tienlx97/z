@@ -35,7 +35,8 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
       front: Question;
       back: Question;
       metadata: {
-        promptSide: 'definition';
+        promptSide: 'Definition';
+        answerSide: 'Term';
       };
     }[]
   >([]);
@@ -49,7 +50,8 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
       front: Question;
       back: Question;
       metadata: {
-        promptSide: 'definition';
+        promptSide: 'Definition';
+        answerSide: 'Term';
       };
     }[] = [];
 
@@ -62,7 +64,7 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
             {
               type: 'TextAttribute',
               plainText: element.hira ?? element.kata!,
-              languageCode: 'lang-ja',
+              languageCode: 'ja',
               richText: null,
               mediaType: 1,
             },
@@ -73,14 +75,15 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
             {
               type: 'TextAttribute',
               plainText: element.detail[0].meaning,
-              languageCode: 'lang-vi',
+              languageCode: 'vi',
               richText: null,
               mediaType: 1,
             },
           ],
         } as unknown as Question,
         metadata: {
-          promptSide: 'definition',
+          promptSide: 'Definition',
+          answerSide: 'Term',
         },
       });
     }
@@ -89,14 +92,31 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
   }, [wordList]);
 
   const elements = {
-    topLeft: () => (
-      <div className="text-[.875rem] text-[#646f90] dark:text-[#939bb4]">
-        Definition
+    topLeft: ({side, isShowing}: {side: string; isShowing: boolean}) => (
+      <div className="font-semibold tracking-normal text-[.875rem] dark:text-[#646f90] text-[#939bb4]">
+        {side}
       </div>
     ),
 
+    topCenter: () => {
+      return (
+        <section
+          className={
+            'mb-0 justify-center h-full font-semibold flex text-[#586380] dark:text-[#d9dde8] items-center text-base'
+          }>
+          {index + 1} / {cards.length}
+        </section>
+      );
+    },
+
     buttons: ({isShowing}: {isShowing: boolean}) => {
-      return <ButtonGroup isHidden={!isShowing} onKnow={onKnow} />;
+      return (
+        <ButtonGroup
+          isHidden={!isShowing}
+          onKnow={onKnow}
+          onDontKnow={onDontKnow}
+        />
+      );
     },
   };
 
@@ -107,7 +127,18 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
   const onKnow = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault(), e.stopPropagation();
     controller.animate('know');
-    setIndex(index + 1);
+
+    window.setTimeout(() => {
+      setIndex(index + 1);
+    }, 250);
+  };
+
+  const onDontKnow = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault(), e.stopPropagation();
+    controller.animate('dontKnow');
+    window.setTimeout(() => {
+      setIndex(index - 1);
+    }, 250);
   };
 
   if (index === cards.length) {

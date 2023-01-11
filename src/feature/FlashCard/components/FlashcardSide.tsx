@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import {
   QuestionGrid,
   QuestionGrid_Options,
@@ -32,7 +33,11 @@ export const FlashcardSide = ({
       <QuestionGrid_Elements>
         {/* convert, trim, cut image/text */}
         <div className="h-full w-full flex justify-center items-center">
-          <div className="text-4xl text-[#303545] dark:text-[#f6f7fb]">
+          <div
+            className={cn('text-4xl text-[#303545] dark:text-[#f6f7fb]', {
+              'lang-vi': questionElement.attributes[0].languageCode == 'vi',
+              'lang-ja': questionElement.attributes[0].languageCode == 'ja',
+            })}>
             {questionElement.attributes[0].plainText}
           </div>
         </div>

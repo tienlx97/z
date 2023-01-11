@@ -99,6 +99,7 @@ export const MultipleChoiceQuestionPrompt = ({
     <article
       className={cn(
         // StudyCardLayout0
+        '[--shadow-with-opacity:#30354514] dark:[--shadow-with-opacity:#939bb414]',
         '[transition:all_0.5s_ease] [box-shadow:0_0.25rem_1rem_0_var(--shadow-with-opacity)]',
         'bg-[#f6f7fb] dark:bg-[#2e3856] rounded-lg flex flex-col justify-between my-0 mx-auto max-w-[52.5rem] min-h-[29.25rem] py-5 px-6 sm:p-4 lg:py-6 lg:px-8',
         {

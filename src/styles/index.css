@@ -798,51 +798,49 @@ svg.acjk path[id] {
 /* flashcard */
 
 
+@-webkit-keyframes flipOutCard {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+}
+
+@keyframes flipOutCard {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg)
+  }
+
+  to {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+  }
+}
 
 .h17h0v5c {
-  -webkit-animation: flipOut-h17h0v5c .25s ease-in-out 1;
-  animation: flipOut-h17h0v5c .25s ease-in-out 1;
+  -webkit-animation: flipOutCard .25s ease-in-out 1;
+  animation: flipOutCard .25s ease-in-out 1;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards
 }
-
-@-webkit-keyframes flipOut-h17h0v5c {
-  0% {
-    -webkit-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    transform: rotateX(0deg)
-  }
-
-  to {
-    -webkit-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    transform: rotateX(180deg)
-  }
-}
-
-@keyframes flipOut-h17h0v5c {
-  0% {
-    -webkit-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    transform: rotateX(0deg)
-  }
-
-  to {
-    -webkit-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    transform: rotateX(180deg)
-  }
-}
-
 
 .v862hqe {
-  -webkit-animation: flipIn-v862hqe .25s ease-in-out 1;
-  animation: flipIn-v862hqe .25s ease-in-out 1;
+  -webkit-animation: flipInCard .25s ease-in-out 1;
+  animation: flipInCard .25s ease-in-out 1;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards
 }
 
-@-webkit-keyframes flipIn-v862hqe {
+@-webkit-keyframes flipInCard {
   0% {
     -webkit-transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
@@ -856,7 +854,7 @@ svg.acjk path[id] {
   }
 }
 
-@keyframes flipIn-v862hqe {
+@keyframes flipInCard {
   0% {
     -webkit-transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
@@ -943,7 +941,7 @@ svg.acjk path[id] {
 
 /* CAr */
 
-.KnowExitAnimation {
+.ShuffleOutCardAnimation {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-box-pack: center;

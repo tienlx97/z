@@ -29,7 +29,7 @@ const g = (element: any, promptSide: any, isShowing: boolean) => {
     topCenter:
       null == element || null == element.topCenter
         ? undefined
-        : element.topCenter(n),
+        : element.topCenter(),
     topLeft:
       null == element || null == element.topLeft
         ? undefined
