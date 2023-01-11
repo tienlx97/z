@@ -871,7 +871,7 @@ svg.acjk path[id] {
 }
 
 
-@-webkit-keyframes shuffleOut-card {
+@-webkit-keyframes shuffleOutCard {
   0% {
     -webkit-transform: scale(.95) rotate(0) translateZ(0);
     -ms-transform: scale(.95) rotate(0) translateZ(0);
@@ -899,7 +899,7 @@ svg.acjk path[id] {
   }
 }
 
-@keyframes shuffleOut-card {
+@keyframes shuffleOutCard {
   0% {
     -webkit-transform: scale(.95) rotate(0) translateZ(0);
     -ms-transform: scale(.95) rotate(0) translateZ(0);
@@ -950,8 +950,8 @@ svg.acjk path[id] {
   -ms-flex-pack: center;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-animation: shuffleOut-card .5s 1;
-  animation: shuffleOut-card .5s 1;
+  -webkit-animation: shuffleOutCard .5s 1;
+  animation: shuffleOutCard .5s 1;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   border: .0625rem solid var(--animation-base-color);
@@ -969,5 +969,6 @@ svg.acjk path[id] {
   max-width: unset;
   min-height: unset;
   width: 100%;
-  z-index: 999
+  z-index: 999;
+  position: absolute;
 }

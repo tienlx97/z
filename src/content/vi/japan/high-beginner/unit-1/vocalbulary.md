@@ -11,7 +11,7 @@ title: Gia đình, con người
 
 
 <QuizExpand name="Flash Card">
-  <FlashCardWrapper />
+  <FlashCardWrapper src2Base64="data.json" />
 </QuizExpand>
 
 <QuizExpand name="Multiple Chocie 1">
