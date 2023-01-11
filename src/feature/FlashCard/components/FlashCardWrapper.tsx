@@ -23,7 +23,13 @@ interface JapanWord {
   detail: DetailItem[];
 }
 
-export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
+export const FlashCardWrapper = ({
+  src2Base64,
+  kanji = false,
+}: {
+  src2Base64: string;
+  kanji?: boolean;
+}) => {
   const [wordList, _] = useState<JapanWord[]>(
     JSON.parse(b64DecodeUnicode(src2Base64)).vocalbulary as JapanWord[]
   );
@@ -63,7 +69,9 @@ export const FlashCardWrapper = ({src2Base64}: {src2Base64: string}) => {
           attributes: [
             {
               type: 'TextAttribute',
-              plainText: element.hira ?? element.kata!,
+              plainText: kanji
+                ? element.kanji ?? element.hira ?? element.kata!
+                : element.hira ?? element.kata!,
               languageCode: 'ja',
               richText: null,
               mediaType: 1,

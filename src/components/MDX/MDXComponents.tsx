@@ -444,6 +444,14 @@ function VocalbularyExpand({children}: {children: any}) {
   return <Expandable type="vocalbulary">{children}</Expandable>;
 }
 
+const ReadMore = ({href}: {href: string}) => {
+  return (
+    <Link className="text-lg font-semibold italic font-sans" href={href}>
+      Read more
+    </Link>
+  );
+};
+
 export const MDXComponents = {
   p: P,
   strong: Strong,
@@ -530,6 +538,7 @@ export const MDXComponents = {
   MultipleChoiceQuestion_1,
   //
   FlashCardWrapper,
+  ReadMore,
 };
 
 for (let key in MDXComponents) {
